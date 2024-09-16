@@ -59,7 +59,7 @@
                 @endshop
 
 
-                @bookCita
+                @bookAppointment
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">@lang('Book Cita ')</span></li>
 
@@ -70,7 +70,7 @@
                         <span class="hide-menu">@lang('Cita Lista')</span>
                     </a>
                 </li>
-                @endbookCita
+                @endbookAppointment
 
                 @plan
                 <li class="list-divider"></li>
@@ -271,7 +271,7 @@
                 </li>
 
 
-                <li class="sidebar-item {{menuActive(['admin.language.create','admin.language.edit*','admin.language.keywordEditar*'],3)}}">
+                <li class="sidebar-item {{menuActive(['admin.language.create','admin.language.edit*','admin.language.keywordEdit*'],3)}}">
                     <a class="sidebar-link" href="{{  route('admin.language.index') }}"
                        aria-expanded="false">
                         <i class="fas fa-language text-teal"></i>

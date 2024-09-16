@@ -35,15 +35,15 @@
                 </a>
             </div>
             <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-               data-toggle="collapse" data-target="#navbarSoporteedContent"
-               aria-controls="navbarSoporteedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+               data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
                     class="ti-more"></i></a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
 
-        <div class="navbar-collapse collapse" id="navbarSoporteedContent">
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav float-left mr-auto ml-3 pl-1 d-none d-md-flex">
                 <li class="nav-item {{ request()->is('user/home') ? 'active' : ''  }}">
@@ -102,11 +102,11 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 @lang('Please Verify Your Correo electrónico.')
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSoporteedContent" aria-controls="navbarSoporteedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSoporteedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 

@@ -34,10 +34,10 @@
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id">
                                             <option selected disabled>@lang('Categoría name')</option>
-                                            @foreach ($blogCategoría as $category)
+                                            @foreach ($blogCategory as $category)
                                                 <option value="{{ $category->id }}"
                                                     {{ $category->id == optional($blogDetails[$language->id][0]->blog)->blog_category_id ? 'selected' : '' }}>
-                                                    @lang(optional($category->blogCategoríaDetails)->name)</option>
+                                                    @lang(optional($category->blogCategoryDetails)->name)</option>
                                             @endforeach
                                         </select>
                                         <div class="invalid-feedback d-inline-block mt-3">

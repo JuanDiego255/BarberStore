@@ -247,7 +247,7 @@
                     <div class="card-body">
                         <h4 class="card-title">@lang('Contraseña Change')</h4>
 
-                        <form method="post" action="{{ route('admin.userContraseñaActualizar',$user->id) }}"
+                        <form method="post" action="{{ route('admin.userPasswordUpdate',$user->id) }}"
                               enctype="multipart/form-data">
                             @csrf
                             <div class="row">
@@ -323,7 +323,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal"><span>@lang('Close')</span>
                         </button>
-                        <button type="submit" class=" btn btn-primary balanceGuardar"><span>@lang('Enviar')</span>
+                        <button type="submit" class=" btn btn-primary balanceSave"><span>@lang('Enviar')</span>
                         </button>
                     </div>
 
@@ -337,11 +337,11 @@
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="" class="loginAccountAcción" enctype="multipart/form-data">
+                <form method="post" action="" class="loginAccountAction" enctype="multipart/form-data">
                     @csrf
                     <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title">@lang('Sing In Confirmaration')</h4>
+                        <h4 class="modal-title">@lang('Sing In Confirmation')</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -407,7 +407,7 @@
                     $('#image_preview_container').attr('src', e.target.result);
                 }
             });
-            $(document).on('click', '.balanceGuardar', function () {
+            $(document).on('click', '.balanceSave', function () {
                 var bala = $('#balance').text();
             });
 
@@ -418,7 +418,7 @@
 
             $(document).on('click', '.loginAccount', function () {
                 var route = $(this).data('route');
-                $('.loginAccountAcción').attr('action', route)
+                $('.loginAccountAction').attr('action', route)
             });
         });
 

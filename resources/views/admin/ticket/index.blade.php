@@ -76,7 +76,7 @@
                                     [{{ trans('Ticket#').$ticket->ticket }}] {{ $ticket->subject }} </a>
                             </td>
 
-                            <td data-label="Enviarted By">
+                            <td data-label="Submitted By">
                                 @if($ticket->user_id)
                                     <a href="{{ route('admin.user-edit', $ticket->user_id)}}"
                                        target="_blank"> {{$ticket->user->fullname}}</a>

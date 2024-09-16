@@ -240,7 +240,7 @@
                         console.log(data);
 
                         if (data == 'success') {
-                            Notiflix.Notify.Éxito("{{trans('Import Data Éxitofully')}}");
+                            Notiflix.Notify.Éxito("{{trans('Import Data Successfully')}}");
 
                             window.location.href = "{{url()->current()}}"
                         }

@@ -89,7 +89,7 @@
                                 @lang(dateTime($item->purchase_date, 'd M Y'))
                             </td>
                             <td data-label="@lang('Date Of Cita')">
-                                @if(optional($item->bookCita)->date_of_appointment)
+                                @if(optional($item->bookAppointment)->date_of_appointment)
                                     <span class="badge badge-success">Given</span>
                                 @else
                                     <span class="badge badge-warning">Not yet</span>

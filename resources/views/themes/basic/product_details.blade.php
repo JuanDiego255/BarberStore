@@ -74,7 +74,7 @@
                             </div>
                             <ul class="product_miniature d-flex transition">
                                 <li>
-                                    <a href="javascript:void(0)" class="wishLista"
+                                    <a href="javascript:void(0)" class="wishList"
                                        data-product="{{ $product_details->id }}" id="">
                                         @if($product_details->get_wishlist_count > 0)
                                             <i class="fas fa-heart save"></i>
@@ -425,24 +425,24 @@
 
         productCheck();
 
-        // WishLista
+        // WishList
         let isAuthenticate = "{{\Illuminate\Soporte\Facades\Auth::check()}}";
         let userId = "{{optional(auth()->user())->id}}";
 
-        $('.wishLista').on('click', function () {
+        $('.wishList').on('click', function () {
             let _this = this.id;
             let user_id = userId;
             let product_id = $(this).data('product');
             if (isAuthenticate == 1) {
-                wishLista(user_id, product_id, _this);
+                wishList(user_id, product_id, _this);
             } else {
                 window.location.href = '{{route('login')}}';
             }
         });
 
-        function wishLista(user_id = null, product_id = null, id = null) {
+        function wishList(user_id = null, product_id = null, id = null) {
             $.ajax({
-                url: "{{ route('user.wishLista') }}",
+                url: "{{ route('user.wishList') }}",
                 type: "POST",
                 data: {
                     user_id: user_id,

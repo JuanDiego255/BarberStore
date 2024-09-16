@@ -53,7 +53,7 @@
                                 </td>
                                 <td data-label="Purchase Date">{{ dateTime($data->purchase_date, 'd M Y') }}</td>
                                 <td data-label="Date Of Cita">
-                                    @if(optional($data->bookCita)->date_of_appointment)
+                                    @if(optional($data->bookAppointment)->date_of_appointment)
                                         <span class="badge bg-danger">@lang('Given')</span>
                                     @else
                                         <span class="badge bg-warning">@lang('Not yet')</span>

@@ -140,7 +140,7 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group ">
-                        <li class="list-group-item bg-transparent">@lang('Transaccións') : <span class="trx"></span>
+                        <li class="list-group-item bg-transparent">@lang('Transactions') : <span class="trx"></span>
                         </li>
                         <li class="list-group-item bg-transparent">@lang('Administrador Feedback') : <span
                                 class="feedback"></span></li>

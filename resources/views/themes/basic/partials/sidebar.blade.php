@@ -12,13 +12,13 @@
             <a class="{{ menuActive(['user.home'], 3) }}" href="{{ route('user.home') }}"><i
                     class="fal fa-th-large"></i>@lang('Tablero')</a>
         </li>
-        @bookCita
+        @bookAppointment
         <li>
             <a class="{{ menuActive(['user.my.appointment', 'user.search.appointment'], 3) }}"
                href="{{ route('user.my.appointment') }}"><i
                     class="fa-thin fa-calendar-check"></i>@lang('My Cita')</a>
         </li>
-        @endbookCita
+        @endbookAppointment
         @plan
         <li>
             <a class="{{ menuActive(['user.my.plan', 'user.search.plan'], 3) }}" href="{{ route('user.my.plan') }}"><i

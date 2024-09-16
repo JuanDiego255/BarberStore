@@ -163,7 +163,7 @@
                         channel.bind('App\\Events\\UserNotification', function (data) {
                             app.items.unshift(data.message);
                         });
-                        channel.bind('App\\Events\\ActualizarUserNotification', function (data) {
+                        channel.bind('App\\Events\\UpdateUserNotification', function (data) {
                             app.getNotifications();
                         });
                     }

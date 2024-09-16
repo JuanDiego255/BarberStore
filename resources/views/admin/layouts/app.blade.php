@@ -132,10 +132,10 @@
                     cluster: "{{ env('PUSHER_APP_CLUSTER') }}"
                 });
                 let channel = pusher.subscribe('admin-notification.' + "{{ Auth::guard('admin')->id() }}");
-                channel.bind('App\\Events\\AdministradorNotification', function (data) {
+                channel.bind('App\\Events\\AdminNotification', function (data) {
                     app.items.unshift(data.message);
                 });
-                channel.bind('App\\Events\\ActualizarAdministradorNotification', function (data) {
+                channel.bind('App\\Events\\UpdateAdminNotification', function (data) {
                     app.getNotifications();
                 });
             }

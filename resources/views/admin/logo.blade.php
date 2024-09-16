@@ -28,7 +28,7 @@
                         <div class="tab-content">
                             <div id="home"
                                  class="mt-3 container tab-pane {{ $errors->has('profile') ? 'active' : ($errors->has('password') ? '' : 'active') }}">
-                                <form action="{{ route('admin.logoActualizar')}}" method="post"
+                                <form action="{{ route('admin.logoUpdate')}}" method="post"
                                       enctype="multipart/form-data">
                                     @method('put')
                                     @csrf
@@ -103,7 +103,7 @@
                                  class="mt-3 container tab-pane {{ $errors->has('password') ? 'active' : '' }}">
 
 
-                                <form method="post" action="{{ route('admin.seoActualizar') }}"
+                                <form method="post" action="{{ route('admin.seoUpdate') }}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     @method('put')

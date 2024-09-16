@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         @endshop
-                        @bookCita
+                        @bookAppointment
                         <div class="col-xl-3 col-md-6 box">
                             <div class="dashboard-box">
                                 <h4>@lang('Total Cita')</h4>
@@ -51,7 +51,7 @@
                                 <i class="fa-thin fa-calendar-check"></i>
                             </div>
                         </div>
-                        @endbookCita
+                        @endbookAppointment
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
     <div class="calender">
         <div class="container-fluid">
             <div class="main row gy-5">
-                @bookCita
+                @bookAppointment
                 <div class="col-lg-6">
                     <div class="card shadow">
                         <div class="card-body">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                @endbookCita
+                @endbookAppointment
                 @shop
                 <div class="col-lg-6">
                     <!-- table -->

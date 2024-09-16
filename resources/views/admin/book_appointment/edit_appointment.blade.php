@@ -92,8 +92,8 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <input type="hidden" class="confirm" name="isConfirmar" value="">
-                                <input type="hidden" class="cancel" name="isCancelar" value="">
+                                <input type="hidden" class="confirm" name="isConfirm" value="">
+                                <input type="hidden" class="cancel" name="isCancel" value="">
                             </div>
                             @if ($appointment_info->status == 0)
                                 <div class="row">
@@ -142,7 +142,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Cita Confirmaration')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Cita Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>
@@ -153,7 +153,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
                     <input type="hidden" class="status" name="status" value="1">
-                    <button type="submit" class="btn btn-success confirmCita">@lang('Confirmar')</button>
+                    <button type="submit" class="btn btn-success confirmAppointment">@lang('Confirmar')</button>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
                     <input type="hidden" class="status" name="status" value="1">
-                    <button type="submit" class="btn btn-danger cancelCita">@lang('Cancelar')</button>
+                    <button type="submit" class="btn btn-danger cancelAppointment">@lang('Cancelar')</button>
                 </div>
             </div>
         </div>
@@ -196,7 +196,7 @@
             $('#editForm').attr('action', route)
         })
 
-        $(document).on('click', '.confirmCita', function() {
+        $(document).on('click', '.confirmAppointment', function() {
             $("#editForm").submit()
         })
 
@@ -206,7 +206,7 @@
             $('#editForm').attr('action', route)
         })
 
-        $(document).on('click', '.cancelCita', function() {
+        $(document).on('click', '.cancelAppointment', function() {
             $("#editForm").submit()
         })
 

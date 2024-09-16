@@ -20,11 +20,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($manageBlogCategoría as $item)
+                        @forelse($manageBlogCategory as $item)
                             <tr>
                                 <td data-label="@lang('SL No.')">{{ $loop->index + 1 }}</td>
                                 <td data-label="@lang('Categoría Name')">
-                                    @lang(@optional($item->blogCategoríaDetails)->name)
+                                    @lang(@optional($item->blogCategoryDetails)->name)
                                 </td>
                                 <td data-label="@lang('Acción')">
                                     <a href="{{ route('admin.blog.category.edit', $item->id) }}"
@@ -54,7 +54,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

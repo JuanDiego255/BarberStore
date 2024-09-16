@@ -53,38 +53,38 @@
         <ul class="nav">
             <li class="nav-item">
                 <a href="{{ route('admin.order.list') }}"
-                    class="nav-link theme-a {{ $segment == 'list' ? 'activeLista' : '' }}">@lang('All Order')
+                    class="nav-link theme-a {{ $segment == 'list' ? 'activeList' : '' }}">@lang('All Order')
                     ({{ $all_order }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'pending') }}"
-                    class="nav-link theme-a {{ $segment == 'pending' ? 'activeLista' : '' }}">@lang('Pending')
+                    class="nav-link theme-a {{ $segment == 'pending' ? 'activeList' : '' }}">@lang('Pending')
                     ({{ $pending_order }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'processing') }}"
-                    class="nav-link theme-a {{ $segment == 'processing' ? 'activeLista' : '' }}">@lang('Processing')
+                    class="nav-link theme-a {{ $segment == 'processing' ? 'activeList' : '' }}">@lang('Processing')
                     ({{ $processing_order }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'on_Shipping') }}"
-                    class="nav-link theme-a {{ $segment == 'on_Shipping' ? 'activeLista' : '' }}">
+                    class="nav-link theme-a {{ $segment == 'on_Shipping' ? 'activeList' : '' }}">
                     @lang('On Shipping') ({{ $onShipping_order }})
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'ship') }}"
-                    class="nav-link theme-a {{ $segment == 'ship' ? 'activeLista' : '' }}">@lang('Ship')
+                    class="nav-link theme-a {{ $segment == 'ship' ? 'activeList' : '' }}">@lang('Ship')
                     ({{ $ship_order }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'completed') }}"
-                    class="nav-link theme-a {{ $segment == 'completed' ? 'activeLista' : '' }}">@lang('Completed')
+                    class="nav-link theme-a {{ $segment == 'completed' ? 'activeList' : '' }}">@lang('Completed')
                     ({{ $completed_order }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'cancel') }}"
-                    class="nav-link theme-a {{ $segment == 'cancel' ? 'activeLista' : '' }}">@lang('Cancelar')
+                    class="nav-link theme-a {{ $segment == 'cancel' ? 'activeList' : '' }}">@lang('Cancelar')
                     ({{ $cancel_order }})</a>
             </li>
         </ul>
@@ -136,7 +136,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($orderLista as $order)
+                        @forelse($orderList as $order)
                             <tr>
                                 <td class="text-center">
                                     <input type="checkbox" id="chk-{{ $order->id }}"
@@ -198,7 +198,7 @@
                         @endforelse
                     </tbody>
                 </table>
-                {{ $orderLista->links('partials.pagination') }}
+                {{ $orderList->links('partials.pagination') }}
             </div>
         </div>
     </div>

@@ -32,7 +32,7 @@
                                     <label for="name"> @lang('Categoría Name') </label>
                                     <input type="text" name="name[{{ $language->id }}]"
                                         class="form-control  @error('name' . '.' . $language->id) is-invalid @enderror"
-                                        value="<?php echo old('name' . $language->id, isset($blogCategoríaDetails[$language->id]) ? @$blogCategoríaDetails[$language->id][0]->name : ''); ?>">
+                                        value="<?php echo old('name' . $language->id, isset($blogCategoryDetails[$language->id]) ? @$blogCategoryDetails[$language->id][0]->name : ''); ?>">
                                     <div class="invalid-feedback">
                                         @error('name' . '.' . $language->id)
                                             @lang($message)

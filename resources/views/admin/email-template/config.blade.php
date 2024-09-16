@@ -11,7 +11,7 @@
                         <div class="d-flex flex-row align-items-center justify-content-between">
 
                             <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="modal"
-                                    data-target="#testCorreo electrónico">
+                                    data-target="#testEmail">
                                 <span class="btn-label"><i class="fas fa-envelope"></i></span>
                                 @lang('Test Correo electrónico')
                             </button>
@@ -220,11 +220,11 @@
         </div>
     </div>
 
-    <!-- testCorreo electrónico Modal -->
-    <div class="modal fade" id="testCorreo electrónico">
+    <!-- testEmail Modal -->
+    <div class="modal fade" id="testEmail">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="{{route('admin.testCorreo electrónico')}}" class="" enctype="multipart/form-data">
+                <form method="post" action="{{route('admin.testEmail')}}" class="" enctype="multipart/form-data">
                 @csrf
                 <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">

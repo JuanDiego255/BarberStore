@@ -160,7 +160,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h5 class="modal-title">@lang('Active User Confirmaration')</h5>
+                    <h5 class="modal-title">@lang('Active User Confirmation')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
                 </div>
                 <div class="modal-body">
@@ -180,7 +180,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h5 class="modal-title">@lang('DeActive User Confirmaration')</h5>
+                    <h5 class="modal-title">@lang('DeActive User Confirmation')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
                 </div>
                 <div class="modal-body">
@@ -201,11 +201,11 @@
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="" class="loginAccountAcción" enctype="multipart/form-data">
+                <form method="post" action="" class="loginAccountAction" enctype="multipart/form-data">
                     @csrf
                     <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title">@lang('Sing In Confirmaration')</h4>
+                        <h4 class="modal-title">@lang('Sing In Confirmation')</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -253,7 +253,7 @@
 
         $(document).on('click', '.loginAccount', function () {
             var route = $(this).data('route');
-            $('.loginAccountAcción').attr('action', route)
+            $('.loginAccountAction').attr('action', route)
         });
 
         //multiple active

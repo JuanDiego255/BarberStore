@@ -8,7 +8,7 @@
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
         <div class="card-body">
 
-            <a href="{{route('admin.subscriber.sendCorreo electrónico')}}"
+            <a href="{{route('admin.subscriber.sendEmail')}}"
                class="btn btn-primary mb-3 float-right" >
                @lang('Enviar Correo electrónico')
             </a>

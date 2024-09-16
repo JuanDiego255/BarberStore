@@ -75,23 +75,23 @@
             @endphp
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'all_list') }}"
-                   class="nav-link theme-a {{ $segment == 'all_list' ? 'activeLista' : '' }}">@lang('All Lista')
-                    ({{ $countAllCita }})</a>
+                   class="nav-link theme-a {{ $segment == 'all_list' ? 'activeList' : '' }}">@lang('All Lista')
+                    ({{ $countAllAppointment }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'pending') }}"
-                   class="nav-link theme-a {{ $segment == 'pending' ? 'activeLista' : '' }}">@lang('Pending')
-                    ({{ $countPendingCita }})</a>
+                   class="nav-link theme-a {{ $segment == 'pending' ? 'activeList' : '' }}">@lang('Pending')
+                    ({{ $countPendingAppointment }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'confirm') }}"
-                   class="nav-link theme-a {{ $segment == 'confirm' ? 'activeLista' : '' }}">@lang('Confirmar')
-                    ({{ $countConfirmarCita }})</a>
+                   class="nav-link theme-a {{ $segment == 'confirm' ? 'activeList' : '' }}">@lang('Confirmar')
+                    ({{ $countConfirmAppointment }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'cancel') }}"
-                   class="nav-link theme-a {{ $segment == 'cancel' ? 'activeLista' : '' }}">@lang('Cancelar')
-                    ({{ $countCancelarCita }})</a>
+                   class="nav-link theme-a {{ $segment == 'cancel' ? 'activeList' : '' }}">@lang('Cancelar')
+                    ({{ $countCancelAppointment }})</a>
             </li>
         </ul>
     </div>
@@ -209,7 +209,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

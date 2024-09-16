@@ -45,7 +45,7 @@
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id" id="categoryId">
                                             <option selected disabled>@lang('Select product category')</option>
-                                            @foreach ($productCategoría as $category)
+                                            @foreach ($productCategory as $category)
                                                 <option value="{{ $category->id }}">@lang(optional($category->details)->name)</option>
                                             @endforeach
                                         </select>

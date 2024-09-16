@@ -1,5 +1,5 @@
 <?php $__env->startSection('title'); ?>
-    <?php echo app('translator')->get('Dashboard'); ?>
+    <?php echo app('translator')->get('Tablero'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 
@@ -59,16 +59,16 @@
                 </div>
             </div>
 
-            <?php if (\Illuminate\Support\Facades\Blade::check('bookAppointment')): ?>
+            @bookCita
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow border-right">
                     <div class="card-body">
                         <div class="d-flex d-lg-flex d-md-block align-items-center">
                             <div>
                                 <div class="d-inline-flex align-items-center">
-                                    <h2 class="text-dark mb-1 font-weight-medium"> <?php echo e($totalBookAppointment); ?> </h2>
+                                    <h2 class="text-dark mb-1 font-weight-medium"> <?php echo e($totalBookCita); ?> </h2>
                                 </div>
-                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><?php echo app('translator')->get('Total Book Appointment'); ?></h6>
+                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><?php echo app('translator')->get('Total Book Cita'); ?></h6>
                             </div>
                             <div class="ml-auto mt-md-3 mt-lg-0">
                                 <span class="opacity-7 text-muted"><i class="fa fa-2x fa-calendar-check"></i></span>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <?php endif; ?>
+            @endbookCita
 
             <?php if (\Illuminate\Support\Facades\Blade::check('plan')): ?>
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -216,7 +216,7 @@
                                 <div class="d-inline-flex align-items-center">
                                     <h2 class="text-dark mb-1 font-weight-medium"><?php echo e($orders['cancelOrders']); ?></h2>
                                 </div>
-                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><?php echo app('translator')->get("Cancel Order"); ?></h6>
+                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><?php echo app('translator')->get("Cancelar Order"); ?></h6>
                             </div>
                             <div class="ml-auto mt-md-3 mt-lg-0">
                                 <span class="opacity-7 text-muted"><i class="fa fa-2x fa-cart-plus"></i></span>
@@ -380,10 +380,10 @@
                                     <thead class="thead-dark">
                                     <tr>
                                         <th scope="col"><?php echo app('translator')->get('Username'); ?></th>
-                                        <th scope="col"><?php echo app('translator')->get('Email'); ?></th>
+                                        <th scope="col"><?php echo app('translator')->get('Correo electrónico'); ?></th>
                                         <th scope="col"><?php echo app('translator')->get('Phone'); ?></th>
                                         <th scope="col"><?php echo app('translator')->get('Status'); ?></th>
-                                            <th scope="col"><?php echo app('translator')->get('Action'); ?></th>
+                                            <th scope="col"><?php echo app('translator')->get('Acción'); ?></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -402,13 +402,13 @@
                                                     </div>
                                                 </a>
                                             </td>
-                                            <td data-label="<?php echo app('translator')->get('Email'); ?>"><?php echo app('translator')->get($user->email); ?></td>
+                                            <td data-label="<?php echo app('translator')->get('Correo electrónico'); ?>"><?php echo app('translator')->get($user->email); ?></td>
                                             <td data-label="<?php echo app('translator')->get('Phone'); ?>"><?php echo e($user->phone); ?></td>
                                             <td data-label="<?php echo app('translator')->get('Status'); ?>">
                                             <span
                                                 class="badge badge-pill <?php echo e($user->status == 0 ? 'badge-danger' : 'badge-success'); ?>"><?php echo e($user->status == 0 ? 'Inactive' : 'Active'); ?></span>
                                             </td>
-                                                 <td data-label="<?php echo app('translator')->get('Action'); ?>">
+                                                 <td data-label="<?php echo app('translator')->get('Acción'); ?>">
                                                     <div class="dropdown show">
                                                         <a class="dropdown-toggle p-3" href="#" id="dropdownMenuLink"
                                                            data-toggle="dropdown"
@@ -419,19 +419,19 @@
                                                             <a class="dropdown-item"
                                                                href="<?php echo e(route('admin.user-edit',$user->id)); ?>">
                                                                 <i class="fa  fa-edit text-warning pr-2"
-                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Edit'); ?>
+                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Editar'); ?>
                                                             </a>
                                                             <a class="dropdown-item"
                                                                href="<?php echo e(route('admin.send-email',$user->id)); ?>">
                                                                 <i class="fa fa-envelope text-success pr-2"
-                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Send Email'); ?>
+                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Enviar Correo electrónico'); ?>
                                                             </a>
                                                             <a class="dropdown-item loginAccount" type="button"
                                                                data-toggle="modal"
                                                                data-target="#signIn"
                                                                data-route="<?php echo e(route('admin.login-as-user',$user->id)); ?>">
                                                                 <i class="fas fa-sign-in-alt text-primary pr-2"
-                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Login as User'); ?>
+                                                                   aria-hidden="true"></i> <?php echo app('translator')->get('Iniciar sesión as User'); ?>
                                                             </a>
                                                         </div>
                                                     </div>
@@ -476,7 +476,7 @@
                                 </p>
                             </div>
                             <div class="col-md-12 form-group">
-                                <label><strong><?php echo app('translator')->get('Command for Email & SMS'); ?></strong></label>
+                                <label><strong><?php echo app('translator')->get('Command for Correo electrónico & SMS'); ?></strong></label>
                                 <div class="input-group ">
                                     <input type="text" class="form-control copyText"
                                            value="curl -s <?php echo e(route('queue.work')); ?>" disabled>
@@ -502,15 +502,15 @@
         </div>
     <?php endif; ?>
 
-    <!-- Admin Login as a User Modal -->
+    <!-- Administrador Iniciar sesión as a User Modal -->
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="" class="loginAccountAction" enctype="multipart/form-data">
+                <form method="post" action="" class="loginAccountAcción" enctype="multipart/form-data">
                     <?php echo csrf_field(); ?>
                     <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title"><?php echo app('translator')->get('Sing In Confirmation'); ?></h4>
+                        <h4 class="modal-title"><?php echo app('translator')->get('Sing In Confirmaration'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -580,7 +580,7 @@
 
         $(document).on('click', '.loginAccount', function () {
             var route = $(this).data('route');
-            $('.loginAccountAction').attr('action', route)
+            $('.loginAccountAcción').attr('action', route)
         });
 
         $(document).on('click', '#details', function () {

@@ -44,7 +44,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="productAttribute" id="productAttribute">
-                                    @foreach ($attributesLista as $attr)
+                                    @foreach ($attributesList as $attr)
                                         <tr>
                                             <td class="w-100">
                                                 <input type="text" name="attr[]"

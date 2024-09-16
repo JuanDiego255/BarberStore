@@ -12,7 +12,7 @@
                     <div class="row g-4 g-lg-5">
                         <div class="col-lg-4">
                             <div class="sidebar-wrapper">
-                                <form method="post" action="{{ route('user.updatePerfil') }}"
+                                <form method="post" action="{{ route('user.updateProfile') }}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="profile">
@@ -129,7 +129,7 @@
                                 </form>
                             </div>
                             <div id="tab2" class="content {{ $errors->has('password') ? 'active' : '' }}">
-                                <form action="{{ route('user.updateContraseña') }}" method="post">
+                                <form action="{{ route('user.updatePassword') }}" method="post">
                                     @csrf
                                     <div class="row g-4">
                                         <div class="input-box col-md-6">

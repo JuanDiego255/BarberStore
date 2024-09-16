@@ -39,7 +39,7 @@
                     </div>
                     <div class="card mt-40">
                         <div class="invoice p-5">
-                            <h4>@lang('Your order Confirmared!')</h4>
+                            <h4>@lang('Your order Confirmed!')</h4>
                             <span class="font-weight-bold d-block mt-4">@lang('Hello'), @lang(optional($orderInfo->shipping)->first_name)</span>
                             <span>@lang('You order has been confirmed and will be shipped in next few days!')</span>
                             <div class="product border-bottom border-top table-responsive mt-5">

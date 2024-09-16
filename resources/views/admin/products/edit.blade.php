@@ -46,7 +46,7 @@
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id" id="categoryId">
                                             <option selected disabled>@lang('Select product category')</option>
-                                            @foreach ($productCategoría as $category)
+                                            @foreach ($productCategory as $category)
                                                 <option value="{{ $category->id }}"
                                                     {{ $category->id == @$productDetails[$language->id][0]->product->category_id ? 'selected' : '' }}>
                                                     @lang($category->details->name)</option>
@@ -198,7 +198,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

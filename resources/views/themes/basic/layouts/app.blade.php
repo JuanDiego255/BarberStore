@@ -50,11 +50,11 @@
                      alt="{{ config('basic.site_title') }}">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSoporteedContent" aria-controls="navbarSoporteedContent"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-center" id="navbarSoporteedContent">
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link {{ menuActive(['home'], 3) }}" aria-current="page"
@@ -72,11 +72,11 @@
                     </li>
                     @endservice
 
-                    @bookCita
+                    @bookAppointment
                     <li class="nav-item">
                         <a class="nav-link {{ menuActive(['appointment'], 3) }}"
                            href="{{ route('appointment') }}">@lang('Cita')</a></li>
-                    @endbookCita
+                    @endbookAppointment
 
                     @shop
                     <li class="nav-item">
@@ -214,7 +214,7 @@
                         channel.bind('App\\Events\\UserNotification', function (data) {
                             app.items.unshift(data.message);
                         });
-                        channel.bind('App\\Events\\ActualizarUserNotification', function (data) {
+                        channel.bind('App\\Events\\UpdateUserNotification', function (data) {
                             app.getNotifications();
                         });
                     }

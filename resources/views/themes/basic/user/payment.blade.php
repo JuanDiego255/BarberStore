@@ -54,7 +54,7 @@
 
                     <div class="modal-body ">
                         <div class="payment-form ">
-                            @if(0 == $totalPago)
+                            @if(0 == $totalPayment)
                                 <p class="text-danger depositLimit"></p>
                                 <p class="text-danger depositCharge"></p>
                             @endif
@@ -71,7 +71,7 @@
                                 <label>@lang('Amount')</label>
                                 <div class="input-group input-group-lg">
                                     <input type="text" class="amount form-control" name="amount"
-                                           @if($totalPago != null) value="{{$totalPago}}" readonly @endif>
+                                           @if($totalPayment != null) value="{{$totalPayment}}" readonly @endif>
                                     <div class="input-group-append">
                                         <span class="input-group-text show-currency"></span>
                                     </div>

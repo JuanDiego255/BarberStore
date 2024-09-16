@@ -61,10 +61,10 @@
                                 <h5 class="mb-40">@lang('Categories')</h5>
                             </div>
                             <ul class="categories_list">
-                                @forelse($blogCategoría as $category)
+                                @forelse($blogCategory as $category)
                                     <li>
                                         <a
-                                            href="{{ route('category.wise.blog', [@slug(optional($category->blogCategoríaDetails)->name), $category->id]) }}"><span>@lang(optional($category->blogCategoríaDetails)->name)</span>
+                                            href="{{ route('category.wise.blog', [@slug(optional($category->blogCategoryDetails)->name), $category->id]) }}"><span>@lang(optional($category->blogCategoryDetails)->name)</span>
                                             <span>{{ $category->blog_count }}</span>
                                         </a>
                                     </li>

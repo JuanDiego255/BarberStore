@@ -20,7 +20,7 @@
                                 <div class="col-sm-12 col-md-12 ">
                                     <label for="product_name"> @lang('Product Name') </label>
                                     <select class="form-control selectProduct @error('product_name') is-invalid @enderror"
-                                        name="product_name" id="stockProductCrear">
+                                        name="product_name" id="stockProductCreate">
                                         <option selected disabled>@lang('Select product category')</option>
                                         @foreach ($products as $product)
                                             <option value="{{ $product->id }}"

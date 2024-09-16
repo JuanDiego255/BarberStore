@@ -80,7 +80,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h5 class="modal-title"><span class="messageShow"></span> @lang('Confirmaration')</h5>
+                    <h5 class="modal-title"><span class="messageShow"></span> @lang('Confirmation')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

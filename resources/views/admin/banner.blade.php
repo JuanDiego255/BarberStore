@@ -17,7 +17,7 @@
                     <div class="card-body">
 
 
-                        <form action="{{ route('admin.breadcrumbActualizar')}}" method="post"
+                        <form action="{{ route('admin.breadcrumbUpdate')}}" method="post"
                               enctype="multipart/form-data">
                             @method('put')
                             @csrf

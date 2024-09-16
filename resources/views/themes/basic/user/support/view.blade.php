@@ -152,7 +152,7 @@
                     @csrf
                     @method('PUT')
                     <div class="modal-header">
-                        <h4 class="modal-title"> @lang('Confirmaration')</h4>
+                        <h4 class="modal-title"> @lang('Confirmation')</h4>
                         <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
                             <i class="fal fa-times"></i>
                         </button>
