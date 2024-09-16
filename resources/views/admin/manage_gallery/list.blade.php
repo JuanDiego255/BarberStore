@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Gallery List')
+    @lang('Gallery Lista')
 @endsection
 
 @section('content')
@@ -22,7 +22,7 @@
                         <th scope="col">@lang('SL No.')</th>
                         <th scope="col">@lang('Tag Name')</th>
                         <th scope="col">@lang('Image')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,7 +36,7 @@
                                 <img src="{{ getFile(config('location.gallery.path').$item->image)}}"
                                      alt="@lang('Gallery Image')" style="width: 70px; height:50px;">
                             </td>
-                            <td data-label="@lang('Action')">
+                            <td data-label="@lang('Acción')">
                                 <a href="{{ route('admin.gallery.items.edit',$item->id) }}"
                                    class="btn btn-sm btn-primary edit-button text-white">
                                     <i class="fa fa-edit" aria-hidden="true"></i>
@@ -62,13 +62,13 @@
 
 
 
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog"
          aria-labelledby="primary-header-modalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×

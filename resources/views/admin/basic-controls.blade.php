@@ -93,7 +93,7 @@
 
 
                     <div class="form-group col-sm-6 col-md-4 col-lg-3 ">
-                        <label class="text-dark">@lang('Strong Password')</label>
+                        <label class="text-dark">@lang('Strong Contraseña')</label>
                         <div class="custom-switch-btn">
                             <input type='hidden' value='1' name='strong_password'>
                             <input type="checkbox" name="strong_password" class="custom-switch-checkbox"
@@ -182,7 +182,7 @@
                     </div>
 
                     <div class="form-group col-sm-6 col-md-4 col-lg-3 ">
-                        <label class="text-dark">@lang('Book Appointment')</label>
+                        <label class="text-dark">@lang('Book Cita')</label>
                         <div class="custom-switch-btn">
                             <input type='hidden' value='1' name='book_appointment'>
                             <input type="checkbox" name="book_appointment" class="custom-switch-checkbox"
@@ -270,7 +270,7 @@
 
 
                 <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3"><span><i
-                            class="fas fa-save pr-2"></i> @lang('Save Changes')</span></button>
+                            class="fas fa-save pr-2"></i> @lang('Guardar Changes')</span></button>
             </form>
         </div>
     </div>

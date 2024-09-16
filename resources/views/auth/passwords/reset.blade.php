@@ -16,7 +16,7 @@
                         <div class="text-center">
                             <img src="{{url('assets/backend/images/big/icon.png')}}" alt="wrapkit">
                         </div>
-                        <h2 class="mt-3 text-center">@lang('Reset Password')</h2>
+                        <h2 class="mt-3 text-center">@lang('Restablecer Contraseña')</h2>
 
 
                         @if (session('status'))
@@ -49,18 +49,18 @@
                                 
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label for="password" class="text-md-right">{{ __('Password') }}</label>
+                                        <label for="password" class="text-md-right">{{ __('Contraseña') }}</label>
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                         @error('password')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
-                                    <label for="password-confirm" class="text-md-right">{{ __('Confirm Password') }}</label>
+                                    <label for="password-confirm" class="text-md-right">{{ __('Confirmar Contraseña') }}</label>
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                                 <div class="col-sm-12 mt-5">
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-block btn-dark btn-sm">@lang('Reset Password')</button>
+                                        <button type="submit" class="btn btn-block btn-dark btn-sm">@lang('Restablecer Contraseña')</button>
                                     </div>
                                 </div>
                             </div>

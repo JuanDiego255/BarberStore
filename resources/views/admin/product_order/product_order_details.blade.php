@@ -15,7 +15,7 @@
                         <div class="dropdown mb-2 text-right action_btn_area">
                             <button class="btn btn-sm  btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span><i class="fas fa-bars pr-2"></i> @lang('Action')</span>
+                                <span><i class="fas fa-bars pr-2"></i> @lang('Acción')</span>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <button class="dropdown-item pending" type="button" data-toggle="modal"
@@ -34,7 +34,7 @@
                                     data-target="#stageChange">@lang('Completed')
                                 </button>
                                 <button class="dropdown-item cancel" type="button" data-toggle="modal"
-                                    data-target="#stageChange">@lang('Cancel')
+                                    data-target="#stageChange">@lang('Cancelar')
                                 </button>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             @elseif($OrderProductInfo->status == 4)
                                 <span class="badge badge-success completed">@lang('Completed')</span>
                             @elseif($OrderProductInfo->status == 5)
-                                <span class="badge badge-danger cancel">@lang('Cancel')</span>
+                                <span class="badge badge-danger cancel">@lang('Cancelar')</span>
                             @endif
                         </div>
                         <div>
@@ -142,7 +142,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Stage Change Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Stage Change Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

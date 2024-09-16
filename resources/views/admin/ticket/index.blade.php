@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <input type="text" name="email" value="{{@request()->email}}"
                                class="form-control"
-                               placeholder="@lang('Email')">
+                               placeholder="@lang('Correo electrónico')">
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                class="fas fa-search"></i> @lang('Search')</button>
+                                class="fas fa-search"></i> @lang('Buscar')</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <th scope="col">@lang('User')</th>
                         <th scope="col">@lang('Status')</th>
                         <th scope="col">@lang('Last Reply')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -76,7 +76,7 @@
                                     [{{ trans('Ticket#').$ticket->ticket }}] {{ $ticket->subject }} </a>
                             </td>
 
-                            <td data-label="Submitted By">
+                            <td data-label="Enviarted By">
                                 @if($ticket->user_id)
                                     <a href="{{ route('admin.user-edit', $ticket->user_id)}}"
                                        target="_blank"> {{$ticket->user->fullname}}</a>
@@ -101,7 +101,7 @@
                                 {{diffForHumans($ticket->last_reply) }}
                             </td>
 
-                            <td data-label="Action">
+                            <td data-label="Acción">
                                 <a href="{{ route('admin.ticket.view', $ticket->id) }}"
                                    class="btn btn-sm btn-outline-info"
                                    data-toggle="tooltip" title="" data-original-title="Details">

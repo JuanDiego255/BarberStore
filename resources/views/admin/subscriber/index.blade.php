@@ -8,9 +8,9 @@
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
         <div class="card-body">
 
-            <a href="{{route('admin.subscriber.sendEmail')}}"
+            <a href="{{route('admin.subscriber.sendCorreo electrónico')}}"
                class="btn btn-primary mb-3 float-right" >
-               @lang('Send Email')
+               @lang('Enviar Correo electrónico')
             </a>
 
 
@@ -19,19 +19,19 @@
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">@lang('SL')</th>
-                        <th scope="col">@lang('Email')</th>
+                        <th scope="col">@lang('Correo electrónico')</th>
                         <th scope="col">@lang('Joined')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
                     @forelse($subscribers as $subscriber)
                         <tr>
                             <td data-label="@lang('SL.')">{{loopIndex($subscribers) + $loop->index	 }}</td>
-                            <td data-label="@lang('Email')">{{ $subscriber->email }}</td>
+                            <td data-label="@lang('Correo electrónico')">{{ $subscriber->email }}</td>
                             <td data-label="@lang('Joined')">{{ dateTime($subscriber->created_at) }}</td>
 
-                            <td data-label="@lang('Action')">
+                            <td data-label="@lang('Acción')">
                                 <a href="javascript:void(0)"
                                    data-id="{{ $subscriber->id }}"
                                    data-email="{{ $subscriber->email }}"

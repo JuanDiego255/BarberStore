@@ -37,7 +37,7 @@
                                             </div>
                                             <div class="col-md-12 col-lg-6">
                                                 <div class="form-group ">
-                                                    <label>@lang('Login Status')</label>
+                                                    <label>@lang('Iniciar sesión Status')</label>
                                                     <div class="custom-switch-btn w-md-100">
                                                         <input type='hidden' value="1" name='reCaptcha_status_login'>
                                                         <input type="checkbox" name="reCaptcha_status_login" class="custom-switch-checkbox" id="reCaptcha_status_login"  value = "0" <?php if( $basicControl->reCaptcha_status_login == 0):echo 'checked'; endif ?> >
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <button type="submit" name="submit" class="btn btn-primary btn-rounded btn-block">@lang('Save changes')</button>
+                                            <button type="submit" name="submit" class="btn btn-primary btn-rounded btn-block">@lang('Guardar changes')</button>
                                         </div>
                                     </form>
                                 </div>

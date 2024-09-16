@@ -40,7 +40,7 @@
 
                         <div class="card card-type-1 ">
                             <div class="card-header custom-header text-center">
-                                <h5 class="card-title">@lang('Additional Information To Withdraw Confirm')</h5>
+                                <h5 class="card-title">@lang('Additional Information To Withdraw Confirmar')</h5>
                             </div>
 
                             <div class="card-body">
@@ -122,7 +122,7 @@
                                     <div class="col-md-12">
                                         <div class=" form-group">
                                             <button type="submit" class="btn btn-success btn-block ">
-                                                <span>@lang('Confirm Now')</span>
+                                                <span>@lang('Confirmar Now')</span>
                                             </button>
 
                                         </div>

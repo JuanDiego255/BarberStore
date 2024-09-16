@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    @lang('Logo & Seo Settings')
+    @lang('Logo & Seo Configuración')
 @endsection
 @section('content')
 
@@ -28,7 +28,7 @@
                         <div class="tab-content">
                             <div id="home"
                                  class="mt-3 container tab-pane {{ $errors->has('profile') ? 'active' : ($errors->has('password') ? '' : 'active') }}">
-                                <form action="{{ route('admin.logoUpdate')}}" method="post"
+                                <form action="{{ route('admin.logoActualizar')}}" method="post"
                                       enctype="multipart/form-data">
                                     @method('put')
                                     @csrf
@@ -91,7 +91,7 @@
                                             <div class="submit-btn-wrapper text-center mt-4">
                                                 <button type="submit"
                                                         class="btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                    <span>@lang('Save Changes')</span></button>
+                                                    <span>@lang('Guardar Changes')</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@
                                  class="mt-3 container tab-pane {{ $errors->has('password') ? 'active' : '' }}">
 
 
-                                <form method="post" action="{{ route('admin.seoUpdate') }}"
+                                <form method="post" action="{{ route('admin.seoActualizar') }}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     @method('put')
@@ -186,7 +186,7 @@
                                                 <div class="submit-btn-wrapper text-center">
                                                     <button type="submit"
                                                             class=" btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                        <span>@lang('Save Changes')</span></button>
+                                                        <span>@lang('Guardar Changes')</span></button>
                                                 </div>
                                             </div>
 

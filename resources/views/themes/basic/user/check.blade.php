@@ -21,7 +21,7 @@
                 <div class="col-lg-7">
                     <div
                         class="form-wrapper w-100 h-100 d-flex flex-column align-items-start justify-content-center pl-65">
-                        <h4 class="h4 text-uppercase mb-30">@lang('Email Verification')</h4>
+                        <h4 class="h4 text-uppercase mb-30">@lang('Correo electrónico Verification')</h4>
 
                         <form method="POST" action="" class="form-content w-100">
                             @csrf
@@ -34,7 +34,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <button class="btn mt-20" type="submit">@lang('Submit')</button>
+                            <button class="btn mt-20" type="submit">@lang('Enviar')</button>
                         </form>
                     </div>
                 </div>

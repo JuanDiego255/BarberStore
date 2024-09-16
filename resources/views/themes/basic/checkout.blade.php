@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <input type="text" class="form-control" name="email"
-                                            value="{{ old('email') }}" placeholder="Email Address*" autocomplete="off">
+                                            value="{{ old('email') }}" placeholder="Correo electrónico Address*" autocomplete="off">
                                         @error('email')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -125,7 +125,7 @@
                         <div class="payment-methods mt-40">
                             <div class="row gy-4 gx-3">
                                 <div class="col-12">
-                                    <h4 class=" mb-20">@lang('Select Payment Method')</h4>
+                                    <h4 class=" mb-20">@lang('Select Pago Method')</h4>
                                     <div class="payment_method">
                                         <input class="form-check-input" type="radio" id="cashon_delivery"
                                             name="payment_method" value="Cash On Delivery" checked>
@@ -217,7 +217,7 @@
 
         $('.product_info').html(product);
 
-        // Place Order Payment
+        // Place Order Pago
         $(document).on('click', '.paymentCheck', function() {
             var id = this.id;
             $("#cashon_delivery").prop("checked", false);

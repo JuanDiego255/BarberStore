@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Edit Blog')
+    @lang('Editar Blog')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -30,14 +30,14 @@
                             <div class="row">
                                 @if ($loop->index == 0)
                                     <div class="col-sm-12 col-md-12 ">
-                                        <label for="category_name"> @lang('Category Name') </label>
+                                        <label for="category_name"> @lang('Categoría Name') </label>
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id">
-                                            <option selected disabled>@lang('Category name')</option>
-                                            @foreach ($blogCategory as $category)
+                                            <option selected disabled>@lang('Categoría name')</option>
+                                            @foreach ($blogCategoría as $category)
                                                 <option value="{{ $category->id }}"
                                                     {{ $category->id == optional($blogDetails[$language->id][0]->blog)->blog_category_id ? 'selected' : '' }}>
-                                                    @lang(optional($category->blogCategoryDetails)->name)</option>
+                                                    @lang(optional($category->blogCategoríaDetails)->name)</option>
                                             @endforeach
                                         </select>
                                         <div class="invalid-feedback d-inline-block mt-3">
@@ -135,7 +135,7 @@
                                 @endif
                             </div>
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
                         </form>
                     </div>
                 @endforeach

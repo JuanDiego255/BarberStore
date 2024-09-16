@@ -1,12 +1,12 @@
 @extends('admin.layouts.login')
-@section('title','Admin Reset Password')
+@section('title','Administrador Restablecer Contraseña')
 
 @section('content')
     <div class="p-3">
         <div class="text-center">
             <img src=" {{getFile(config('location.logoIcon.path').'favicon.png')}}" alt="wrapkit">
         </div>
-        <h2 class="mt-3 text-center">@lang('Reset Password')</h2>
+        <h2 class="mt-3 text-center">@lang('Restablecer Contraseña')</h2>
 
         <form method="POST" action="{{ route('admin.password.update') }}">
             @csrf
@@ -19,7 +19,7 @@
 
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="text-dark">@lang('Password')</label>
+                        <label class="text-dark">@lang('Contraseña')</label>
                         <input id="password" type="password" class="form-control" name="password" required autocomplete="current-password">
                         @error('password')
                         <p class="text-danger">{{ $message }}</p>
@@ -27,14 +27,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="text-dark">@lang('Confirm Password')</label>
+                        <label class="text-dark">@lang('Confirmar Contraseña')</label>
                         <input id="password" type="password" class="form-control" name="password_confirmation" required autocomplete="current-password">
                     </div>
 
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <button type="submit" class="btn btn-block btn-dark">@lang('Reset Password')</button>
+                    <button type="submit" class="btn btn-block btn-dark">@lang('Restablecer Contraseña')</button>
                 </div>
 
             </div>

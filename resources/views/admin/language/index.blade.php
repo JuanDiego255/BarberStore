@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Language')
+    @lang('Idioma')
 @endsection
 @section('content')
 
@@ -29,17 +29,17 @@
                            
                            <div class="card-footer bg-white border-top-eee d-flex justify-content-between">
                                
-                               <a href="{{route('admin.language.edit',$language) }}" class=" btn-sm btn btn-outline-dark" title="@lang('Edit')">
+                               <a href="{{route('admin.language.edit',$language) }}" class=" btn-sm btn btn-outline-dark" title="@lang('Editar')">
                                    <i class="fas fa-edit"></i>
                                </a>
 
                                <a class="btn btn-sm btn-outline-primary" title="{{trans('Keywords')}}"
-                                  href="{{route('admin.language.keywordEdit',$language) }}">
+                                  href="{{route('admin.language.keywordEditar',$language) }}">
                                    <i class="fas fa-code"></i>
                                </a>
 
                                @if($language->short_name != 'US')
-                                   <a href="javascript:void(0)" title="@lang('Delete')"
+                                   <a href="javascript:void(0)" title="@lang('Eliminar')"
                                       class="btn btn-sm btn-outline-danger deleteBtn"
                                       data-toggle="modal" data-target="#deleteModal"
                                       data-route="{{route('admin.language.delete',$language)}}">
@@ -66,7 +66,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×
@@ -82,7 +82,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light"
                                 data-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" class="btn btn-primary">@lang('Delete')</button>
+                        <button type="submit" class="btn btn-primary">@lang('Eliminar')</button>
                     </div>
 
                 </form>

@@ -1,5 +1,5 @@
 @extends($theme.'layouts.user')
-@section('title',trans('Dashboard'))
+@section('title',trans('Tablero'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
@@ -20,7 +20,7 @@
                                        value="{{@request()->date}}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Search')</button>
+                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Buscar')</button>
                             </div>
                         </div>
                     </form>
@@ -33,7 +33,7 @@
                             <th scope="col">@lang('Product')</th>
                             <th scope="col">@lang('Price')</th>
                             <th scope="col">@lang('Added Date')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Acción')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -57,7 +57,7 @@
                                 <td data-label="Added Date">
                                     {{ dateTime($data->created_at, 'd M Y') }}
                                 </td>
-                                <td data-label="Action">
+                                <td data-label="Acción">
                                     <a
                                         href="{{ route('user.my.wishlist.delete', $data->id) }}"
                                         class="">

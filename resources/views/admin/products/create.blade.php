@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Create Product')
+    @lang('Crear Product')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -41,11 +41,11 @@
                                 </div>
                                 @if ($loop->index == 0)
                                     <div class="col-sm-12 col-md-6">
-                                        <label for="category_name"> @lang('Product Category') </label>
+                                        <label for="category_name"> @lang('Product Categoría') </label>
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id" id="categoryId">
                                             <option selected disabled>@lang('Select product category')</option>
-                                            @foreach ($productCategory as $category)
+                                            @foreach ($productCategoría as $category)
                                                 <option value="{{ $category->id }}">@lang(optional($category->details)->name)</option>
                                             @endforeach
                                         </select>
@@ -156,7 +156,7 @@
 
                             </div>
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
                         </form>
                     </div>
                 @endforeach

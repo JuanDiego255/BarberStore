@@ -37,7 +37,7 @@
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item text-muted active" aria-current="page">@lang('Dashboard')</li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page">@lang('Tablero')</li>
                                 <li class="breadcrumb-item text-muted" aria-current="page">@yield('title')</li>
                             </ol>
                         </nav>
@@ -132,10 +132,10 @@
                     cluster: "{{ env('PUSHER_APP_CLUSTER') }}"
                 });
                 let channel = pusher.subscribe('admin-notification.' + "{{ Auth::guard('admin')->id() }}");
-                channel.bind('App\\Events\\AdminNotification', function (data) {
+                channel.bind('App\\Events\\AdministradorNotification', function (data) {
                     app.items.unshift(data.message);
                 });
-                channel.bind('App\\Events\\UpdateAdminNotification', function (data) {
+                channel.bind('App\\Events\\ActualizarAdministradorNotification', function (data) {
                     app.getNotifications();
                 });
             }

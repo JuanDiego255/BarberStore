@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Edit Product')
+    @lang('Editar Product')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -42,11 +42,11 @@
                                 </div>
                                 @if ($loop->index == 0)
                                     <div class="col-sm-12 col-md-6">
-                                        <label for="category_name"> @lang('Product Category') </label>
+                                        <label for="category_name"> @lang('Product Categoría') </label>
                                         <select class="form-control @error('category_id') is-invalid @enderror"
                                             name="category_id" id="categoryId">
                                             <option selected disabled>@lang('Select product category')</option>
-                                            @foreach ($productCategory as $category)
+                                            @foreach ($productCategoría as $category)
                                                 <option value="{{ $category->id }}"
                                                     {{ $category->id == @$productDetails[$language->id][0]->product->category_id ? 'selected' : '' }}>
                                                     @lang($category->details->name)</option>
@@ -173,7 +173,7 @@
                                                                 class="btn btn-sm btn-danger notiflix-confirm removeFile"
                                                                 data-route="{{ route('admin.product.image.delete', [$sliderImage->id, $sliderImage->slider_image[$i]]) }}"
                                                                 data-toggle="modal" data-target="#delete-modal"
-                                                                type="button" title="@lang('Delete Image')">
+                                                                type="button" title="@lang('Eliminar Image')">
                                                                 <i class="fa fa-times"></i>
                                                             </button>
                                                         </div>
@@ -185,20 +185,20 @@
                                 </div>
                             @endif
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
                         </form>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

@@ -21,13 +21,13 @@
                                     <div class="col-md-3">
                                         <div class="form-group mb-2">
                                             <select name="status" class="form-control">
-                                                <option value="">@lang('All Payment')</option>
+                                                <option value="">@lang('All Pago')</option>
                                                 <option value="1"
-                                                        @if(@request()->status == '1') selected @endif>@lang('Pending Payment')</option>
+                                                        @if(@request()->status == '1') selected @endif>@lang('Pending Pago')</option>
                                                 <option value="2"
-                                                        @if(@request()->status == '2') selected @endif>@lang('Complete Payment')</option>
+                                                        @if(@request()->status == '2') selected @endif>@lang('Complete Pago')</option>
                                                 <option value="3"
-                                                        @if(@request()->status == '3') selected @endif>@lang('Rejected Payment')</option>
+                                                        @if(@request()->status == '3') selected @endif>@lang('Rejected Pago')</option>
                                             </select>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                                         <div class="form-group mb-2 h-fill">
                                             <button type="submit" class="btn btn-primary  btn-primary w-fill h-fill">
                                                 <i
-                                                    class="fas fa-search"></i> @lang('Search')</button>
+                                                    class="fas fa-search"></i> @lang('Buscar')</button>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 <table class="table table-hover table-striped " id="service-table">
                                     <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">@lang('Transaction ID')</th>
+                                        <th scope="col">@lang('Transacción ID')</th>
                                         <th scope="col">@lang('Gateway')</th>
                                         <th scope="col">@lang('Amount')</th>
                                         <th scope="col">@lang('Charge')</th>
@@ -75,7 +75,7 @@
                                     <tbody>
                                     @forelse($payoutLog as $item)
                                         <tr>
-                                            <td data-label="#@lang('Transaction ID')">{{$item->trx_id}}</td>
+                                            <td data-label="#@lang('Transacción ID')">{{$item->trx_id}}</td>
                                             <td data-label="@lang('Gateway')">@lang(optional($item->method)->name)</td>
                                             <td data-label="@lang('Amount')">
                                                 <strong>{{getAmount($item->amount)}} @lang($basic->currency)</strong>
@@ -90,7 +90,7 @@
                                                 @elseif($item->status == 2)
                                                     <span class="badge badge-success">@lang('Complete')</span>
                                                 @elseif($item->status == 3)
-                                                    <span class="badge badge-danger">@lang('Cancel')</span>
+                                                    <span class="badge badge-danger">@lang('Cancelar')</span>
                                                 @endif
                                             </td>
 
@@ -140,9 +140,9 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group ">
-                        <li class="list-group-item bg-transparent">@lang('Transactions') : <span class="trx"></span>
+                        <li class="list-group-item bg-transparent">@lang('Transaccións') : <span class="trx"></span>
                         </li>
-                        <li class="list-group-item bg-transparent">@lang('Admin Feedback') : <span
+                        <li class="list-group-item bg-transparent">@lang('Administrador Feedback') : <span
                                 class="feedback"></span></li>
                     </ul>
                     <div class="payout-detail">
@@ -186,7 +186,7 @@
                 }
 
                 if (result) {
-                    infoModal.find('.payout-detail').html(`<br><strong class="my-3">@lang('Payment Information')</strong>  ${result}`);
+                    infoModal.find('.payout-detail').html(`<br><strong class="my-3">@lang('Pago Information')</strong>  ${result}`);
                 } else {
                     infoModal.find('.payout-detail').html(`${result}`);
                 }

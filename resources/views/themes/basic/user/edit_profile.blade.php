@@ -1,18 +1,18 @@
 @extends($theme . 'layouts.user')
-@section('title', trans('My Profile'))
+@section('title', trans('My Perfil'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
             <div class="col-12">
                 <div class="dashboard-heading">
-                    <h2 class="mb-0">@lang('Edit profile')</h2>
+                    <h2 class="mb-0">@lang('Editar profile')</h2>
                     <a href="{{ route('user.home') }}" class="btn-custom">@lang('Back')</a>
                 </div>
                 <section class="profile-setting">
                     <div class="row g-4 g-lg-5">
                         <div class="col-lg-4">
                             <div class="sidebar-wrapper">
-                                <form method="post" action="{{ route('user.updateProfile') }}"
+                                <form method="post" action="{{ route('user.updatePerfil') }}"
                                       enctype="multipart/form-data">
                                     @csrf
                                     <div class="profile">
@@ -32,17 +32,17 @@
                                         </div>
                                     </div>
                                     <div class="image_update_area mt-2">
-                                        <button type="submit" class="btn-custom">@lang('Update Image')</button>
+                                        <button type="submit" class="btn-custom">@lang('Actualizar Image')</button>
                                     </div>
                                 </form>
 
                                 <div class="profile-navigator">
                                     <button tab-id="tab1"
                                             class="tab {{ $errors->has('profile') ? 'active' : ($errors->has('password') || $errors->has('identity') || $errors->has('addressVerification') ? '' : ' active') }}">
-                                        <i class="fal fa-user"></i> @lang('Profile information')
+                                        <i class="fal fa-user"></i> @lang('Perfil information')
                                     </button>
                                     <button tab-id="tab2" class="tab {{ $errors->has('password') ? 'active' : '' }}">
-                                        <i class="fal fa-key"></i> @lang('Password setting')
+                                        <i class="fal fa-key"></i> @lang('Contraseña setting')
                                     </button>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                                         <div class="input-box col-md-6">
                                             <label for="">@lang('preferred language')</label>
                                             <select name="language_id" id="language_id" class="form-select">
-                                                <option value="" disabled>@lang('Select Language')</option>
+                                                <option value="" disabled>@lang('Select Idioma')</option>
                                                 @foreach ($languages as $la)
                                                     <option value="{{ $la->id }}"
                                                         {{ old('language_id', $user->language_id) == $la->id ? 'selected' : '' }}>
@@ -129,11 +129,11 @@
                                 </form>
                             </div>
                             <div id="tab2" class="content {{ $errors->has('password') ? 'active' : '' }}">
-                                <form action="{{ route('user.updatePassword') }}" method="post">
+                                <form action="{{ route('user.updateContraseña') }}" method="post">
                                     @csrf
                                     <div class="row g-4">
                                         <div class="input-box col-md-6">
-                                            <label for="">@lang('Current Password')</label>
+                                            <label for="">@lang('Current Contraseña')</label>
                                             <input type="password" name="current_password" class="form-control"/>
                                             @if ($errors->has('current_password'))
                                                 <div
@@ -141,14 +141,14 @@
                                             @endif
                                         </div>
                                         <div class="input-box col-md-6">
-                                            <label for="">@lang('New Password')</label>
+                                            <label for="">@lang('New Contraseña')</label>
                                             <input type="password" name="password" class="form-control"/>
                                             @if ($errors->has('password'))
                                                 <div class="error text-danger">@lang($errors->first('password')) </div>
                                             @endif
                                         </div>
                                         <div class="input-box col-md-6">
-                                            <label for="">@lang('Confirm Password')</label>
+                                            <label for="">@lang('Confirmar Contraseña')</label>
                                             <input type="password" name="password_confirmation" class="form-control"/>
                                             @if ($errors->has('password_confirmation'))
                                                 <div

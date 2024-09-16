@@ -8,7 +8,7 @@
                 <div class="dashboard-heading">
                     <h4 class="card-title">@lang($page_title)</h4>
                     <a href="{{route('user.ticket.create')}}" class="btn-custom">
-                        Create Ticket
+                        Crear Ticket
                     </a>
                 </div>
                 <div class="table-parent table-responsive mt-2">
@@ -18,7 +18,7 @@
                             <th scope="col">@lang('Subject')</th>
                             <th scope="col">@lang('Status')</th>
                             <th scope="col">@lang('Last Reply')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Acción')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -48,7 +48,7 @@
                                     {{diffForHumans($ticket->last_reply) }}
                                 </td>
 
-                                <td data-label="@lang('Action')">
+                                <td data-label="@lang('Acción')">
                                     <a href="{{ route('user.ticket.view', $ticket->ticket) }}"
                                        class="btn btn-sm btn-primary"
                                        data-toggle="tooltip" title="" data-original-title="Details">

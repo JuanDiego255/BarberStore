@@ -182,7 +182,7 @@
                     sessionStorage.setItem("shoppingCart", JSON.stringify(storeIds));
                     shoppingCart.removeItemFromCartAll(obj.name);
                     displayCart();
-                    Notiflix.Notify.Success("Remove from Cart");
+                    Notiflix.Notify.Éxito("Remove from Cart");
                 },
                 minus(obj) {
                     shoppingCart.removeItemFromCart(obj.name);

@@ -81,7 +81,7 @@
 
                             <button type="submit"
                                     class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                                <span>@lang('Save Change')</span></button>
+                                <span>@lang('Guardar Change')</span></button>
 
                         </form>
 

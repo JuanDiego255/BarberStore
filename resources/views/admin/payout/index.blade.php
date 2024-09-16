@@ -16,7 +16,7 @@
                     <tr>
                         <th scope="col">@lang('Name')</th>
                         <th scope="col">@lang('Status')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                        
                     </tr>
                     </thead>
@@ -29,12 +29,12 @@
                                 class="badge badge-pill badge-{{($method->status == 1) ?'success' : 'danger'}}">{{($method->status == 1) ?trans('Active') : trans('Deactive')}}</span>
                             </td>
 
-                            <td data-label="@lang('Action')">
+                            <td data-label="@lang('Acción')">
                                 <a href="{{ route('admin.payout-method.edit', $method->id) }}"
                                    class="btn btn-sm btn-primary"
                                    data-toggle="tooltip"
                                    data-placement="top"
-                                   data-original-title="@lang('Edit Payment Methods Info')">
+                                   data-original-title="@lang('Editar Pago Methods Info')">
                                     <i class="fa fa-edit"></i></a>
                             </td>
                         </tr>

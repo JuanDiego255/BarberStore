@@ -35,15 +35,15 @@
                 </a>
             </div>
             <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-               data-toggle="collapse" data-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+               data-toggle="collapse" data-target="#navbarSoporteedContent"
+               aria-controls="navbarSoporteedContent" aria-expanded="false" aria-label="Toggle navigation"><i
                     class="ti-more"></i></a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
 
-        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSoporteedContent">
 
             <ul class="navbar-nav float-left mr-auto ml-3 pl-1 d-none d-md-flex">
                 <li class="nav-item {{ request()->is('user/home') ? 'active' : ''  }}">
@@ -57,7 +57,7 @@
                         <form>
                             <div class="customize-input">
                                 <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                       type="search" placeholder="Search" aria-label="Search">
+                                       type="search" placeholder="Buscar" aria-label="Buscar">
                                 <i class="form-control-icon" data-feather="search"></i>
                             </div>
                         </form>
@@ -78,7 +78,7 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i data-feather="power" class="svg-icon mr-2 ml-1"></i>
-                            {{ __('Logout') }}
+                            {{ __('Cerrar sesión') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -100,13 +100,13 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                @lang('Please Verify Your Email.')
+                @lang('Please Verify Your Correo electrónico.')
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSoporteedContent" aria-controls="navbarSoporteedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSoporteedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 
@@ -117,11 +117,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                             </li>
                         @endif
                     @else

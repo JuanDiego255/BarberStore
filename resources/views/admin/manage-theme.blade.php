@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Manage Theme')
+    @lang('Gestionar Tema')
 @endsection
 @section('content')
 
@@ -31,7 +31,7 @@
                                         type="button"
                                         class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3 activateBtn"
                                         data-toggle="modal" data-target="#activateModal"
-                                        data-route="{{route('admin.activate.themeUpdate', $key)}}">
+                                        data-route="{{route('admin.activate.themeActualizar', $key)}}">
                                         <span><i class="fas fa-save pr-2"></i> @lang('Select As Active')</span>
                                     </button>
                                 @endif
@@ -51,7 +51,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Theme Activate Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Tema Activate Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×

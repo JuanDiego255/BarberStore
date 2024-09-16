@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Edit Appointment')
+    @lang('Editar Cita')
 @endsection
 @section('content')
     <div class="m-0 m-md-4 my-4 m-md-0">
@@ -41,7 +41,7 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group ">
-                                        <label>@lang('Email')</label>
+                                        <label>@lang('Correo electrónico')</label>
                                         <input class="form-control" type="email" name="email"
                                             value="{{ $appointment_info->email ?? optional($appointment_info->user)->email }}" required>
                                         @error('email')
@@ -63,7 +63,7 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group ">
-                                        <label>@lang('Date Of Appointment')</label>
+                                        <label>@lang('Date Of Cita')</label>
                                         <input class="form-control" type="date" name="date_of_appointment"
                                             value="{{ $appointment_info->date_of_appointment }}">
                                         @error('date_of_appointment')
@@ -74,7 +74,7 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group ">
-                                        <label>@lang('Appointment Time')</label>
+                                        <label>@lang('Cita Time')</label>
                                         <input class="form-control" type="time" name="appointment_time"
                                             value="{{ $appointment_info->appointment_time }}">
                                         @error('appointment_time')
@@ -92,8 +92,8 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <input type="hidden" class="confirm" name="isConfirm" value="">
-                                <input type="hidden" class="cancel" name="isCancel" value="">
+                                <input type="hidden" class="confirm" name="isConfirmar" value="">
+                                <input type="hidden" class="cancel" name="isCancelar" value="">
                             </div>
                             @if ($appointment_info->status == 0)
                                 <div class="row">
@@ -103,7 +103,7 @@
                                                 data-route="{{ route('admin.update.appointment', $appointment_info->id) }}"
                                                 data-toggle="modal" data-target="#confirm-modal"
                                                 class=" btn waves-effect waves-light btn-success btn-block confirm_btn">
-                                                <span>@lang('Confirm')</span>
+                                                <span>@lang('Confirmar')</span>
                                             </button>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@
                                                 data-route="{{ route('admin.update.appointment', $appointment_info->id) }}"
                                                 data-toggle="modal" data-target="#cancel-modal"
                                                 class=" btn waves-effect waves-light btn-danger btn-block cancel_btn">
-                                                <span>@lang('Cancel')</span>
+                                                <span>@lang('Cancelar')</span>
                                             </button>
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@
                                     <button type="submit"
                                         data-route="{{ route('admin.update.appointment', $appointment_info->id) }}"
                                         class=" btn waves-effect waves-light btn-rounded btn-primary btn-block save_changes">
-                                        <span>@lang('Save')</span>
+                                        <span>@lang('Guardar')</span>
                                     </button>
                                 </div>
                             @endif
@@ -136,13 +136,13 @@
     </div>
 
 
-    <!-- Confirm Modal-->
+    <!-- Confirmar Modal-->
     <div id="confirm-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Appointment Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Cita Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>
@@ -153,19 +153,19 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
                     <input type="hidden" class="status" name="status" value="1">
-                    <button type="submit" class="btn btn-success confirmAppointment">@lang('Confirm')</button>
+                    <button type="submit" class="btn btn-success confirmCita">@lang('Confirmar')</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cancel Modal-->
+    <!-- Cancelar Modal-->
     <div id="cancel-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Cancel Appointment')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Cancelar Cita')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>
@@ -176,7 +176,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
                     <input type="hidden" class="status" name="status" value="1">
-                    <button type="submit" class="btn btn-danger cancelAppointment">@lang('Cancel')</button>
+                    <button type="submit" class="btn btn-danger cancelCita">@lang('Cancelar')</button>
                 </div>
             </div>
         </div>
@@ -196,7 +196,7 @@
             $('#editForm').attr('action', route)
         })
 
-        $(document).on('click', '.confirmAppointment', function() {
+        $(document).on('click', '.confirmCita', function() {
             $("#editForm").submit()
         })
 
@@ -206,7 +206,7 @@
             $('#editForm').attr('action', route)
         })
 
-        $(document).on('click', '.cancelAppointment', function() {
+        $(document).on('click', '.cancelCita', function() {
             $("#editForm").submit()
         })
 

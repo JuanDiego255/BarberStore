@@ -18,7 +18,7 @@
                         <th scope="col">@lang('Name')</th>
                         <th scope="col">@lang('Verification Type')</th>
                         <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -43,7 +43,7 @@
                                 @endif
 
                             </td>
-                                <td data-label="@lang('Action')">
+                                <td data-label="@lang('Acción')">
                                     @php
                                         if($item->details){
                                                 $details =[];
@@ -68,7 +68,7 @@
                                     <button
                                         class="edit_button   btn  {{($item->status == 0) ?  'btn-primary' : 'btn-success'}} text-white  btn-sm "
                                         data-toggle="modal" data-target="#myModal"
-                                        data-title="{{($item->status == 0) ?  trans('Edit') : trans('Details')}}"
+                                        data-title="{{($item->status == 0) ?  trans('Editar') : trans('Details')}}"
 
                                         data-id="{{ $item->id }}"
                                         data-info="{{json_encode($details)}}"
@@ -100,7 +100,7 @@
 
 
 
-    <!-- Modal for Edit button -->
+    <!-- Modal for Editar button -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">

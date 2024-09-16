@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    @lang('Banner Settings')
+    @lang('Banner Configuración')
 @endsection
 
 
@@ -17,7 +17,7 @@
                     <div class="card-body">
 
 
-                        <form action="{{ route('admin.breadcrumbUpdate')}}" method="post"
+                        <form action="{{ route('admin.breadcrumbActualizar')}}" method="post"
                               enctype="multipart/form-data">
                             @method('put')
                             @csrf
@@ -48,7 +48,7 @@
                                     <div class="submit-btn-wrapper text-center mt-4">
                                         <button type="submit"
                                                 class="btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                            <span>@lang('Save Changes')</span></button>
+                                            <span>@lang('Guardar Changes')</span></button>
                                     </div>
                                 </div>
                             </div>

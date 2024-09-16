@@ -1,5 +1,5 @@
 @extends($theme.'layouts.app')
-@section('title','Reset Password')
+@section('title','Restablecer Contraseña')
 
 @section('content')
     <section class="login_area">
@@ -16,7 +16,7 @@
                         <form class="login-form" action="{{ route('password.email') }}"  method="post">
                             @csrf
                             <div>
-                                <h3 class="title mb-30">@lang('Reset Password')</h3>
+                                <h3 class="title mb-30">@lang('Restablecer Contraseña')</h3>
 
                                 <div class="form-group mb-30 name_area icon_position">
                                     <input class="form-control" type="email" name="email" value="{{old('email')}}"
@@ -27,7 +27,7 @@
 
 
                                 <div class="btn-area">
-                                    <button class="common_btn mb-40 d-flex justify-content-center align-items-center" type="submit"><span>@lang('Send Password Reset Link')</span></button>
+                                    <button class="common_btn mb-40 d-flex justify-content-center align-items-center" type="submit"><span>@lang('Enviar Contraseña Restablecer Link')</span></button>
                                 </div>
 
                                 <div class="login-query mt-30 text-center">

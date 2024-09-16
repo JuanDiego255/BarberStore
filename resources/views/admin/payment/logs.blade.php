@@ -17,13 +17,13 @@
                     <div class="form-group">
                         <select name="status" class="form-control">
                             <option value="-1"
-                                    @if(@request()->status == '-1') selected @endif>@lang('All Payment')</option>
+                                    @if(@request()->status == '-1') selected @endif>@lang('All Pago')</option>
                             <option value="1"
-                                    @if(@request()->status == '1') selected @endif>@lang('Complete Payment')</option>
+                                    @if(@request()->status == '1') selected @endif>@lang('Complete Pago')</option>
                             <option value="2"
-                                    @if(@request()->status == '2') selected @endif>@lang('Pending Payment')</option>
+                                    @if(@request()->status == '2') selected @endif>@lang('Pending Pago')</option>
                             <option value="3"
-                                    @if(@request()->status == '3') selected @endif>@lang('Cancel Payment')</option>
+                                    @if(@request()->status == '3') selected @endif>@lang('Cancelar Pago')</option>
                         </select>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                class="fas fa-search"></i> @lang('Search')</button>
+                                class="fas fa-search"></i> @lang('Buscar')</button>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                         <th scope="col">@lang('Charge')</th>
                         <th scope="col">@lang('Payable')</th>
                         <th scope="col">@lang('Status')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -91,7 +91,7 @@
                                 @endif
                             </td>
 
-                            <td data-label="@lang('Action')">
+                            <td data-label="@lang('Acción')">
                                 @php
                                     if($fund->detail){
                                             $details =[];
@@ -117,7 +117,7 @@
                                     <button
                                         class="edit_button   btn  {{($fund->status == 2) ?  'btn-primary' : 'btn-success'}} text-white  btn-sm "
                                         data-toggle="modal" data-target="#myModal"
-                                        data-title="{{($fund->status == 2) ?  trans('Edit') : trans('Details')}}"
+                                        data-title="{{($fund->status == 2) ?  trans('Editar') : trans('Details')}}"
 
                                         data-id="{{ $fund->id }}"
                                         data-feedback="{{ $fund->feedback }}"
@@ -154,7 +154,7 @@
         </div>
     </div>
 
-    <!-- Modal for Edit button -->
+    <!-- Modal for Editar button -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
@@ -220,7 +220,7 @@
 
                 if (feedback == '') {
                     var $res = `<div class="form-group"><br>
-                                <label class="font-weight-bold">{{trans('Send You Feedback')}}</label>
+                                <label class="font-weight-bold">{{trans('Enviar You Feedback')}}</label>
                                 <textarea name="feedback" class="form-control" row="3" required>{{old('feedback')}}</textarea>
                             </div>`
                 } else {

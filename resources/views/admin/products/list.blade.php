@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Product List')
+    @lang('Product Lista')
 @endsection
 
 @section('content')
@@ -12,19 +12,19 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <input type="text" name="product_name" value="{{ @request()->product_name }}"
-                                    class="form-control get-trx-id" placeholder="@lang('Search for Product ')" autocomplete="off">
+                                    class="form-control get-trx-id" placeholder="@lang('Buscar for Product ')" autocomplete="off">
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <input type="text" name="product_category" value="{{ @request()->product_category }}"
-                                    class="form-control get-username" placeholder="@lang('Search Category')" autocomplete="off">
+                                    class="form-control get-username" placeholder="@lang('Buscar Categoría')" autocomplete="off">
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                        class="fas fa-search"></i> @lang('Search')</button>
+                                        class="fas fa-search"></i> @lang('Buscar')</button>
                             </div>
                         </div>
                     </div>
@@ -45,14 +45,14 @@
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
                             <th scope="col">@lang('Product')</th>
-                            <th scope="col">@lang('Category')</th>
+                            <th scope="col">@lang('Categoría')</th>
                             <th scope="col">@lang('Price')</th>
                             <th scope="col">@lang('Stock')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Acción')</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($productList as $item)
+                        @forelse($productLista as $item)
                             <tr>
                                 <td data-label="@lang('SL No.')">{{ $loop->index + 1 }}</td>
                                 <td data-label="@lang('Product')">
@@ -69,7 +69,7 @@
                                         </div>
                                     </a>
                                 </td>
-                                <td data-label="@lang('Category')">
+                                <td data-label="@lang('Categoría')">
                                     @lang(optional(optional($item->category)->details)->name)
                                 </td>
                                 <td data-label="@lang('Price')">
@@ -80,7 +80,7 @@
                                 <td data-label="@lang('Stock')">
                                     {{ $item->stock_total ?? 'N/A' }}
                                 </td>
-                                <td data-label="@lang('Action')">
+                                <td data-label="@lang('Acción')">
                                     <a href="{{ route('admin.product.edit', $item->id) }}"
                                         class="btn btn-sm btn-primary edit-button text-white">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
@@ -103,13 +103,13 @@
     </div>
 
 
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

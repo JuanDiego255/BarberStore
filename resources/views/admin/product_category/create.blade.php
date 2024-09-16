@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Create Category')
+    @lang('Crear Categoría')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -28,7 +28,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 mb-3">
-                                    <label for="name"> @lang('Category Name') </label>
+                                    <label for="name"> @lang('Categoría Name') </label>
                                     <input type="text" name="category_name[{{ $language->id }}]"
                                         class="form-control  @error('category_name' . '.' . $language->id) is-invalid @enderror"
                                         value="{{ old('category_name' . '.' . $language->id) }}">
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
                         </form>
                     </div>
                 @endforeach

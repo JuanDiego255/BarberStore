@@ -44,7 +44,7 @@
                             <div class="col-md-6">
                                 <div class="email_area icon_position">
                                     <input type="email" class="form-control" name="email" value="{{ old('email') }}"
-                                        placeholder="@lang('Email')" autocomplete="off" required>
+                                        placeholder="@lang('Correo electrónico')" autocomplete="off" required>
                                     <div class="image_area">
                                         <i class="fa-regular fa-envelope"></i>
                                     </div>
@@ -104,7 +104,7 @@
                 <div class="col-md-4">
                     <div class="email_area box">
                         <div class="section_header">
-                            <h4>@lang('Email Address')</h4>
+                            <h4>@lang('Correo electrónico Address')</h4>
                         </div>
                         <div class="section_body">
                             <p>@lang($contact->email_one??null)</p>

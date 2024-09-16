@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang("Transaction")
+    @lang("Transacción")
 @endsection
 @section('content')
 
@@ -12,7 +12,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <input type="text" name="transaction_id" value="{{@request()->transaction_id}}" class="form-control get-trx-id"
-                                       placeholder="@lang('Search for Transaction ID')">
+                                       placeholder="@lang('Buscar for Transacción ID')">
                             </div>
                         </div>
 
@@ -39,7 +39,7 @@
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <button type="submit" class="btn waves-effect waves-light btn-primary"><i class="fas fa-search"></i> @lang('Search')</button>
+                                <button type="submit" class="btn waves-effect waves-light btn-primary"><i class="fas fa-search"></i> @lang('Buscar')</button>
                             </div>
                         </div>
                     </div>

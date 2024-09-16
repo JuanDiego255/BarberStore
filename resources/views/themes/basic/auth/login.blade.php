@@ -1,5 +1,5 @@
 @extends($theme.'layouts.app')
-@section('title','Login')
+@section('title','Iniciar sesión')
 @section('content')
         <section class="login_area">
             <div class="container">
@@ -24,7 +24,7 @@
                             <div class="col-md-12">
                                 <div class="name_area icon_position mb-30">
                                     <input type="text" name="username" class="form-control"
-                                           placeholder="@lang('Username or Email Address')" autocomplete="off">
+                                           placeholder="@lang('Username or Correo electrónico Address')" autocomplete="off">
                                     <div class="image_area mt-1">
                                         <i class="fa-regular fa-envelope"></i>
                                     </div>
@@ -35,7 +35,7 @@
                             <div class="col-md-12">
                                 <div class="name_area icon_position">
                                     <input type="password" name="password" class="form-control"
-                                           placeholder="@lang('Password')" autocomplete="off">
+                                           placeholder="@lang('Contraseña')" autocomplete="off">
                                     <div class="image_area mt-1">
                                         <i class="fa-sharp fa-solid fa-unlock"></i>
                                     </div>
@@ -62,12 +62,12 @@
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">@lang('Remember Me?')</label>
                                 </div>
-                                <a href="{{ route('password.request') }}" class="highlight">@lang('Forgot Password?')</a>
+                                <a href="{{ route('password.request') }}" class="highlight">@lang('Forgot Contraseña?')</a>
                             </div>
                             <button
-                                class="common_btn mb-40 d-flex justify-content-center align-items-center">@lang('Login')</button>
+                                class="common_btn mb-40 d-flex justify-content-center align-items-center">@lang('Iniciar sesión')</button>
                             <h6 class="highlight text-center mb-40">@lang('Haven’t any account?') <a
-                                    href="{{ route('register') }}">@lang('Register')</a></h6>
+                                    href="{{ route('register') }}">@lang('Registrar')</a></h6>
                         </form>
                     </div>
                 </div>

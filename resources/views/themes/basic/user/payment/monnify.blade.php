@@ -51,7 +51,7 @@
                     currency: "{{ $data->currency ?? 'NGN' }}",
                     reference: "{{ $data->ref }}",
                     customerName: "{{$data->customer_name ?? 'John Doe'}}",
-                    customerEmail: "{{$data->customer_email ?? 'example@example.com'}}",
+                    customerCorreo electrónico: "{{$data->customer_email ?? 'example@example.com'}}",
                     customerMobileNumber: "{{ $data->customer_phone ?? '0123' }}",
                     apiKey: "{{ $data->api_key }}",
                     contractCode: "{{ $data->contract_code }}",

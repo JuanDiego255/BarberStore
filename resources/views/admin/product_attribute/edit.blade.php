@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Edit Attribute')
+    @lang('Editar Attribute')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -44,7 +44,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="productAttribute" id="productAttribute">
-                                    @foreach ($attributesList as $attr)
+                                    @foreach ($attributesLista as $attr)
                                         <tr>
                                             <td class="w-100">
                                                 <input type="text" name="attr[]"
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
+                        class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
                 </form>
             </div>
         </div>

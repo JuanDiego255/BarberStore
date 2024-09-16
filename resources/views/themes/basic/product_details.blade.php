@@ -74,7 +74,7 @@
                             </div>
                             <ul class="product_miniature d-flex transition">
                                 <li>
-                                    <a href="javascript:void(0)" class="wishList"
+                                    <a href="javascript:void(0)" class="wishLista"
                                        data-product="{{ $product_details->id }}" id="">
                                         @if($product_details->get_wishlist_count > 0)
                                             <i class="fas fa-heart save"></i>
@@ -425,24 +425,24 @@
 
         productCheck();
 
-        // WishList
-        let isAuthenticate = "{{\Illuminate\Support\Facades\Auth::check()}}";
+        // WishLista
+        let isAuthenticate = "{{\Illuminate\Soporte\Facades\Auth::check()}}";
         let userId = "{{optional(auth()->user())->id}}";
 
-        $('.wishList').on('click', function () {
+        $('.wishLista').on('click', function () {
             let _this = this.id;
             let user_id = userId;
             let product_id = $(this).data('product');
             if (isAuthenticate == 1) {
-                wishList(user_id, product_id, _this);
+                wishLista(user_id, product_id, _this);
             } else {
                 window.location.href = '{{route('login')}}';
             }
         });
 
-        function wishList(user_id = null, product_id = null, id = null) {
+        function wishLista(user_id = null, product_id = null, id = null) {
             $.ajax({
-                url: "{{ route('user.wishList') }}",
+                url: "{{ route('user.wishLista') }}",
                 type: "POST",
                 data: {
                     user_id: user_id,
@@ -452,12 +452,12 @@
                     if (data.data == 'added') {
                         $(`.save${id}`).removeClass("fal fa-heart");
                         $(`.save${id}`).addClass("fas fa-heart");
-                        Notiflix.Notify.Success(data.addNotify);
+                        Notiflix.Notify.Éxito(data.addNotify);
                     }
                     if (data.data == 'remove') {
                         $(`.save${id}`).removeClass("fas fa-heart");
                         $(`.save${id}`).addClass("fal fa-heart");
-                        Notiflix.Notify.Success(data.removeNotify);
+                        Notiflix.Notify.Éxito(data.removeNotify);
                     }
                 },
             });

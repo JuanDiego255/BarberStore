@@ -97,7 +97,7 @@
 
                             <div class="row">
                                 <div class="col-sm-12 form-group">
-                                    <label>@lang('Email Body')</label>
+                                    <label>@lang('Correo electrónico Body')</label>
                                     <textarea class="form-control summernote" name="template" id="summernote"
                                               rows="20">{{ $value->template }}</textarea>
                                     @if($errors->has('template'))
@@ -107,7 +107,7 @@
                             </div>
                             <button type="submit"
                                     class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                                <span>@lang('Update')</span></button>
+                                <span>@lang('Actualizar')</span></button>
 
                         </form>
                     </div>

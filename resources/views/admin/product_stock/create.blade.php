@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Create Stock')
+    @lang('Crear Stock')
 @endsection
 @section('content')
     <div class="container-fluid">
@@ -20,7 +20,7 @@
                                 <div class="col-sm-12 col-md-12 ">
                                     <label for="product_name"> @lang('Product Name') </label>
                                     <select class="form-control selectProduct @error('product_name') is-invalid @enderror"
-                                        name="product_name" id="stockProductCreate">
+                                        name="product_name" id="stockProductCrear">
                                         <option selected disabled>@lang('Select product category')</option>
                                         @foreach ($products as $product)
                                             <option value="{{ $product->id }}"
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="btn btn-rounded btn-primary btn-block mt-3">@lang('Save Changes')</button>
+                                class="btn btn-rounded btn-primary btn-block mt-3">@lang('Guardar Changes')</button>
                         </form>
                     </div>
                 </div>

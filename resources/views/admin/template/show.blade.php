@@ -10,7 +10,7 @@
 
         <div class="row justify-content-md-center">
             <div class="col-lg-12">
-                <!-- Currency Create Form  -->
+                <!-- Currency Crear Form  -->
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <div class="media align-items-center justify-content-between mb-3">
@@ -94,7 +94,7 @@
                                                 @endif
                                             @endforeach
                                         </div>
-                                        <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save Change')</button>
+                                        <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar Change')</button>
                                     </form>
                                 </div>
                             @endforeach

@@ -19,7 +19,7 @@
                             @endif
                             <img src="{{url('assets/backend/images/big/icon.png')}}" alt="wrapkit">
                         </div>
-                        <h2 class="mt-3 text-center">@lang('Reset Password')</h2>
+                        <h2 class="mt-3 text-center">@lang('Restablecer Contraseña')</h2>
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf
                             <div class="row">
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-block btn-dark btn-sm">@lang('Send Password Reset Link')</button>
+                                        <button type="submit" class="btn btn-block btn-dark btn-sm">@lang('Enviar Contraseña Restablecer Link')</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">

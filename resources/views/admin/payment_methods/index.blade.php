@@ -13,7 +13,7 @@
                             <tr>
                                 <th scope="col">@lang('Name')</th>
                                 <th scope="col">@lang('Status')</th>
-                                    <th scope="col">@lang('Action')</th>
+                                    <th scope="col">@lang('Acción')</th>
                             </tr>
                             </thead>
                             <tbody id="sortable">
@@ -34,12 +34,12 @@
                                             {!!  $method->status == 1 ? '<span class="badge badge-success badge-sm">'.trans('Active').'</span>' : '<span class="badge badge-danger badge-sm">'.trans('Inactive').'</span>' !!}
                                         </td>
 
-                                        <td data-label="@lang('Action')">
+                                        <td data-label="@lang('Acción')">
                                             <a href="{{ route('admin.edit.payment.methods', $method->id) }}"
                                                class="btn btn-primary btn-circle"
                                                data-toggle="tooltip"
                                                data-placement="top"
-                                               data-original-title="@lang('Edit this Payment Methods info')">
+                                               data-original-title="@lang('Editar this Pago Methods info')">
                                                 <i class="fa fa-edit"></i></a>
 
                                                 <button type="button"
@@ -80,7 +80,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h5 class="modal-title"><span class="messageShow"></span> @lang('Confirmation')</h5>
+                    <h5 class="modal-title"><span class="messageShow"></span> @lang('Confirmaration')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

@@ -1,21 +1,21 @@
-@bookAppointment
-@if(isset($templates['book-appointment'][0]) && $bookAppointment = $templates['book-appointment'][0])
+@bookCita
+@if(isset($templates['book-appointment'][0]) && $bookCita = $templates['book-appointment'][0])
     <section class="appoinment_area"
-             style="background: linear-gradient(rgb(53, 49, 47, 0.9),rgb(53, 49, 47, 0.9)), url({{ getFile(config('location.content.path').$bookAppointment->templateMedia()->background_image) }}); background-repeat: no-repeat; background-size: 100% 50%; background-position: top">
+             style="background: linear-gradient(rgb(53, 49, 47, 0.9),rgb(53, 49, 47, 0.9)), url({{ getFile(config('location.content.path').$bookCita->templateMedia()->background_image) }}); background-repeat: no-repeat; background-size: 100% 50%; background-position: top">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="section_left h-100">
                         <div class="card bg-transparent border-0 rounded-0 h-100">
                             <div class="section_header pb-40">
-                                <h2>@lang(optional($bookAppointment->description)->title)</h2>
+                                <h2>@lang(optional($bookCita->description)->title)</h2>
                                 <p>
-                                    @lang(optional($bookAppointment->description)->short_details)
+                                    @lang(optional($bookCita->description)->short_details)
                                 </p>
                             </div>
                             <div class="image_area h-100">
                                 <iframe class="w-100 h-100"
-                                        src="{{ optional($bookAppointment->templateMedia())->map_link }}" width="600"
+                                        src="{{ optional($bookCita->templateMedia())->map_link }}" width="600"
                                         height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
@@ -36,7 +36,7 @@
                             </div>
                             <div class="mt-4">
                                 <input type="email" name="email" class="form-control"
-                                       placeholder="@lang('Email Address')" value="{{ old('email') }}"
+                                       placeholder="@lang('Correo electrónico Address')" value="{{ old('email') }}"
                                        autocomplete="off">
                                 @error('email')
                                 <span class="text-danger">{{ $message }}</span>
@@ -85,4 +85,4 @@
         </div>
     </section>
 @endif
-@endbookAppointment
+@endbookCita

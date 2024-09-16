@@ -58,11 +58,11 @@
                             </span>
                             <ul class="user-dropdown">
                                 <li>
-                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-user"></i> @lang('Profile')
+                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-user"></i> @lang('Perfil')
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-key"></i> @lang('Change Password')
+                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-key"></i> @lang('Change Contraseña')
                                     </a>
                                 </li>
                                 <li>
@@ -163,7 +163,7 @@
                         channel.bind('App\\Events\\UserNotification', function (data) {
                             app.items.unshift(data.message);
                         });
-                        channel.bind('App\\Events\\UpdateUserNotification', function (data) {
+                        channel.bind('App\\Events\\ActualizarUserNotification', function (data) {
                             app.getNotifications();
                         });
                     }

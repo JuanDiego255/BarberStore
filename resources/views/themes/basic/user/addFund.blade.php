@@ -52,7 +52,7 @@
 
                     <div class="modal-body ">
                         <div class="payment-form ">
-                            @if(0 == $totalPayment)
+                            @if(0 == $totalPago)
                                 <p class="text-danger depositLimit"></p>
                                 <p class="text-danger depositCharge"></p>
                             @endif
@@ -64,7 +64,7 @@
                                 <label>@lang('Amount')</label>
                                 <div class="input-group input-group-lg">
                                     <input type="text" class="amount form-control" name="amount"
-                                           @if($totalPayment != null) value="{{$totalPayment}}"  readonly @endif>
+                                           @if($totalPago != null) value="{{$totalPago}}"  readonly @endif>
                                     <div class="input-group-append">
                                         <span class="input-group-text show-currency"></span>
                                     </div>
@@ -109,12 +109,12 @@
             fixCharge = $(this).data('fix_charge');
             percentCharge = $(this).data('percent_charge');
             currency = $(this).data('currency');
-            $('.depositLimit').text(`@lang('Transaction Limit:') ${minAmount} - ${maxAmount}  ${baseSymbol}`);
+            $('.depositLimit').text(`@lang('Transacción Limit:') ${minAmount} - ${maxAmount}  ${baseSymbol}`);
 
             var depositCharge = `@lang('Charge:') ${fixCharge} ${baseSymbol}  ${(0 < percentCharge) ? ' + ' + percentCharge + ' % ' : ''}`;
             $('.depositCharge').text(depositCharge);
 
-            $('.method-name').text(`@lang('Payment By') ${$(this).data('name')} - ${currency}`);
+            $('.method-name').text(`@lang('Pago By') ${$(this).data('name')} - ${currency}`);
             $('.show-currency').text("{{config('basic.currency')}}");
             $('.gateway').val(currency);
 

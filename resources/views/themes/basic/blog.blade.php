@@ -19,7 +19,7 @@
                                         @lang(optional($item->blogDetails)->service_name)
                                     </div>
                                     <h5 class="card-title">
-                                        <a class="blog_title" href="{{ route('blogDetails', [slug(optional($item->blogDetails)->title), $item->id]) }}">{{\Illuminate\Support\Str::limit(trans(optional($item->blogDetails)->title), 45)}}</a>
+                                        <a class="blog_title" href="{{ route('blogDetails', [slug(optional($item->blogDetails)->title), $item->id]) }}">{{\Illuminate\Soporte\Str::limit(trans(optional($item->blogDetails)->title), 45)}}</a>
                                     </h5>
                                     <ul class="section_list d-flex justify-content-between">
                                         <li>
@@ -68,7 +68,7 @@
                             <form action="{{ route('blog.search') }}" method="get">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="search"
-                                           placeholder="@lang('Search Here...')" value="{{ @request()->search }}"
+                                           placeholder="@lang('Buscar Here...')" value="{{ @request()->search }}"
                                            autocomplete="off">
                                     <button type="submit" class="input-group-text hover" id="basic-addon1"><i
                                             class="fa-solid fa-magnifying-glass"></i></button>
@@ -99,10 +99,10 @@
                                 <h5 class="mb-40">@lang('Categories')</h5>
                             </div>
                             <ul class="categories_list">
-                                @forelse($blogCategory as $category)
+                                @forelse($blogCategoría as $category)
                                     <li>
                                         <a
-                                            href="{{ route('category.wise.blog', [@slug(optional($category->blogCategoryDetails)->name), $category->id]) }}"><span>@lang($category->blogCategoryDetails->name)</span>
+                                            href="{{ route('category.wise.blog', [@slug(optional($category->blogCategoríaDetails)->name), $category->id]) }}"><span>@lang($category->blogCategoríaDetails->name)</span>
                                             <span>{{ $category->blog_count }}</span>
                                         </a>
                                     </li>

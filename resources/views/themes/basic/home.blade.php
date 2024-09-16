@@ -1,5 +1,5 @@
 @extends($theme.'layouts.app')
-@section('title',trans('Home'))
+@section('title',trans('Inicio'))
 
 @section('content')
     @include($theme.'partials.heroBanner')

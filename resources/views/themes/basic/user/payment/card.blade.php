@@ -62,7 +62,7 @@
                                                        autocomplete="off"
                                                        required>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mt-3 ">@lang('Submit')</button>
+                                            <button type="submit" class="btn btn-primary mt-3 ">@lang('Enviar')</button>
                                         </form>
 
                                     </div>

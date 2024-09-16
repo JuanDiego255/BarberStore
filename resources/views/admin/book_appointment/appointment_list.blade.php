@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Book Appointment List')
+    @lang('Book Cita Lista')
 @endsection
 @section('content')
     <div class="page-header card card-primary m-0 m-md-4 my-4 m-md-0 p-2 pt-4 pl-4 shadow">
@@ -46,7 +46,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <input type="text" name="email" value="{{ @request()->email }}" class="form-control"
-                                       placeholder="@lang('Email')">
+                                       placeholder="@lang('Correo electrónico')">
                             </div>
                         </div>
 
@@ -60,7 +60,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                        class="fas fa-search"></i> @lang('Search')</button>
+                                        class="fas fa-search"></i> @lang('Buscar')</button>
                             </div>
                         </div>
                     </div>
@@ -75,23 +75,23 @@
             @endphp
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'all_list') }}"
-                   class="nav-link theme-a {{ $segment == 'all_list' ? 'activeList' : '' }}">@lang('All List')
-                    ({{ $countAllAppointment }})</a>
+                   class="nav-link theme-a {{ $segment == 'all_list' ? 'activeLista' : '' }}">@lang('All Lista')
+                    ({{ $countAllCita }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'pending') }}"
-                   class="nav-link theme-a {{ $segment == 'pending' ? 'activeList' : '' }}">@lang('Pending')
-                    ({{ $countPendingAppointment }})</a>
+                   class="nav-link theme-a {{ $segment == 'pending' ? 'activeLista' : '' }}">@lang('Pending')
+                    ({{ $countPendingCita }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'confirm') }}"
-                   class="nav-link theme-a {{ $segment == 'confirm' ? 'activeList' : '' }}">@lang('Confirm')
-                    ({{ $countConfirmAppointment }})</a>
+                   class="nav-link theme-a {{ $segment == 'confirm' ? 'activeLista' : '' }}">@lang('Confirmar')
+                    ({{ $countConfirmarCita }})</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.appointment.list', 'cancel') }}"
-                   class="nav-link theme-a {{ $segment == 'cancel' ? 'activeList' : '' }}">@lang('Cancel')
-                    ({{ $countCancelAppointment }})</a>
+                   class="nav-link theme-a {{ $segment == 'cancel' ? 'activeLista' : '' }}">@lang('Cancelar')
+                    ({{ $countCancelarCita }})</a>
             </li>
         </ul>
     </div>
@@ -103,14 +103,14 @@
             <div class="dropdown mb-2 text-right">
                 <button class="btn btn-sm  btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span><i class="fas fa-bars pr-2"></i> @lang('Action')</span>
+                    <span><i class="fas fa-bars pr-2"></i> @lang('Acción')</span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <button class="dropdown-item confirm" type="button" data-toggle="modal"
-                            data-target="#all_inactive">@lang('Confirm')
+                            data-target="#all_inactive">@lang('Confirmar')
                     </button>
                     <button class="dropdown-item cancel" type="button" data-toggle="modal"
-                            data-target="#all_inactive">@lang('Cancel')
+                            data-target="#all_inactive">@lang('Cancelar')
                     </button>
                 </div>
             </div>
@@ -125,9 +125,9 @@
                         </th>
                         <th scope="col">@lang('Service Name')</th>
                         <th scope="col">@lang('Username')</th>
-                        <th scope="col">@lang('Date Of Appointment')</th>
+                        <th scope="col">@lang('Date Of Cita')</th>
                         <th scope="col">@lang('Status')</th>
-                        <th scope="col">@lang('Action')</th>
+                        <th scope="col">@lang('Acción')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -161,7 +161,7 @@
                                 </div>
                             </td>
 
-                            <td data-label="@lang('Date Of Appointment')">
+                            <td data-label="@lang('Date Of Cita')">
                                 @if($item->date_of_appointment == null)
                                     <span>N/A</span>
                                 @else()
@@ -173,12 +173,12 @@
                                 @if ($item->status == 0)
                                     <span class="badge bg-warning text-white">@lang('Pending')</span>
                                 @elseif($item->status == 1)
-                                    <span class="badge bg-success text-white">@lang('Confirm')</span>
+                                    <span class="badge bg-success text-white">@lang('Confirmar')</span>
                                 @elseif($item->status == 2)
-                                    <span class="badge bg-danger text-white">@lang('Cancel')</span>
+                                    <span class="badge bg-danger text-white">@lang('Cancelar')</span>
                                 @endif
                             </td>
-                            <td class="book-appointment-action" data-label="@lang('Action')">
+                            <td class="book-appointment-action" data-label="@lang('Acción')">
                                 <a class="btn btn-sm btn-primary mr-1"
                                    href="{{ route('admin.edit.appointment', $item->id) }}">
                                     <i class="fa fa-edit"></i>
@@ -203,13 +203,13 @@
         </div>
     </div>
 
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

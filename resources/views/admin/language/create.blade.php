@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Create Language')
+    @lang('Crear Idioma')
 @endsection
 
 @section('content')
@@ -92,7 +92,7 @@
 
 
                         <button class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                            @lang('Create New Language')
+                            @lang('Crear New Idioma')
                         </button>
 
                     </div>

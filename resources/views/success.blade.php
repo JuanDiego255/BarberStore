@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@lang($basic->site_title) | @lang("Payment Success")</title>
+    <title>@lang($basic->site_title) | @lang("Pago Éxito")</title>
     <link rel="shortcut icon" href="{{getFile(config('location.logoIcon.path').'favicon.png') }}" type="image/x-icon">
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
 </div>
 
 <footer class="site-footer" id="footer">
-    <a href="{{ url('/') }}">@lang("Go back to Home")</a>
+    <a href="{{ url('/') }}">@lang("Go back to Inicio")</a>
     <p class="site-footer__fineprint" id="fineprint">@lang("Copyright") ©{{ date('Y') }}
         @lang("All Rights Reserved") <a href="{{ url('/') }}" class="site_title">{{ $basic->site_title ?? 'SASS BILLER' }}</a></p>
 </footer>

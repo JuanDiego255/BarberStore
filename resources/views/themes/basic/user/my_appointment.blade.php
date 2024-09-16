@@ -1,5 +1,5 @@
 @extends($theme.'layouts.user')
-@section('title',trans('My Appointment'))
+@section('title',trans('My Cita'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
@@ -19,17 +19,17 @@
                                 </select>
                             </div>
                             <div class="input-box col-lg-2">
-                                <label for="">@lang('From Appointment Date')</label>
+                                <label for="">@lang('From Cita Date')</label>
                                 <input type="text" class="form-select flatpickr" name="from_date"
                                        placeholder="@lang('Date')" value="{{@request()->from_date}}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <label for="">@lang('To Appointment Date')</label>
+                                <label for="">@lang('To Cita Date')</label>
                                 <input type="text" class="form-select flatpickr" name="to_date"
                                        placeholder="@lang('Date')" value="{{@request()->to_date}}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <button class="btn-custom w-100"><i class="fal fa-search"></i>@lang('Search')</button>
+                                <button class="btn-custom w-100"><i class="fal fa-search"></i>@lang('Buscar')</button>
                             </div>
                         </div>
                     </form>
@@ -40,10 +40,10 @@
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
                             <th scope="col">@lang('Service Name')</th>
-                            <th scope="col">@lang('Date Of Appointment')</th>
-                            <th scope="col">@lang('Appointment Time')</th>
+                            <th scope="col">@lang('Date Of Cita')</th>
+                            <th scope="col">@lang('Cita Time')</th>
                             <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Acción')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -57,26 +57,26 @@
                                         @lang(optional($data->plan)->name . ' ' . 'Plan Services')
                                     @endif
                                 </td>
-                                <td data-label="Date Of Appointment">
+                                <td data-label="Date Of Cita">
                                     @if(!$data->date_of_appointment)
                                         <span>N/A</span>
                                     @else
                                         {{ dateTime($data->date_of_appointment, 'd M Y') }}
                                     @endif
                                 </td>
-                                <td data-label="Appointment Time">
+                                <td data-label="Cita Time">
                                     {{ !empty($data->appointment_time) ? timeFormat($data->appointment_time) : 'N/A' }}
                                 </td>
                                 <td data-label="Status">
                                     @if($data->status == 0)
                                         <span class="badge bg-warning">@lang('Pending')</span>
                                     @elseif($data->status == 1)
-                                        <span class="badge bg-success">@lang('Confirm')</span>
+                                        <span class="badge bg-success">@lang('Confirmar')</span>
                                     @elseif($data->status == 2)
-                                        <span class="badge bg-danger">@lang('Cancel')</span>
+                                        <span class="badge bg-danger">@lang('Cancelar')</span>
                                     @endif
                                 </td>
-                                <td data-label="Action">
+                                <td data-label="Acción">
                                     <button type="button"
                                             data-route="{{ route('user.my.appointment.date.fixed', $data->id) }}"
                                             data-status="{{ $data->status }}"
@@ -106,7 +106,7 @@
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="editModalLabel">Make a Appointment</h4>
+                    <h4 class="modal-title" id="editModalLabel">Make a Cita</h4>
                     <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
                         <i class="fal fa-times"></i>
                     </button>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn-custom btn2" data-bs-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" class="btn-custom">@lang('Save changes')</button>
+                        <button type="submit" class="btn-custom">@lang('Guardar changes')</button>
                     </div>
                 </form>
             </div>

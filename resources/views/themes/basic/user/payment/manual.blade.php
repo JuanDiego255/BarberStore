@@ -92,7 +92,7 @@
                                         <div class="col-md-12 ">
                                             <div class=" form-group">
                                                 <button type="submit" class="btn btn-success w-100 mt-3">
-                                                    <span>@lang('Confirm Now')</span>
+                                                    <span>@lang('Confirmar Now')</span>
                                                 </button>
                                             </div>
                                         </div>

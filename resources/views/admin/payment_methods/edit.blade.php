@@ -22,7 +22,7 @@
                             @csrf
                             @method('put')
                             <div class="mt-0 section-title">
-                                Edit {{ strtoupper($method->name) }}
+                                Editar {{ strtoupper($method->name) }}
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-6 col-6">
@@ -263,7 +263,7 @@
 
                                 </div>
                             </div>
-                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">Save Changes</button>
+                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">Guardar Changes</button>
                         </form>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Category List')
+    @lang('Categoría Lista')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -15,18 +15,18 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
-                            <th scope="col">@lang('Category Name')</th>
-                            <th scope="col">@lang('Action')</th>
+                            <th scope="col">@lang('Categoría Name')</th>
+                            <th scope="col">@lang('Acción')</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse($manageBlogCategory as $item)
+                        @forelse($manageBlogCategoría as $item)
                             <tr>
                                 <td data-label="@lang('SL No.')">{{ $loop->index + 1 }}</td>
-                                <td data-label="@lang('Category Name')">
-                                    @lang(@optional($item->blogCategoryDetails)->name)
+                                <td data-label="@lang('Categoría Name')">
+                                    @lang(@optional($item->blogCategoríaDetails)->name)
                                 </td>
-                                <td data-label="@lang('Action')">
+                                <td data-label="@lang('Acción')">
                                     <a href="{{ route('admin.blog.category.edit', $item->id) }}"
                                         class="btn btn-sm btn-primary edit-button text-white">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
@@ -48,13 +48,13 @@
             </div>
         </div>
     </div>
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmaration')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

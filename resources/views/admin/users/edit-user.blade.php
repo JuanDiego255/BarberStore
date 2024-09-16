@@ -10,7 +10,7 @@
             <div class="col-md-4">
                 <div class="card card-primary">
                     <div class="card-body">
-                        <h4 class="card-title">@lang('Profile')</h4>
+                        <h4 class="card-title">@lang('Perfil')</h4>
                         <div class="form-group">
                             <div class="image-input">
                                 <img id="image_preview_container" class="preview-image"
@@ -27,7 +27,7 @@
                     <div class="card-body">
                         <h4 class="card-title">@lang('User information')</h4>
                         <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">@lang('Email')
+                            <li class="list-group-item d-flex justify-content-between align-items-center">@lang('Correo electrónico')
                                 <span>{{ $user->email }}</span></li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">@lang('Username')
                                 <span>{{ $user->username }}</span></li>
@@ -53,20 +53,20 @@
                                data-target="#signIn"
                                data-route="{{route('admin.login-as-user',$user->id)}}">
                                 <i class="fas fa-sign-in-alt"
-                                   aria-hidden="true"></i> @lang('Login as User')
+                                   aria-hidden="true"></i> @lang('Iniciar sesión as User')
                             </a>
 
 
                             <a href="{{ route('admin.user.transaction',$user->id) }}"
                                class="btn btn-info btn-sm">
                                     <span class="btn-label"><i
-                                            class="fas fa-exchange-alt"></i></span> @lang('Transaction Log')
+                                            class="fas fa-exchange-alt"></i></span> @lang('Transacción Log')
                             </a>
 
                             <a href="{{ route('admin.send-email',$user->id) }}"
                                class="btn btn-info btn-sm">
                                     <span class="btn-label"><i
-                                            class="fas fa-envelope-open"></i></span> @lang('Send Email')
+                                            class="fas fa-envelope-open"></i></span> @lang('Enviar Correo electrónico')
                             </a>
 
 
@@ -124,7 +124,7 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group ">
-                                        <label>@lang('Email')</label>
+                                        <label>@lang('Correo electrónico')</label>
                                         <input class="form-control" type="email" name="email" value="{{ $user->email }}"
                                                required>
                                         @error('email')
@@ -149,7 +149,7 @@
                                         <label>@lang('Preferred language')</label>
 
                                         <select name="language_id" id="language_id" class="form-control">
-                                            <option value="" disabled>@lang('Select Language')</option>
+                                            <option value="" disabled>@lang('Select Idioma')</option>
                                             @foreach($languages as $la)
                                                 <option value="{{$la->id}}"
                                                     {{ old('language_id', $user->language_id) == $la->id ? 'selected' : '' }}>@lang($la->name)</option>
@@ -189,7 +189,7 @@
 
 
                                         <div class="col-md-3">
-                                            <label>@lang('Email Verification')</label>
+                                            <label>@lang('Correo electrónico Verification')</label>
                                             <div class="custom-switch-btn w-md-80">
                                                 <input type='hidden' value='1' name='email_verification'>
                                                 <input type="checkbox" name="email_verification"
@@ -236,7 +236,7 @@
                             <div class="submit-btn-wrapper mt-md-3  text-center text-md-left">
                                 <button type="submit"
                                         class=" btn waves-effect waves-light btn-rounded btn-primary btn-block">
-                                    <span>@lang('Update User')</span></button>
+                                    <span>@lang('Actualizar User')</span></button>
                             </div>
                         </form>
                     </div>
@@ -245,15 +245,15 @@
 
                 <div class="card card-primary ">
                     <div class="card-body">
-                        <h4 class="card-title">@lang('Password Change')</h4>
+                        <h4 class="card-title">@lang('Contraseña Change')</h4>
 
-                        <form method="post" action="{{ route('admin.userPasswordUpdate',$user->id) }}"
+                        <form method="post" action="{{ route('admin.userContraseñaActualizar',$user->id) }}"
                               enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group ">
-                                        <label>@lang('New Password')</label>
+                                        <label>@lang('New Contraseña')</label>
                                         <input id="new_password" type="password" class="form-control" name="password"
                                                autocomplete="current-password">
                                         @error('password')
@@ -261,7 +261,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group ">
-                                        <label>@lang('Confirm Password')</label>
+                                        <label>@lang('Confirmar Contraseña')</label>
                                         <input id="confirm_password" type="password" name="password_confirmation"
                                                autocomplete="current-password" class="form-control">
                                         @error('password_confirmation')
@@ -273,7 +273,7 @@
                             <div class="submit-btn-wrapper mt-md-3 text-center text-md-left">
                                 <button type="submit"
                                         class="btn waves-effect waves-light btn-rounded btn-primary btn-block">
-                                    <span>@lang('Update Password')</span></button>
+                                    <span>@lang('Actualizar Contraseña')</span></button>
                             </div>
                         </form>
                     </div>
@@ -323,7 +323,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal"><span>@lang('Close')</span>
                         </button>
-                        <button type="submit" class=" btn btn-primary balanceSave"><span>@lang('Submit')</span>
+                        <button type="submit" class=" btn btn-primary balanceGuardar"><span>@lang('Enviar')</span>
                         </button>
                     </div>
 
@@ -333,15 +333,15 @@
     </div>
 
 
-    <!-- Admin Login as a User Modal -->
+    <!-- Administrador Iniciar sesión as a User Modal -->
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="" class="loginAccountAction" enctype="multipart/form-data">
+                <form method="post" action="" class="loginAccountAcción" enctype="multipart/form-data">
                     @csrf
                     <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title">@lang('Sing In Confirmation')</h4>
+                        <h4 class="modal-title">@lang('Sing In Confirmaration')</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -407,7 +407,7 @@
                     $('#image_preview_container').attr('src', e.target.result);
                 }
             });
-            $(document).on('click', '.balanceSave', function () {
+            $(document).on('click', '.balanceGuardar', function () {
                 var bala = $('#balance').text();
             });
 
@@ -418,7 +418,7 @@
 
             $(document).on('click', '.loginAccount', function () {
                 var route = $(this).data('route');
-                $('.loginAccountAction').attr('action', route)
+                $('.loginAccountAcción').attr('action', route)
             });
         });
 

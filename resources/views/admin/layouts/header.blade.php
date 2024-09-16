@@ -17,12 +17,12 @@
             </div>
 
             <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-               data-toggle="collapse" data-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+               data-toggle="collapse" data-target="#navbarSoporteedContent"
+               aria-controls="navbarSoporteedContent" aria-expanded="false" aria-label="Toggle navigation"><i
                     class="ti-more"></i></a>
         </div>
 
-        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse collapse" id="navbarSoporteedContent">
             <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                 <li class="nav-item dropdown" id="pushNotificationArea">
                     <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
@@ -81,7 +81,7 @@
                             <div class="customize-input">
                                 <input class="form-control custom-shadow custom-radius border-0 bg-white"
                                        type="search" name="navbar_search" id="navbar_search" autocomplete="off"
-                                       placeholder="Search" aria-label="Search">
+                                       placeholder="Buscar" aria-label="Buscar">
                                 <i class="form-control-icon" data-feather="search"></i>
                             </div>
 
@@ -118,12 +118,12 @@
 
                         <a class="dropdown-item" href="{{route('admin.profile') }}">
                             <i class="svg-icon mr-2 ml-1 icon-user"></i>
-                            @lang('Profile')
+                            @lang('Perfil')
                         </a>
 
                         <a class="dropdown-item" href="{{route('admin.password')}}">
                             <i class="svg-icon mr-2 ml-1 icon-settings"></i>
-                            @lang('Password')
+                            @lang('Contraseña')
                         </a>
 
                         <div class="dropdown-divider"></div>
@@ -131,7 +131,7 @@
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i
                                 data-feather="power" class="svg-icon mr-2 ml-1"></i>
-                            {{ __('Logout') }}
+                            {{ __('Cerrar sesión') }}
                         </a>
                         <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                             @csrf

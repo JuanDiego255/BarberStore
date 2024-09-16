@@ -23,13 +23,13 @@
                                     <div class="col-md-3">
                                         <div class="form-group mb-2">
                                             <select name="status" class="form-control">
-                                                <option value="">@lang('All Payment')</option>
+                                                <option value="">@lang('All Pago')</option>
                                                 <option value="1"
-                                                        @if(@request()->status == '1') selected @endif>@lang('Complete Payment')</option>
+                                                        @if(@request()->status == '1') selected @endif>@lang('Complete Pago')</option>
                                                 <option value="2"
-                                                        @if(@request()->status == '2') selected @endif>@lang('Pending Payment')</option>
+                                                        @if(@request()->status == '2') selected @endif>@lang('Pending Pago')</option>
                                                 <option value="3"
-                                                        @if(@request()->status == '3') selected @endif>@lang('Cancel Payment')</option>
+                                                        @if(@request()->status == '3') selected @endif>@lang('Cancelar Pago')</option>
                                             </select>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                         <div class="form-group mb-2 h-fill">
                                             <button type="submit" class="btn btn-primary w-fill h-fill">
                                                 <i
-                                                    class="fas fa-search"></i> @lang('Search')</button>
+                                                    class="fas fa-search"></i> @lang('Buscar')</button>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                                 <table class="table table-hover table-striped " id="service-table">
                                     <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">@lang('Transaction ID')</th>
+                                        <th scope="col">@lang('Transacción ID')</th>
                                         <th scope="col">@lang('Gateway')</th>
                                         <th scope="col">@lang('Amount')</th>
                                         <th scope="col">@lang('Charge')</th>
@@ -76,7 +76,7 @@
                                     @forelse($funds as $data)
                                         <tr>
 
-                                            <td data-label="#@lang('Transaction ID')">{{$data->transaction}}</td>
+                                            <td data-label="#@lang('Transacción ID')">{{$data->transaction}}</td>
                                             <td data-label="@lang('Gateway')">@lang(optional($data->gateway)->name)</td>
                                             <td data-label="@lang('Amount')">
                                                 <strong>{{getAmount($data->amount)}} @lang($basic->currency)</strong>
@@ -92,7 +92,7 @@
                                                 @elseif($data->status == 2)
                                                     <span class="badge badge-warning">@lang('Pending')</span>
                                                 @elseif($data->status == 3)
-                                                    <span class="badge badge-danger">@lang('Cancel')</span>
+                                                    <span class="badge badge-danger">@lang('Cancelar')</span>
                                                 @endif
                                             </td>
 
