@@ -1,5 +1,5 @@
 @extends($theme.'layouts.app')
-@section('title','Restablecer Contraseña')
+@section('title','Reset Password')
 
 @section('content')
     <section class="login_area">
@@ -27,24 +27,24 @@
                             @enderror
 
                             <div class="signin">
-                                <h3 class="title mb-30">@lang('Restablecer Contraseña')</h3>
+                                <h3 class="title mb-30">@lang('Reset Password')</h3>
                                 <input type="hidden" name="token" value="{{ $token }}">
                                 <input type="hidden" name="email" value="{{ $email }}">
 
                                 <div class="form-group mb-20">
-                                    <input class="form-control" type="password" name="password" placeholder="@lang('New Contraseña')">
+                                    <input class="form-control" type="password" name="password" placeholder="@lang('New Password')">
                                     @error('password')
                                     <span class="text-danger mt-1">{{ $message }}</span>
                                     @enderror
                                 </div>
 
                                 <div class="form-group mb-20">
-                                    <input class="form-control" type="password" name="password_confirmation" placeholder="@lang('Confirmar Contraseña')">
+                                    <input class="form-control" type="password" name="password_confirmation" placeholder="@lang('Confirm Password')">
                                 </div>
 
 
                                 <div class="btn-area mt-4">
-                                    <button class="common_btn mb-40 d-flex justify-content-center align-items-center" type="submit"><span>@lang('Enviar Contraseña Restablecer Link')</span></button>
+                                    <button class="common_btn mb-40 d-flex justify-content-center align-items-center" type="submit"><span>@lang('Send Password Reset Link')</span></button>
                                 </div>
 
                                 <div class="login-query mt-30 text-center">

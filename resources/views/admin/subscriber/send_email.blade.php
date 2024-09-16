@@ -8,7 +8,7 @@
             <div class="col-sm-12">
                 <div class="card card-primary shadow">
                     <div class="card-body">
-                        <h3>@lang("Enviar Correo electrónico To Subscribers")</h3>
+                        <h3>@lang("Send Email To Subscribers")</h3>
                         <div class="form-group ">
                             <label>@lang('Subject')</label>
                             <input type="text" name="subject" value="{{old('subject')}}" placeholder="@lang('Write Subject')"  class="form-control" >
@@ -24,7 +24,7 @@
                             @enderror
                         </div>
                         <div class="submit-btn-wrapper mt-md-3 text-center text-md-left">
-                            <button type="submit" class=" btn waves-effect waves-light btn-rounded btn-primary btn-block"><span>@lang('Enviar Correo electrónico')</span> </button>
+                            <button type="submit" class=" btn waves-effect waves-light btn-rounded btn-primary btn-block"><span>@lang('Send Email')</span> </button>
                         </div>
                     </div>
                 </div>

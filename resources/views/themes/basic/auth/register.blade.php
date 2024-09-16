@@ -1,11 +1,11 @@
 @extends($theme.'layouts.app')
-@section('title','Registrar')
+@section('title','Register')
 @section('content')
     <section class="register_area login_area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="section_header text-center">
-                    <h2>@lang('Crear an Account')</h2>
+                    <h2>@lang('Create an Account')</h2>
                 </div>
                 <div class="col-lg-10 registration_form" data-aos="fade-right">
                     <form action="{{ route('register') }}" method="post">
@@ -87,7 +87,7 @@
                             <div class="col-md-12">
                                 <div class="name_area icon_position">
                                     <input type="email" name="email" class="form-control"
-                                           placeholder="@lang('Correo electrónico Address')" value="{{ old('email') }}"
+                                           placeholder="@lang('Email Address')" value="{{ old('email') }}"
                                            autocomplete="off">
                                     <div class="image_area mt-1">
                                         <i class="fa-regular fa-envelope"></i>
@@ -99,7 +99,7 @@
                             <div class="col-md-6">
                                 <div class="name_area icon_position">
                                     <input type="password" name="password" class="form-control"
-                                           placeholder="@lang('Contraseña')" autocomplete="off">
+                                           placeholder="@lang('Password')" autocomplete="off">
                                     <div class="image_area mt-1">
                                         <i class="fa-regular fa-lock"></i>
                                     </div>
@@ -109,7 +109,7 @@
                             <div class="col-md-6">
                                 <div class="name_area icon_position">
                                     <input type="password" name="password_confirmation" class="form-control"
-                                           placeholder="@lang('Confirmar Contraseña')" autocomplete="off">
+                                           placeholder="@lang('Confirm Password')" autocomplete="off">
                                     <div class="image_area mt-1">
                                         <i class="fa-regular fa-lock"></i>
                                     </div>
@@ -136,7 +136,7 @@
 
                         </div>
                         <button type="submit"
-                                class="common_btn mb-40 d-flex justify-content-center align-items-center">@lang('Registrar')</button>
+                                class="common_btn mb-40 d-flex justify-content-center align-items-center">@lang('Register')</button>
                         <h6 class="highlight text-center mb-40">@lang('Already have account?') <a
                                 href="{{ route('login') }}"> @lang('Sign In')</a>
                         </h6>

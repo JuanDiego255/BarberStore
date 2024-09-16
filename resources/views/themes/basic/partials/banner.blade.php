@@ -13,7 +13,7 @@
                 </div>
                 <div class="breadcrumb d-flex justify-content-center">
                     <div class="text_area">
-                        <h6><a href="{{ route('home') }}"><span>@lang('Inicio')</span></a> |
+                        <h6><a href="{{ route('home') }}"><span>@lang('Home')</span></a> |
                             <span>@yield('title')</span></h6>
                     </div>
                 </div>

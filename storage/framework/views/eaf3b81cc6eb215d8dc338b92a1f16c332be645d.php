@@ -59,14 +59,14 @@
                 </div>
             </div>
 
-            @bookCita
+            <?php if (\Illuminate\Support\Facades\Blade::check('bookAppointment')): ?>
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow border-right">
                     <div class="card-body">
                         <div class="d-flex d-lg-flex d-md-block align-items-center">
                             <div>
                                 <div class="d-inline-flex align-items-center">
-                                    <h2 class="text-dark mb-1 font-weight-medium"> <?php echo e($totalBookCita); ?> </h2>
+                                    <h2 class="text-dark mb-1 font-weight-medium"> <?php echo e($totalBookAppointment); ?> </h2>
                                 </div>
                                 <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><?php echo app('translator')->get('Total Book Cita'); ?></h6>
                             </div>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            @endbookCita
+            <?php endif; ?>
 
             <?php if (\Illuminate\Support\Facades\Blade::check('plan')): ?>
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -506,11 +506,11 @@
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="post" action="" class="loginAccountAcción" enctype="multipart/form-data">
+                <form method="post" action="" class="loginAccountAction" enctype="multipart/form-data">
                     <?php echo csrf_field(); ?>
                     <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title"><?php echo app('translator')->get('Sing In Confirmaration'); ?></h4>
+                        <h4 class="modal-title"><?php echo app('translator')->get('Sing In Confirmation'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -580,7 +580,7 @@
 
         $(document).on('click', '.loginAccount', function () {
             var route = $(this).data('route');
-            $('.loginAccountAcción').attr('action', route)
+            $('.loginAccountAction').attr('action', route)
         });
 
         $(document).on('click', '#details', function () {

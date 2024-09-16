@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Editar Idioma')
+    @lang('Edit Language')
 @endsection
 @section('content')
 
@@ -92,7 +92,7 @@
 
                             <div class="col-md-4">
                                 <div class="form-group ">
-                                    <label class="text-dark">@lang('Default Idioma')</label>
+                                    <label class="text-dark">@lang('Default Language')</label>
                                     <div class="custom-switch-btn w-md-75">
                                         <input type='hidden' value="1" name='default_lang'>
                                         <input type="checkbox" name="default_lang" class="custom-switch-checkbox"
@@ -109,7 +109,7 @@
                             </div>
 
                             <button class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                                @lang('Guardar Changes')
+                                @lang('Save Changes')
                             </button>
                         </div>
                     </div>

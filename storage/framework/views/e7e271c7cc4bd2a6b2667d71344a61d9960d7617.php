@@ -7,20 +7,20 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="<?php echo e(route('admin.dashboard')); ?>" aria-expanded="false">
                         <i data-feather="home" class="feather-icon text-indigo"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Dashboard'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Tablero'); ?></span>
                     </a>
                 </li>
 
                 <?php if (\Illuminate\Support\Facades\Blade::check('shop')): ?>
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Manage Product '); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Gestionar Product '); ?></span></li>
                 <li class="sidebar-item <?php echo e(menuActive(['admin.product.category.list', 'admin.product.category.create', 'admin.product.category.edit*',
                                                          'admin.product.attribute.list', 'admin.product.attribute.create', 'admin.product.attribute.edit*',
                                                          'admin.product.list','admin.product.create', 'admin.product.edit*',
                                                          'admin.product.stock.list', 'admin.product.stock.create', 'admin.product.stock.edit*', 'admin.product.search', 'admin.product.stock.search'],3)); ?>">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i class="fab fa-product-hunt text-indigo"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Product'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Product'); ?></span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line <?php echo e(menuActive(['admin.product.category.list', 'admin.product.category.create', 'admin.product.category.edit*',
                                                          'admin.product.attribute.list', 'admin.product.attribute.create', 'admin.product.attribute.edit*',
@@ -29,7 +29,7 @@
                         <li class="sidebar-item <?php echo e(menuActive(['admin.product.category.list','admin.product.category.create','admin.product.category.edit*'])); ?>">
                             <a href="<?php echo e(route('admin.product.category.list')); ?>"
                                class="sidebar-link <?php echo e(menuActive(['admin.product.category.list','admin.product.category.create','admin.product.category.edit*'])); ?>">
-                                <span class="hide-menu"><?php echo app('translator')->get('Category'); ?></span>
+                                <span class="hide-menu"><?php echo app('translator')->get('Categoría'); ?></span>
                             </a>
                         </li>
 
@@ -61,32 +61,32 @@
 
                 <?php if (\Illuminate\Support\Facades\Blade::check('bookAppointment')): ?>
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Book Appointment '); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Book Cita '); ?></span></li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.appointment.list', 'admin.edit.appointment', 'admin.search.appointment'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.appointment.list', 'all_list')); ?>"
                        aria-expanded="false">
                         <i class="fa fa-calendar-check text-orange"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Appointment List'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Cita Lista'); ?></span>
                     </a>
                 </li>
                 <?php endif; ?>
 
                 <?php if (\Illuminate\Support\Facades\Blade::check('plan')): ?>
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Manage Plan'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Gestionar Plan'); ?></span></li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.plan.list', 'admin.plan.create', 'admin.plan.edit'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.plan.list')); ?>" aria-expanded="false">
                         <i class="fas fa-outdent text-purple"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Plan'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Plan'); ?></span>
                     </a>
                 </li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.plan.sold.list', 'admin.search.plan.sold'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.plan.sold.list')); ?>" aria-expanded="false">
                         <i class="fas fa-shopping-basket text-indigo"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Plan Sold List'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Plan Sold Lista'); ?></span>
                     </a>
                 </li>
                 <?php endif; ?>
@@ -94,31 +94,31 @@
 
                 <?php if (\Illuminate\Support\Facades\Blade::check('shop')): ?>
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Manage Product Order'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Gestionar Product Order'); ?></span></li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.order.list', 'admin.order.product.info', 'admin.product.order.search'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.order.list')); ?>" aria-expanded="false">
                         <i class="fa fa-cart-arrow-down text-orange"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Order List'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Order Lista'); ?></span>
                     </a>
                 </li>
                 <?php endif; ?>
 
 
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('All Transaction '); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('All Transacción '); ?></span></li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.transaction*'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.transaction')); ?>" aria-expanded="false">
                         <i class="fas fa-exchange-alt text-purple"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Transaction'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Transacción'); ?></span>
                     </a>
                 </li>
 
 
                 
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Manage User'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Gestionar User'); ?></span></li>
 
                 <li class="sidebar-item <?php echo e(menuActive(['admin.users','admin.users.search','admin.user-edit*','admin.send-email*','admin.user*'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.users')); ?>" aria-expanded="false">
@@ -131,18 +131,18 @@
                     <a class="sidebar-link" href="<?php echo e(route('admin.email-send')); ?>"
                        aria-expanded="false">
                         <i class="fas fa-envelope-open text-purple"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Send Email'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Enviar Correo electrónico'); ?></span>
                     </a>
                 </li>
 
 
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Payment Settings'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Pago Configuración'); ?></span></li>
                 <li class="sidebar-item <?php echo e(menuActive(['admin.payment.methods','admin.edit.payment.methods'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.payment.methods')); ?>"
                        aria-expanded="false">
                         <i class="fas fa-credit-card text-red"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Payment Methods'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Pago Methods'); ?></span>
                     </a>
                 </li>
 
@@ -151,13 +151,13 @@
                 <li class="sidebar-item <?php echo e(menuActive(['admin.payment.log','admin.payment.search'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.payment.log')); ?>" aria-expanded="false">
                         <i class="fas fa-history text-indigo"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Payment Log'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Pago Log'); ?></span>
                     </a>
                 </li>
 
 
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Support Tickets'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Soporte Tickets'); ?></span></li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="<?php echo e(route('admin.ticket')); ?>" aria-expanded="false">
                         <i class="fas fa-ticket-alt text-info"></i>
@@ -195,7 +195,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="<?php echo e(route('admin.subscriber.index')); ?>" aria-expanded="false">
                         <i class="fas fa-envelope-open text-teal"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Subscriber List'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Subscriber Lista'); ?></span>
                     </a>
                 </li>
 
@@ -214,17 +214,17 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i class="fas fa-envelope text-success"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Email Settings'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Correo electrónico Configuración'); ?></span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
                         <li class="sidebar-item">
                             <a href="<?php echo e(route('admin.email-controls')); ?>" class="sidebar-link">
-                                <span class="hide-menu"><?php echo app('translator')->get('Email Controls'); ?></span>
+                                <span class="hide-menu"><?php echo app('translator')->get('Correo electrónico Controls'); ?></span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="<?php echo e(route('admin.email-template.show')); ?>" class="sidebar-link">
-                                <span class="hide-menu"><?php echo app('translator')->get('Email Template'); ?> </span>
+                                <span class="hide-menu"><?php echo app('translator')->get('Correo electrónico Template'); ?> </span>
                             </a>
                         </li>
                     </ul>
@@ -233,7 +233,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i class="fas fa-mobile-alt text-danger"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('SMS Settings'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('SMS Configuración'); ?></span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level base-level-line">
                         <li class="sidebar-item">
@@ -275,7 +275,7 @@
                     <a class="sidebar-link" href="<?php echo e(route('admin.language.index')); ?>"
                        aria-expanded="false">
                         <i class="fas fa-language text-teal"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Language'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Idioma'); ?></span>
                     </a>
                 </li>
 
@@ -288,18 +288,18 @@
 
 
                 <li class="list-divider"></li>
-                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Theme Settings'); ?></span></li>
+                <li class="nav-small-cap"><span class="hide-menu"><?php echo app('translator')->get('Tema Configuración'); ?></span></li>
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="<?php echo e(route('admin.logo-seo')); ?>" aria-expanded="false">
                         <i class="fas fa-image text-purple text-orange"></i><span
-                            class="hide-menu"><?php echo app('translator')->get('Manage Logo & SEO'); ?></span>
+                            class="hide-menu"><?php echo app('translator')->get('Gestionar Logo & SEO'); ?></span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="<?php echo e(route('admin.breadcrumb')); ?>" aria-expanded="false">
                         <i class="fas fa-file-image text-indigo"></i><span
-                            class="hide-menu"><?php echo app('translator')->get('Manage Breadcrumb'); ?></span>
+                            class="hide-menu"><?php echo app('translator')->get('Gestionar Breadcrumb'); ?></span>
                     </a>
                 </li>
 
@@ -309,14 +309,14 @@
                 <li class="sidebar-item <?php echo e(menuActive(['admin.blog.category.list', 'admin.blog.category.create', 'admin.blog.category.edit*','admin.blog.list', 'admin.blog.create', 'admin.blog.edit*'],3)); ?>">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i class="fas fa-book-reader text-dark"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Blog'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Blog'); ?></span>
                     </a>
                     <ul aria-expanded="false"
                         class="collapse first-level base-level-line <?php echo e(menuActive(['admin.blog.category.list', 'admin.blog.category.create', 'admin.blog.category.edit*','admin.blog.list', 'admin.blog.create', 'admin.blog.edit*'],1)); ?>">
                         <li class="sidebar-item <?php echo e(menuActive(['admin.blog.category.list','admin.blog.category.create','admin.blog.category.edit*'])); ?>">
                             <a href="<?php echo e(route('admin.blog.category.list')); ?>"
                                class="sidebar-link  <?php echo e(menuActive(['admin.blog.category.list','admin.blog.category.create','admin.blog.category.edit*'])); ?>">
-                                <span class="hide-menu"><?php echo app('translator')->get('Category'); ?></span>
+                                <span class="hide-menu"><?php echo app('translator')->get('Categoría'); ?></span>
                             </a>
                         </li>
 
@@ -335,7 +335,7 @@
                 <li class="sidebar-item <?php echo e(menuActive(['admin.service.list','admin.service.create','admin.service.edit*'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.service.list')); ?>" aria-expanded="false">
                         <i class="fas fa-wrench text-red"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Service'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Service'); ?></span>
                     </a>
                 </li>
                 <?php endif; ?>
@@ -344,7 +344,7 @@
                 <li class="sidebar-item <?php echo e(menuActive(['admin.team.list','admin.team.create','admin.team.edit*'],3)); ?>">
                     <a class="sidebar-link" href="<?php echo e(route('admin.team.list')); ?>" aria-expanded="false">
                         <i class="fas fa-user-plus text-teal"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Team'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Team'); ?></span>
                     </a>
                 </li>
                 <?php endif; ?>
@@ -353,7 +353,7 @@
                 <li class="sidebar-item <?php echo e(menuActive(['admin.gallery.tag.list', 'admin.gallery.items.list', 'admin.gallery.items.create', 'admin.gallery.items.edit*'],3)); ?>">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                         <i class="fas fa-images text-success"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Manage Gallery'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Gestionar Gallery'); ?></span>
                     </a>
                     <ul aria-expanded="false"
                         class="collapse first-level base-level-line <?php echo e(menuActive(['admin.gallery.tag.list',  'admin.gallery.items.list', 'admin.gallery.items.create', 'admin.gallery.items.edit*'],1)); ?>">
@@ -404,7 +404,7 @@
                     <a class="sidebar-link has-arrow <?php echo e(Request::routeIs('admin.content.show',$last) ? 'active' : ''); ?>"
                        href="javascript:void(0)" aria-expanded="false">
                         <i class="fas fa-clipboard-list text-teal"></i>
-                        <span class="hide-menu"><?php echo app('translator')->get('Content Settings'); ?></span>
+                        <span class="hide-menu"><?php echo app('translator')->get('Content Configuración'); ?></span>
                     </a>
                     <ul aria-expanded="false"
                         class="collapse first-level base-level-line <?php echo e(menuActive(['admin.content.create','admin.content.show*'],1)); ?>">

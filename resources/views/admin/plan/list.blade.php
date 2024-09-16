@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', trans('Plan Lista'))
+@section('title', trans('Plan List'))
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
         <div class="card-body">
@@ -15,7 +15,7 @@
                         <tr>
                             <th scope="col">@lang('Name')</th>
                             <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,9 +30,9 @@
                                         <span class="badge badge-success">@lang('Active')</span>
                                     @endif
                                 </td>
-                                <td data-label="@lang('Acción')">
+                                <td data-label="@lang('Action')">
                                     <a href="{{ route('admin.plan.edit', $plan->id) }}" class="btn btn-sm btn-primary"
-                                        data-toggle="tooltip" data-placement="top" data-original-title="@lang('Editar Plan Info')">
+                                        data-toggle="tooltip" data-placement="top" data-original-title="@lang('Edit Plan Info')">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                     <a href="javascript:void(0)" data-route="{{ route('admin.plan.delete', $plan->id) }}"
@@ -54,13 +54,13 @@
         </div>
     </div>
 
-    <!-- Eliminar Modal -->
+    <!-- Delete Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

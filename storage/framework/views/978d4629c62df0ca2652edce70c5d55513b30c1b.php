@@ -1,6 +1,6 @@
 <?php if(session()->has('success')): ?>
     <script>
-        Notiflix.Notify.Success("<?php echo app('translator')->get(session('success')); ?>");
+        Notiflix.Notify.Éxito("<?php echo app('translator')->get(session('success')); ?>");
     </script>
 <?php endif; ?>
 

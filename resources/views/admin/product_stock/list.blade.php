@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Stock Lista')
+    @lang('Stock List')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -12,13 +12,13 @@
                             <div class="col-md-3 ">
                                 <div class="form-group">
                                     <input type="text" name="product_name" value="{{ @request()->product_name }}"
-                                        class="form-control get-trx-id" placeholder="@lang('Buscar Product')">
+                                        class="form-control get-trx-id" placeholder="@lang('Search Product')">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                            class="fas fa-search"></i> @lang('Buscar')</button>
+                                            class="fas fa-search"></i> @lang('Search')</button>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <tr>
                             <th scope="col">@lang('Product Name')</th>
                             <th scope="col">@lang('Quantity')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,7 +58,7 @@
                                 </td>
                                 <td data-label="@lang('Quantity')"> {{ $stock->qty }}</td>
 
-                                <td data-label="@lang('Acción')">
+                                <td data-label="@lang('Action')">
                                     <a href="{{ route('admin.product.stock.edit', $stock->product_id) }}"
                                         class="btn btn-sm btn-primary edit-button text-white">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
@@ -77,13 +77,13 @@
             {{ $productStock->links('partials.pagination') }}
         </div>
     </div>
-    <!-- Eliminar Modal -->
+    <!-- Delete Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

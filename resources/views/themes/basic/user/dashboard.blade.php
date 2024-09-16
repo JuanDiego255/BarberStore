@@ -1,18 +1,18 @@
 @extends($theme . 'layouts.user')
-@section('title', trans('Tablero'))
+@section('title', trans('Dashboard'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
             <div class="col-12">
                 <div class="dashboard-heading mt-2">
-                    <h2 class="mb-0">@lang('Tablero')</h2>
+                    <h2 class="mb-0">@lang('Dashboard')</h2>
                 </div>
                 @if($planOfServices > 0)
                 <div class="bd-callout bd-callout-warning m-0 my-4 m-md-0 ">
                     <i class="fas fa-info-circle mr-2"></i>
                     @lang("You have purchased $planOfServices plans"). @lang('To get all the facilities of your plans.')
                     <span class="text-dark">
-                        <a class="text-dark" href="{{ route('user.my.appointment') }}">@lang('Make Cita')</a>
+                        <a class="text-dark" href="{{ route('user.my.appointment') }}">@lang('Make Appointment')</a>
                     </span>
                 </div>
                 @endif
@@ -46,7 +46,7 @@
                         @bookAppointment
                         <div class="col-xl-3 col-md-6 box">
                             <div class="dashboard-box">
-                                <h4>@lang('Total Cita')</h4>
+                                <h4>@lang('Total Appointment')</h4>
                                 <h3>{{ $appointmentCount }}</h3>
                                 <i class="fa-thin fa-calendar-check"></i>
                             </div>
@@ -65,7 +65,7 @@
                 <div class="col-lg-6">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h4 class="card-title">@lang('Upcoming Cita')</h4>
+                            <h4 class="card-title">@lang('Upcoming Appointment')</h4>
                             <div id="calendar"></div>
                         </div>
                     </div>
@@ -79,11 +79,11 @@
                             <thead>
                             <tr>
                                 <th scope="col">@lang('#Order Number')</th>
-                                <th scope="col">@lang('Pago Type')</th>
+                                <th scope="col">@lang('Payment Type')</th>
                                 <th scope="col">@lang('Amount')</th>
                                 <th scope="col">@lang('Order Date')</th>
                                 <th scope="col">@lang('Status')</th>
-                                <th scope="col">@lang('Acción')</th>
+                                <th scope="col">@lang('Action')</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -92,7 +92,7 @@
                                     <td data-label="Order Number">
                                         #{{ optional($data->getOrder)->order_number }}
                                     </td>
-                                    <td data-label="Pago Type">
+                                    <td data-label="Payment Type">
                                         @lang(optional(optional($data->getOrder)->gateway)->name ?? optional($data->getOrder)->payment_type)
                                     </td>
                                     <td data-label="Price">
@@ -114,10 +114,10 @@
                                         @elseif(optional($data->getOrder)->status == 4)
                                             <span class="badge bg-success">@lang('Completed')</span>
                                         @elseif(optional($data->getOrder)->status == 5)
-                                            <span class="badge bg-danger">@lang('Cancelar')</span>
+                                            <span class="badge bg-danger">@lang('Cancel')</span>
                                         @endif
                                     </td>
-                                    <td data-label="Acción">
+                                    <td data-label="Action">
                                         <a href="{{ route('user.my.order.details', $data->order_id) }}" class="">
                                             <i class="fa-sharp fa-solid fa-eye"></i>
                                         </a>

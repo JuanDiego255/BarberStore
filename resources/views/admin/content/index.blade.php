@@ -23,7 +23,7 @@
                             <th>@lang('SL')</th>
                             <th>@lang(ucfirst(array_key_first(config('contents.'.@$content)['field_name'])))</th>
 
-                                <th>@lang('Acción')</th>
+                                <th>@lang('Action')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -36,14 +36,14 @@
                                     <td>
                                             <a href="{{ route('admin.content.show',[$value,$value->name])}}"
                                                class="btn btn-primary btn-sm"><i
-                                                    class="fas fa-edit"></i> @lang('Editar')</a>
+                                                    class="fas fa-edit"></i> @lang('Edit')</a>
 
                                             <a href="javascript:void(0)"
                                                data-route="{{route('admin.content.delete',$value->id)}}"
                                                data-toggle="modal"
                                                data-target="#delete-modal"
                                                class="btn btn-danger btn-sm notiflix-confirm"><i
-                                                    class="fas fa-trash"></i> @lang('Eliminar')</a>
+                                                    class="fas fa-trash"></i> @lang('Delete')</a>
                                     </td>
                             </tr>
                         @endforeach
@@ -62,7 +62,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Editar a gallery')
+    @lang('Edit a gallery')
 @endsection
 
 @section('content')
@@ -51,7 +51,7 @@
                     </div>
                     <button type="submit"
                         class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3"><span><i
-                                class="fas fa-save pr-2"></i> @lang('Guardar')</span>
+                                class="fas fa-save pr-2"></i> @lang('Save')</span>
                             </button>
 
                 </div>

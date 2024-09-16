@@ -26,7 +26,7 @@
                                             <thead class="thead-dark">
                                             <tr>
                                                 <th scope="col">@lang('Username')</th>
-                                                <th scope="col">@lang('Correo electrónico')</th>
+                                                <th scope="col">@lang('Email')</th>
                                                 <th scope="col">@lang('Phone Number')</th>
                                                 <th scope="col">@lang('Joined At')</th>
                                             </tr>
@@ -40,7 +40,7 @@
                                                             @lang($user->username)
                                                         </a>
                                                     </td>
-                                                    <td data-label="@lang('Correo electrónico')">{{$user->email}}</td>
+                                                    <td data-label="@lang('Email')">{{$user->email}}</td>
                                                     <td data-label="@lang('Phone Number')">
                                                         {{$user->mobile}}
                                                     </td>

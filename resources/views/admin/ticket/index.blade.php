@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <input type="text" name="email" value="{{@request()->email}}"
                                class="form-control"
-                               placeholder="@lang('Correo electrónico')">
+                               placeholder="@lang('Email')">
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                class="fas fa-search"></i> @lang('Buscar')</button>
+                                class="fas fa-search"></i> @lang('Search')</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <th scope="col">@lang('User')</th>
                         <th scope="col">@lang('Status')</th>
                         <th scope="col">@lang('Last Reply')</th>
-                        <th scope="col">@lang('Acción')</th>
+                        <th scope="col">@lang('Action')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -101,7 +101,7 @@
                                 {{diffForHumans($ticket->last_reply) }}
                             </td>
 
-                            <td data-label="Acción">
+                            <td data-label="Action">
                                 <a href="{{ route('admin.ticket.view', $ticket->id) }}"
                                    class="btn btn-sm btn-outline-info"
                                    data-toggle="tooltip" title="" data-original-title="Details">

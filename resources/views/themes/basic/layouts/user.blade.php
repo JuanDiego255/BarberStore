@@ -58,11 +58,11 @@
                             </span>
                             <ul class="user-dropdown">
                                 <li>
-                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-user"></i> @lang('Perfil')
+                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-user"></i> @lang('Profile')
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-key"></i> @lang('Change Contraseña')
+                                    <a href="{{ route('user.profile') }}"> <i class="fal fa-key"></i> @lang('Change Password')
                                     </a>
                                 </li>
                                 <li>

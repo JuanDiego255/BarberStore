@@ -1,6 +1,6 @@
 @if (session()->has('success'))
     <script>
-        Notiflix.Notify.Éxito("@lang(session('success'))");
+        Notiflix.Notify.Success("@lang(session('success'))");
     </script>
 @endif
 

@@ -1,6 +1,6 @@
 @extends($theme.'layouts.user')
 @section('title')
-    @lang('Transacción')
+    @lang('Transaction')
 @endsection
 @section('content')
 
@@ -17,7 +17,7 @@
                                             <input type="text" name="transaction_id"
                                                    value="{{@request()->transaction_id}}"
                                                    class="form-control"
-                                                   placeholder="@lang('Buscar for Transacción ID')">
+                                                   placeholder="@lang('Search for Transaction ID')">
                                         </div>
                                     </div>
 
@@ -39,7 +39,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group mb-2 h-fill">
                                             <button type="submit" class="btn btn-primary btn-lg btn-primary w-fill h-fill">
-                                                <i class="fas fa-search"></i> @lang('Buscar')</button>
+                                                <i class="fas fa-search"></i> @lang('Search')</button>
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                                     <thead class="thead-dark">
                                     <tr>
                                         <th>@lang('SL No.')</th>
-                                        <th>@lang('Transacción ID')</th>
+                                        <th>@lang('Transaction ID')</th>
                                         <th>@lang('Amount')</th>
                                         <th>@lang('Remarks')</th>
                                         <th>@lang('Time')</th>
@@ -70,7 +70,7 @@
                                     @forelse($transactions as $transaction)
                                         <tr>
                                             <td data-label="@lang('SL No.')">{{loopIndex($transactions) + $loop->index}}</td>
-                                            <td data-label="@lang('Transacción ID')">@lang($transaction->trx_id)</td>
+                                            <td data-label="@lang('Transaction ID')">@lang($transaction->trx_id)</td>
                                             <td data-label="@lang('Amount')">
                                         <span
                                             class="font-weight-bold text-{{($transaction->trx_type == "+") ? 'success': 'danger'}}">{{($transaction->trx_type == "+") ? '+': '-'}}{{getAmount($transaction->amount, config('basic.fraction_number')). ' ' . trans(config('basic.currency'))}}</span>

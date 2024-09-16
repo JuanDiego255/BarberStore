@@ -163,7 +163,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn-custom" data-bs-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" name="replayTicket" value="2" class="btn-custom">@lang('Confirmar')</button>
+                        <button type="submit" name="replayTicket" value="2" class="btn-custom">@lang('Confirm')</button>
                     </div>
                 </form>
             </div>

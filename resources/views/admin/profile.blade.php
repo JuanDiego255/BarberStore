@@ -13,7 +13,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-3"><i class="icon-user"></i> @lang('Perfil Setting')</h4>
+                    <h4 class="card-title mb-3"><i class="icon-user"></i> @lang('Profile Setting')</h4>
                     <form action="" method="post" class="form-body file-upload" enctype="multipart/form-data">
                         @csrf
                         @method('put')
@@ -59,8 +59,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>@lang('Correo electrónico Address') <span class="text-danger">*</span></label>
-                                            <input type="text" name="email" class="form-control" value="{{$admin->email}}" placeholder="@lang('Enter Correo electrónico Address')">
+                                            <label>@lang('Email Address') <span class="text-danger">*</span></label>
+                                            <input type="text" name="email" class="form-control" value="{{$admin->email}}" placeholder="@lang('Enter Email Address')">
 
 
                                             @error('email')
@@ -92,7 +92,7 @@
 
                                     <div class="col-md-12">
                                         <div class="text-right">
-                                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">{{trans('Enviar')}}</button>
+                                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">{{trans('Submit')}}</button>
                                         </div>
                                     </div>
                                 </div>

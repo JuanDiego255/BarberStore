@@ -20,7 +20,7 @@
                             <?php echo csrf_field(); ?>
                             <div class="mb-3 d-flex align-items-center justify-content-center">
                                 <input type="email" name="email" class="form-control"
-                                       placeholder="<?php echo app('translator')->get('Email Address'); ?>" autocomplete="off">
+                                       placeholder="<?php echo app('translator')->get('Correo electrónico Address'); ?>" autocomplete="off">
                                 <button type="submit" class="common_btn"><i class="fa-solid fa-arrow-right-long"></i>
                                 </button>
                             </div>

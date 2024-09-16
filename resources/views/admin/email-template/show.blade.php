@@ -17,7 +17,7 @@
                         <th scope="col">@lang('Name')</th>
                         <th scope="col">@lang('Subject')</th>
                         <th scope="col">@lang('Status')</th>
-                        <th scope="col">@lang('Acción')</th>
+                        <th scope="col">@lang('Action')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -31,7 +31,7 @@
                                 <span class="badge badge-pill badge-{{($template->mail_status == 1) ?'success' : 'danger'}}">{{($template->mail_status == 1) ?trans('Active') : trans('Deactive')}}</span>
                             </td>
                             <td>
-                                <a  href="{{ route('admin.email-template.edit',$template->id) }}" class="btn btn-sm btn-primary" title="@lang('Editar')"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                                <a  href="{{ route('admin.email-template.edit',$template->id) }}" class="btn btn-sm btn-primary" title="@lang('Edit')"><i class="fas fa-edit" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                     @endforeach

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Correo electrónico')
+    @lang('Email')
 @endsection
 @section('content')
 
@@ -10,7 +10,7 @@
             <div class="col-sm-12">
                 <div class="card card-primary">
                     <div class="card-body">
-                        <h4 class="card-title"><i class="fas fa-envelope-open"></i> @lang('Enviar Correo electrónico To') @lang($user->name)</h4>
+                        <h4 class="card-title"><i class="fas fa-envelope-open"></i> @lang('Send Email To') @lang($user->name)</h4>
                         <div class="form-group">
                             <label>@lang('Subject')</label>
                             <input type="text" name="subject" value="{{old('subject')}}" placeholder="@lang('Write Subject')" class="form-control" >
@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="submit-btn-wrapper mt-md-3 text-center text-md-left">
-                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block"><span>@lang('Enviar Correo electrónico')</span> </button>
+                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block"><span>@lang('Send Email')</span> </button>
                         </div>
                     </div>
                 </div>

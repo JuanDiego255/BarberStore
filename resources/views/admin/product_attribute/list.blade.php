@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Attribute Lista')
+    @lang('Attribute List')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -17,7 +17,7 @@
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
                             <th scope="col">@lang('Attribute Name')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                                 <td data-label="@lang('Attribute Name')">
                                     @lang($item->name)
                                 </td>
-                                <td data-label="@lang('Acción')">
+                                <td data-label="@lang('Action')">
                                     <a href="{{ route('admin.product.attribute.edit', $item->id) }}"
                                         class="btn btn-sm btn-primary edit-button text-white">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
@@ -50,13 +50,13 @@
         </div>
     </div>
 
-    <!-- Eliminar Modal -->
+    <!-- Delete Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

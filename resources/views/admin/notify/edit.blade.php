@@ -86,7 +86,7 @@
 
 
                             <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                                <span>@lang('Actualizar')</span>
+                                <span>@lang('Update')</span>
                             </button>
 
                         </form>

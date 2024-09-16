@@ -216,7 +216,7 @@
                         </div>
 
                         <button type="submit"
-                                class="btn  btn-primary btn-block mt-3">@lang('Guardar Changes')</button>
+                                class="btn  btn-primary btn-block mt-3">@lang('Save Changes')</button>
                     </form>
                 </div>
             </div>

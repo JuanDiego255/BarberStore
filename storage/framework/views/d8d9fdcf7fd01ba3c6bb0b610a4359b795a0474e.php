@@ -1,5 +1,5 @@
 <?php $__env->startSection('title'); ?>
-    <?php echo app('translator')->get('Logo & Seo Settings'); ?>
+    <?php echo app('translator')->get('Logo & Seo Configuración'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 
@@ -110,7 +110,7 @@ unset($__errorArgs, $__bag); ?>
                                             <div class="submit-btn-wrapper text-center mt-4">
                                                 <button type="submit"
                                                         class="btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                    <span><?php echo app('translator')->get('Save Changes'); ?></span></button>
+                                                    <span><?php echo app('translator')->get('Guardar Changes'); ?></span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +212,7 @@ unset($__errorArgs, $__bag); ?>
                                                 <div class="submit-btn-wrapper text-center">
                                                     <button type="submit"
                                                             class=" btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                        <span><?php echo app('translator')->get('Save Changes'); ?></span></button>
+                                                        <span><?php echo app('translator')->get('Guardar Changes'); ?></span></button>
                                                 </div>
                                             </div>
 

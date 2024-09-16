@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Order Lista')
+    @lang('Order List')
 @endsection
 
 @section('content')
@@ -25,7 +25,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <input type="text" name="payment_type" value="{{ @request()->payment_type }}"
-                                    class="form-control get-username" placeholder="@lang('Pago Type')">
+                                    class="form-control get-username" placeholder="@lang('Payment Type')">
                             </div>
                         </div>
 
@@ -38,7 +38,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                        class="fas fa-search"></i> @lang('Buscar')</button>
+                                        class="fas fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.order.list', 'cancel') }}"
-                    class="nav-link theme-a {{ $segment == 'cancel' ? 'activeList' : '' }}">@lang('Cancelar')
+                    class="nav-link theme-a {{ $segment == 'cancel' ? 'activeList' : '' }}">@lang('Cancel')
                     ({{ $cancel_order }})</a>
             </li>
         </ul>
@@ -94,7 +94,7 @@
             <div class="dropdown mb-2 text-right">
                 <button class="btn btn-sm  btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span><i class="fas fa-bars pr-2"></i> @lang('Acción')</span>
+                    <span><i class="fas fa-bars pr-2"></i> @lang('Action')</span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <button class="dropdown-item pending" type="button" data-toggle="modal"
@@ -113,7 +113,7 @@
                         data-target="#all_inactive">@lang('Completed')
                     </button>
                     <button class="dropdown-item cancel" type="button" data-toggle="modal"
-                        data-target="#all_inactive">@lang('Cancelar')
+                        data-target="#all_inactive">@lang('Cancel')
                     </button>
 
                 </div>
@@ -129,10 +129,10 @@
                             </th>
                             <th scope="col">@lang('#Order Number')</th>
                             <th scope="col">@lang('User')</th>
-                            <th scope="col">@lang('Pago Type')</th>
+                            <th scope="col">@lang('Payment Type')</th>
                             <th scope="col">@lang('Order Time')</th>
                             <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -159,9 +159,9 @@
                                     </div>
                                 </td>
                                 @if ($order->payment_type == 'Cash On Delivery')
-                                    <td data-label="@lang('Pago Type')">{{ $order->payment_type }}</td>
+                                    <td data-label="@lang('Payment Type')">{{ $order->payment_type }}</td>
                                 @else
-                                    <td data-label="@lang('Pago Type')">{{ optional($order->gateway)->name }}</td>
+                                    <td data-label="@lang('Payment Type')">{{ optional($order->gateway)->name }}</td>
                                 @endif
                                 <td data-label="@lang('Order Time')">{{ dateTime($order->created_at, 'd M Y') }}</td>
                                 <td data-label="@lang('Status')" class="order_status">
@@ -181,10 +181,10 @@
                                         <span class="badge badge-pill badge-success">@lang('Completed')</span>
                                     @endif
                                     @if ($order->status == 5)
-                                        <span class="badge badge-pill badge-danger">@lang('Cancelar')</span>
+                                        <span class="badge badge-pill badge-danger">@lang('Cancel')</span>
                                     @endif
                                 </td>
-                                <td data-label="@lang('Acción')">
+                                <td data-label="@lang('Action')">
                                     <a href="{{ route('admin.order.product.info', $order->id) }}" type="button"
                                         class="btn btn-outline-primary btn-sm ">
                                         <i class="fa fa-eye"></i>

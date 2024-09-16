@@ -50,7 +50,7 @@
                                 <div class="form-group mt-3">
                                     <button type="submit"
                                             class="btn-custom">
-                                        <span>@lang('Enviar')</span></button>
+                                        <span>@lang('Submit')</span></button>
 
                                 </div>
                             </div>

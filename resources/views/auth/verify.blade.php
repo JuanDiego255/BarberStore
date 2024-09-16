@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    @lang('Correo electrónico Verify')
+    @lang('Email Verify')
 @endsection
 @section('content pt-5 mt-5')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Verify Your Correo electrónico Address') }}</div>
+                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
                 <div class="card-body">
                     @if (session('resent'))

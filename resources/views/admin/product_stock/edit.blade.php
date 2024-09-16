@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Editar Stock')
+    @lang('Edit Stock')
 @endsection
 @section('content')
     <div class="container-fluid">
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="btn btn-rounded btn-primary btn-block mt-3">@lang('Guardar Changes')</button>
+                                class="btn btn-rounded btn-primary btn-block mt-3">@lang('Save Changes')</button>
                         </form>
                     </div>
                 </div>

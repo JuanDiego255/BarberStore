@@ -1,5 +1,5 @@
 @extends($theme.'layouts.user')
-@section('title',trans('My Perfil'))
+@section('title',trans('My Profile'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
@@ -8,9 +8,9 @@
                     <form action="{{ route('user.transaction.search') }}" method="get">
                         <div class="row g-3 align-items-end">
                             <div class="input-box col-lg-2">
-                                <label for="">@lang('Transacción Id')</label>
+                                <label for="">@lang('Transaction Id')</label>
                                 <input type="text" class="form-control" name="transaction_id"
-                                       placeholder="@lang('Transacción Id')" value="{{@request()->transaction_id}}"
+                                       placeholder="@lang('Transaction Id')" value="{{@request()->transaction_id}}"
                                        autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
@@ -24,7 +24,7 @@
                                        placeholder="@lang('Date')" value="{{ @request()->datetrx }}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Buscar')</button>
+                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@
                         <thead>
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
-                            <th scope="col">@lang('Transacción ID')</th>
+                            <th scope="col">@lang('Transaction ID')</th>
                             <th scope="col">@lang('Amount')</th>
                             <th scope="col">@lang('Remark')</th>
                             <th scope="col">@lang('Date')</th>

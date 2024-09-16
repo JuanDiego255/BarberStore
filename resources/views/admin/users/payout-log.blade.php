@@ -9,19 +9,19 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <input type="text" name="name" value="{{@request()->name}}" class="form-control"
-                               placeholder="@lang('Correo electrónico/ Username/ Trx')">
+                               placeholder="@lang('Email/ Username/ Trx')">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <select name="status" class="form-control">
-                            <option value="">@lang('All Pago')</option>
+                            <option value="">@lang('All Payment')</option>
                             <option value="1"
-                                    @if(@request()->status == '1') selected @endif>@lang('Pending Pago')</option>
+                                    @if(@request()->status == '1') selected @endif>@lang('Pending Payment')</option>
                             <option value="2"
-                                    @if(@request()->status == '2') selected @endif>@lang('Complete Pago')</option>
+                                    @if(@request()->status == '2') selected @endif>@lang('Complete Payment')</option>
                             <option value="3"
-                                    @if(@request()->status == '3') selected @endif>@lang('Cancelar Pago')</option>
+                                    @if(@request()->status == '3') selected @endif>@lang('Cancel Payment')</option>
                         </select>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                class="fas fa-search"></i> @lang('Buscar')</button>
+                                class="fas fa-search"></i> @lang('Search')</button>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
 
 
 
-    <!-- Modal for Editar button -->
+    <!-- Modal for Edit button -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -198,7 +198,7 @@
 
 
                     if ($(this).data('status') != '1') {
-                        list[details.length + 1] = `<li class="list-group-item"><span class="font-weight-bold">@lang('Administrador Feedback')</span> : <span">${$(this).data('feedback')}</span></li>`;
+                        list[details.length + 1] = `<li class="list-group-item"><span class="font-weight-bold">@lang('Admin Feedback')</span> : <span">${$(this).data('feedback')}</span></li>`;
                         $('.addForm').html(``)
                     } else {
                         list[details.length + 1] = ``;

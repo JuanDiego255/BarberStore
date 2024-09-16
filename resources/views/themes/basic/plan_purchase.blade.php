@@ -10,7 +10,7 @@
                             @csrf
                             <div class="row gy-4 gx-3">
                                 <div class="col-12">
-                                    <h4>@lang('Select Pago Method')</h4>
+                                    <h4>@lang('Select Payment Method')</h4>
                                     <div class="payment-box mb-4">
                                         <div class="payment-options">
                                             <div class="row g-2">

@@ -114,7 +114,7 @@
             fixCharge = $(this).data('fix_charge');
             percentCharge = $(this).data('percent_charge');
             currency = $(this).data('currency');
-            $('.depositLimit').text(`@lang('Transacción Limit:') ${minAmount} - ${maxAmount}  ${baseSymbol}`);
+            $('.depositLimit').text(`@lang('Transaction Limit:') ${minAmount} - ${maxAmount}  ${baseSymbol}`);
 
             var depositCharge = `@lang('Charge:') ${fixCharge} ${baseSymbol}  ${(0 < percentCharge) ? ' + ' + percentCharge + ' % ' : ''}`;
             $('.depositCharge').text(depositCharge);

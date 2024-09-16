@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Gestionar Tema')
+    @lang('Manage Theme')
 @endsection
 @section('content')
 
@@ -51,7 +51,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Tema Activate Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Theme Activate Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×

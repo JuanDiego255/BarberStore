@@ -17,7 +17,7 @@
                                     class="fa fa-warning"></i>
                                 @lang('Warning')
                             </h1>
-                            <h4 class="text-center">@lang('Uh-ho! We are unable to process your Pago by this method.
+                            <h4 class="text-center">@lang('Uh-ho! We are unable to process your Payment by this method.
                                 <br>This method is under construction!!')
                             </h4>
                             <br>

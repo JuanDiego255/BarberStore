@@ -45,7 +45,7 @@
                         <th scope="col" class="text-left">
                             {{$lang->name}}
                         </th>
-                        <th scope="col" class="w-85">@lang('Acción')</th>
+                        <th scope="col" class="w-85">@lang('Action')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -55,7 +55,7 @@
                             <td data-label="@lang('Value')" class="text-left ">{{$langValue}}</td>
 
 
-                            <td data-label="@lang('Acción')">
+                            <td data-label="@lang('Action')">
                                 <a href="javascript:void(0)"
                                    data-target="#editModal"
                                    data-toggle="modal"
@@ -63,7 +63,7 @@
                                    data-key="{{$k}}"
                                    data-value="{{$langValue}}"
                                    class="editModal btn btn-primary btn-sm "
-                                   data-original-title="@lang('Editar')">
+                                   data-original-title="@lang('Edit')">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
 
@@ -95,7 +95,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title" id="myModalLabel">@lang('Editar')</h4>
+                    <h4 class="modal-title" id="myModalLabel">@lang('Edit')</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
                 </div>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" class="btn btn-primary">@lang('Actualizar')</button>
+                        <button type="submit" class="btn btn-primary">@lang('Update')</button>
                     </div>
                 </form>
 
@@ -130,13 +130,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h4 class="modal-title" id="myModalLabel"><i class='fa fa-trash'></i> @lang('Eliminar !')</h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class='fa fa-trash'></i> @lang('Delete !')</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
 
 
                 <div class="modal-body">
-                    <strong>@lang('Are you sure you want to Eliminar ?')</strong>
+                    <strong>@lang('Are you sure you want to Delete ?')</strong>
                 </div>
                 <form action="{{route('admin.language.deleteKey',$lang->id)}}" method="post">
                     @csrf
@@ -146,7 +146,7 @@
                     <input type="hidden" name="value">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" class="btn btn-danger ">@lang('Eliminar')</button>
+                        <button type="submit" class="btn btn-danger ">@lang('Delete')</button>
                     </div>
                 </form>
             </div>
@@ -184,7 +184,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal">@lang('Close')</button>
-                        <button type="submit" class="btn btn-primary"> @lang('Guardar')</button>
+                        <button type="submit" class="btn btn-primary"> @lang('Save')</button>
                     </div>
                 </form>
 
@@ -240,7 +240,7 @@
                         console.log(data);
 
                         if (data == 'success') {
-                            Notiflix.Notify.Éxito("{{trans('Import Data Successfully')}}");
+                            Notiflix.Notify.Success("{{trans('Import Data Successfully')}}");
 
                             window.location.href = "{{url()->current()}}"
                         }

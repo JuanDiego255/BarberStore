@@ -37,7 +37,7 @@
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item text-muted active" aria-current="page"><?php echo app('translator')->get('Dashboard'); ?></li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page"><?php echo app('translator')->get('Tablero'); ?></li>
                                 <li class="breadcrumb-item text-muted" aria-current="page"><?php echo $__env->yieldContent('title'); ?></li>
                             </ol>
                         </nav>

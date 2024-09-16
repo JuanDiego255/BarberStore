@@ -1,19 +1,19 @@
 @extends('admin.layouts.login')
-@section('title','Administrador Iniciar sesión')
+@section('title','Admin Login')
 
 @section('content')
     <div class="p-3">
         <div class="text-center">
             <img src=" {{getFile(config('location.logoIcon.path').'favicon.png')}}" alt="wrapkit">
         </div>
-        <h2 class="mt-3 text-center">@lang('Administrador Iniciar sesión')</h2>
+        <h2 class="mt-3 text-center">@lang('Admin Login')</h2>
 
-        <form method="POST" action="{{ route('admin.login') }}" aria-label="{{ __('Iniciar sesión') }}">
+        <form method="POST" action="{{ route('admin.login') }}" aria-label="{{ __('Login') }}">
             @csrf
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="text-dark" for="email">@lang('Correo electrónico Or Username')</label>
+                        <label class="text-dark" for="email">@lang('Email Or Username')</label>
                         <input id="username" type="text"
                                class="form-control
                                 @error('username') is-invalid @enderror
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="text-dark" for="pwd">@lang('Contraseña')</label>
+                        <label class="text-dark" for="pwd">@lang('Password')</label>
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
 
 
                 <div class="col-lg-12 text-center mt-5">
-                    <a href="{{route('admin.password.request')}}" class="text-danger">{{trans('Forgot Your Contraseña?')}}</a>
+                    <a href="{{route('admin.password.request')}}" class="text-danger">{{trans('Forgot Your Password?')}}</a>
                 </div>
 
 

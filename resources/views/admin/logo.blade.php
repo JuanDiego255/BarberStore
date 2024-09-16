@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    @lang('Logo & Seo Configuración')
+    @lang('Logo & Seo Settings')
 @endsection
 @section('content')
 
@@ -91,7 +91,7 @@
                                             <div class="submit-btn-wrapper text-center mt-4">
                                                 <button type="submit"
                                                         class="btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                    <span>@lang('Guardar Changes')</span></button>
+                                                    <span>@lang('Save Changes')</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@
                                                 <div class="submit-btn-wrapper text-center">
                                                     <button type="submit"
                                                             class=" btn waves-effect waves-light btn-primary btn-block btn-rounded">
-                                                        <span>@lang('Guardar Changes')</span></button>
+                                                        <span>@lang('Save Changes')</span></button>
                                                 </div>
                                             </div>
 

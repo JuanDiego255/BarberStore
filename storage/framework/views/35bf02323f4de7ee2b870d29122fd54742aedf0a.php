@@ -1,5 +1,5 @@
 <?php $__env->startSection('title'); ?>
-    <?php echo app('translator')->get('Book Appointment List'); ?>
+    <?php echo app('translator')->get('Book Cita Lista'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
     <div class="page-header card card-primary m-0 m-md-4 my-4 m-md-0 p-2 pt-4 pl-4 shadow">
@@ -45,7 +45,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <input type="text" name="email" value="<?php echo e(@request()->email); ?>" class="form-control"
-                                       placeholder="<?php echo app('translator')->get('Email'); ?>">
+                                       placeholder="<?php echo app('translator')->get('Correo electrónico'); ?>">
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                        class="fas fa-search"></i> <?php echo app('translator')->get('Search'); ?></button>
+                                        class="fas fa-search"></i> <?php echo app('translator')->get('Buscar'); ?></button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
             ?>
             <li class="nav-item">
                 <a href="<?php echo e(route('admin.appointment.list', 'all_list')); ?>"
-                   class="nav-link theme-a <?php echo e($segment == 'all_list' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('All List'); ?>
+                   class="nav-link theme-a <?php echo e($segment == 'all_list' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('All Lista'); ?>
                     (<?php echo e($countAllAppointment); ?>)</a>
             </li>
             <li class="nav-item">
@@ -84,12 +84,12 @@
             </li>
             <li class="nav-item">
                 <a href="<?php echo e(route('admin.appointment.list', 'confirm')); ?>"
-                   class="nav-link theme-a <?php echo e($segment == 'confirm' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('Confirm'); ?>
+                   class="nav-link theme-a <?php echo e($segment == 'confirm' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('Confirmar'); ?>
                     (<?php echo e($countConfirmAppointment); ?>)</a>
             </li>
             <li class="nav-item">
                 <a href="<?php echo e(route('admin.appointment.list', 'cancel')); ?>"
-                   class="nav-link theme-a <?php echo e($segment == 'cancel' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('Cancel'); ?>
+                   class="nav-link theme-a <?php echo e($segment == 'cancel' ? 'activeList' : ''); ?>"><?php echo app('translator')->get('Cancelar'); ?>
                     (<?php echo e($countCancelAppointment); ?>)</a>
             </li>
         </ul>
@@ -102,14 +102,14 @@
             <div class="dropdown mb-2 text-right">
                 <button class="btn btn-sm  btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span><i class="fas fa-bars pr-2"></i> <?php echo app('translator')->get('Action'); ?></span>
+                    <span><i class="fas fa-bars pr-2"></i> <?php echo app('translator')->get('Acción'); ?></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <button class="dropdown-item confirm" type="button" data-toggle="modal"
-                            data-target="#all_inactive"><?php echo app('translator')->get('Confirm'); ?>
+                            data-target="#all_inactive"><?php echo app('translator')->get('Confirmar'); ?>
                     </button>
                     <button class="dropdown-item cancel" type="button" data-toggle="modal"
-                            data-target="#all_inactive"><?php echo app('translator')->get('Cancel'); ?>
+                            data-target="#all_inactive"><?php echo app('translator')->get('Cancelar'); ?>
                     </button>
                 </div>
             </div>
@@ -124,9 +124,9 @@
                         </th>
                         <th scope="col"><?php echo app('translator')->get('Service Name'); ?></th>
                         <th scope="col"><?php echo app('translator')->get('Username'); ?></th>
-                        <th scope="col"><?php echo app('translator')->get('Date Of Appointment'); ?></th>
+                        <th scope="col"><?php echo app('translator')->get('Date Of Cita'); ?></th>
                         <th scope="col"><?php echo app('translator')->get('Status'); ?></th>
-                        <th scope="col"><?php echo app('translator')->get('Action'); ?></th>
+                        <th scope="col"><?php echo app('translator')->get('Acción'); ?></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -160,7 +160,7 @@
                                 </div>
                             </td>
 
-                            <td data-label="<?php echo app('translator')->get('Date Of Appointment'); ?>">
+                            <td data-label="<?php echo app('translator')->get('Date Of Cita'); ?>">
                                 <?php if($item->date_of_appointment == null): ?>
                                     <span>N/A</span>
                                 <?php else: ?>
@@ -172,12 +172,12 @@
                                 <?php if($item->status == 0): ?>
                                     <span class="badge bg-warning text-white"><?php echo app('translator')->get('Pending'); ?></span>
                                 <?php elseif($item->status == 1): ?>
-                                    <span class="badge bg-success text-white"><?php echo app('translator')->get('Confirm'); ?></span>
+                                    <span class="badge bg-success text-white"><?php echo app('translator')->get('Confirmar'); ?></span>
                                 <?php elseif($item->status == 2): ?>
-                                    <span class="badge bg-danger text-white"><?php echo app('translator')->get('Cancel'); ?></span>
+                                    <span class="badge bg-danger text-white"><?php echo app('translator')->get('Cancelar'); ?></span>
                                 <?php endif; ?>
                             </td>
-                            <td class="book-appointment-action" data-label="<?php echo app('translator')->get('Action'); ?>">
+                            <td class="book-appointment-action" data-label="<?php echo app('translator')->get('Acción'); ?>">
                                 <a class="btn btn-sm btn-primary mr-1"
                                    href="<?php echo e(route('admin.edit.appointment', $item->id)); ?>">
                                     <i class="fa fa-edit"></i>
@@ -203,13 +203,13 @@
         </div>
     </div>
 
-    <!-- Delete Modal -->
+    <!-- Eliminar Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel"><?php echo app('translator')->get('Delete Confirmation'); ?>
+                    <h4 class="modal-title" id="primary-header-modalLabel"><?php echo app('translator')->get('Eliminar Confirmation'); ?>
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

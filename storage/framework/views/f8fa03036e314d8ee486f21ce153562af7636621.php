@@ -43,7 +43,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                             <div class="mt-4">
                                 <input type="email" name="email" class="form-control"
-                                       placeholder="<?php echo app('translator')->get('Email Address'); ?>" value="<?php echo e(old('email')); ?>"
+                                       placeholder="<?php echo app('translator')->get('Correo electrónico Address'); ?>" value="<?php echo e(old('email')); ?>"
                                        autocomplete="off">
                                 <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

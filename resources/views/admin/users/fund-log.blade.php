@@ -18,13 +18,13 @@
                     <div class="form-group">
                         <select name="status" class="form-control">
                             <option value="-1"
-                                    @if(@request()->status == '-1') selected @endif>@lang('All Pago')</option>
+                                    @if(@request()->status == '-1') selected @endif>@lang('All Payment')</option>
                             <option value="1"
-                                    @if(@request()->status == '1') selected @endif>@lang('Complete Pago')</option>
+                                    @if(@request()->status == '1') selected @endif>@lang('Complete Payment')</option>
                             <option value="2"
-                                    @if(@request()->status == '2') selected @endif>@lang('Pending Pago')</option>
+                                    @if(@request()->status == '2') selected @endif>@lang('Pending Payment')</option>
                             <option value="3"
-                                    @if(@request()->status == '3') selected @endif>@lang('Cancelar Pago')</option>
+                                    @if(@request()->status == '3') selected @endif>@lang('Cancel Payment')</option>
                         </select>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                class="fas fa-search"></i> @lang('Buscar')</button>
+                                class="fas fa-search"></i> @lang('Search')</button>
                     </div>
                 </div>
             </div>

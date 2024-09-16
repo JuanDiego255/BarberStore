@@ -50,7 +50,7 @@
                                     @elseif(optional($data->getOrder)->status == 4)
                                         <span class="badge bg-success">@lang('Completed')</span>
                                     @elseif(optional($data->getOrder)->status == 5)
-                                        <span class="badge bg-danger">@lang('Cancelar')</span>
+                                        <span class="badge bg-danger">@lang('Cancel')</span>
                                     @endif
                                 </td>
                             </tr>

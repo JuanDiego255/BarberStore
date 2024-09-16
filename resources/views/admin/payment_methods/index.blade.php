@@ -13,7 +13,7 @@
                             <tr>
                                 <th scope="col">@lang('Name')</th>
                                 <th scope="col">@lang('Status')</th>
-                                    <th scope="col">@lang('Acción')</th>
+                                    <th scope="col">@lang('Action')</th>
                             </tr>
                             </thead>
                             <tbody id="sortable">
@@ -34,12 +34,12 @@
                                             {!!  $method->status == 1 ? '<span class="badge badge-success badge-sm">'.trans('Active').'</span>' : '<span class="badge badge-danger badge-sm">'.trans('Inactive').'</span>' !!}
                                         </td>
 
-                                        <td data-label="@lang('Acción')">
+                                        <td data-label="@lang('Action')">
                                             <a href="{{ route('admin.edit.payment.methods', $method->id) }}"
                                                class="btn btn-primary btn-circle"
                                                data-toggle="tooltip"
                                                data-placement="top"
-                                               data-original-title="@lang('Editar this Pago Methods info')">
+                                               data-original-title="@lang('Edit this Payment Methods info')">
                                                 <i class="fa fa-edit"></i></a>
 
                                                 <button type="button"

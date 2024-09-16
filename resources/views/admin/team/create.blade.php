@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Crear Service')
+    @lang('Create Service')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -40,7 +40,7 @@
                                     <div class="valid-feedback"></div>
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="email"> @lang('Correo electrónico') </label>
+                                    <label for="email"> @lang('Email') </label>
                                     <input type="email" name="email[{{ $language->id }}]"
                                         class="form-control  @error('email' . '.' . $language->id) is-invalid @enderror"
                                         value="{{ old('email' . '.' . $language->id) }}" autocomplete="off">
@@ -233,7 +233,7 @@
                             @endif
 
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
                         </form>
                     </div>
                 @endforeach

@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="@lang($basic->site_title) | @yield('title')">
-{{--<!-- Google / Buscar Engine Tags -->--}}
+{{--<!-- Google / Search Engine Tags -->--}}
 <meta itemprop="name" content="@lang($basic->site_title) | @yield('title')">
 <meta itemprop="description" content="{{ config('seo.meta_description')}}">
 <meta itemprop="image" content="{{ getFile(config('location.logoIcon.path'). config('seo.meta_image'),'600x315') }}">

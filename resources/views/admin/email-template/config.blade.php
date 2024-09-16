@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Correo electrónico Controls')
+    @lang('Email Controls')
 @endsection
 @section('content')
     <div class="row">
@@ -13,7 +13,7 @@
                             <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="modal"
                                     data-target="#testEmail">
                                 <span class="btn-label"><i class="fas fa-envelope"></i></span>
-                                @lang('Test Correo electrónico')
+                                @lang('Test Email')
                             </button>
 
                             <a href="https://www.youtube.com/watch?v=MQszEDuWFeQ" target="_blank"
@@ -57,14 +57,14 @@
         <div class="col-md-6">
             <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
                 <div class="card-body">
-                    <h4 class="card-title">@lang('Correo electrónico Acción')</h4>
+                    <h4 class="card-title">@lang('Email Action')</h4>
                     <form method="post" action="{{route('admin.email-controls.action')}}" novalidate="novalidate"
                           class="needs-validation base-form ">
                         @csrf
                         <div class="row">
 
                             <div class="form-group col-lg-6 col-md-6">
-                                <label class="d-block">@lang('Correo electrónico Notification')</label>
+                                <label class="d-block">@lang('Email Notification')</label>
 
                                 <div class="custom-switch-btn">
                                     <input type='hidden' value='1' name='email_notification'>
@@ -80,7 +80,7 @@
 
 
                             <div class="form-group col-lg-6 col-md-6">
-                                <label class="d-block">@lang('Correo electrónico Verification')</label>
+                                <label class="d-block">@lang('Email Verification')</label>
                                 <div class="custom-switch-btn">
                                     <input type='hidden' value='1' name='email_verification'>
                                     <input type="checkbox" name="email_verification" class="custom-switch-checkbox"
@@ -97,7 +97,7 @@
 
                         <button type="submit"
                                 class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                            <span>@lang('Guardar Changes')</span></button>
+                            <span>@lang('Save Changes')</span></button>
                     </form>
                 </div>
             </div>
@@ -115,9 +115,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group ">
-                            <label>@lang('From Correo electrónico')</label>
+                            <label>@lang('From Email')</label>
                             <input type="text" name="sender_email" class="form-control"
-                                   placeholder="@lang('Correo electrónico Address')" value="{{$control->sender_email}}">
+                                   placeholder="@lang('Email Address')" value="{{$control->sender_email}}">
                             @error('sender_email')
                             <span class="text-danger">{{ trans($message) }}</span>
                             @enderror
@@ -125,9 +125,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group ">
-                            <label>@lang('From Correo electrónico Name')</label>
+                            <label>@lang('From Email Name')</label>
                             <input type="text" name="sender_email_name" class="form-control"
-                                   placeholder="@lang('Correo electrónico Address')" value="{{$control->sender_email_name}}">
+                                   placeholder="@lang('Email Address')" value="{{$control->sender_email_name}}">
                             @error('sender_email_name')
                             <span class="text-danger">{{ trans($message) }}</span>
                             @enderror
@@ -137,7 +137,7 @@
 
                     <div class="col-md-3 d-none">
                         <div class="form-group">
-                            <label>{{trans('Enviar Correo electrónico Method')}}</label>
+                            <label>{{trans('Send Email Method')}}</label>
                             <select name="email_method" class="form-control">
                                 <option value="sendmail"
                                         @if(old('email_method', @$control->email_configuration->name) == "sendmail")  selected @endif>@lang('PHP Mail')</option>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label class="font-weight-bold">{{trans('Host')}} <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="@lang('Host or Correo electrónico Address')"
+                        <input type="text" class="form-control" placeholder="@lang('Host or Email Address')"
                                name="smtp_host"
                                value="{{ old('smtp_host', $control->email_configuration->smtp_host ?? '') }}"/>
                         @error('smtp_host')
@@ -190,7 +190,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label class="font-weight-bold">{{trans('Username')}} <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="@lang('username or Correo electrónico')"
+                        <input type="text" class="form-control" placeholder="@lang('username or Email')"
                                name="smtp_username"
                                value="{{ old('smtp_username', $control->email_configuration->smtp_username ?? '') }}"/>
                         @error('smtp_username')
@@ -198,8 +198,8 @@
                         @enderror
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="font-weight-bold">{{trans('Contraseña')}} <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="@lang('Contraseña')" name="smtp_password"
+                        <label class="font-weight-bold">{{trans('Password')}} <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="@lang('Password')" name="smtp_password"
                                value="{{ old('smtp_password', $control->email_configuration->smtp_password ?? '') }}"/>
                         @error('smtp_password')
                         <span class="text-danger">{{ trans($message) }}</span>
@@ -209,13 +209,13 @@
 
 
                 <div class="form-group ">
-                    <label>@lang('Correo electrónico Description')</label>
+                    <label>@lang('Email Description')</label>
                     <textarea class="form-control summernote" name="email_description" id="summernote"
-                              placeholder="@lang('Correo electrónico Description')"
+                              placeholder="@lang('Email Description')"
                               rows="20"><?php echo $email_description ?></textarea>
                 </div>
                 <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                    <span>@lang('Guardar Changes')</span></button>
+                    <span>@lang('Save Changes')</span></button>
             </form>
         </div>
     </div>
@@ -228,14 +228,14 @@
                 @csrf
                 <!-- Modal Header -->
                     <div class="modal-header modal-colored-header bg-primary">
-                        <h4 class="modal-title">@lang('Test Correo electrónico')</h4>
+                        <h4 class="modal-title">@lang('Test Email')</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <label for="email">@lang('Enter Your Correo electrónico')</label>
+                        <label for="email">@lang('Enter Your Email')</label>
                         <input type="email" class="form-control" name="email" id="email"
-                               placeholder="@lang('Enter Your Correo electrónico')">
+                               placeholder="@lang('Enter Your Email')">
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">

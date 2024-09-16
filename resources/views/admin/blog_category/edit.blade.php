@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Editar Blog Categoría')
+    @lang('Edit Blog Category')
 @endsection
 @section('content')
     <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
@@ -29,7 +29,7 @@
                             @method('put')
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 mb-3">
-                                    <label for="name"> @lang('Categoría Name') </label>
+                                    <label for="name"> @lang('Category Name') </label>
                                     <input type="text" name="name[{{ $language->id }}]"
                                         class="form-control  @error('name' . '.' . $language->id) is-invalid @enderror"
                                         value="<?php echo old('name' . $language->id, isset($blogCategoryDetails[$language->id]) ? @$blogCategoryDetails[$language->id][0]->name : ''); ?>">
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar')</button>
+                                class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save')</button>
                         </form>
                     </div>
                 @endforeach

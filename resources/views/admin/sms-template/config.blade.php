@@ -48,7 +48,7 @@
         <div class="col-md-6">
             <div class="card card-primary m-0 m-md-4 my-4 m-md-0 shadow">
                 <div class="card-body">
-                    <h4 class="card-title">@lang('SMS Acción')</h4>
+                    <h4 class="card-title">@lang('SMS Action')</h4>
                     <form method="post" action="{{route('admin.sms-controls.action')}}" novalidate="novalidate"
                           class="needs-validation base-form ">
                         @csrf
@@ -87,7 +87,7 @@
 
                         <button type="submit"
                                 class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">
-                            <span>@lang('Guardar Changes')</span></button>
+                            <span>@lang('Save Changes')</span></button>
                     </form>
                 </div>
             </div>
@@ -380,7 +380,7 @@
                     </div>
                 </div>
                 <button type="submit"
-                        class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar Changes')</button>
+                        class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save Changes')</button>
             </form>
         </div>
     </div>
@@ -489,7 +489,7 @@
                 $(this).closest('.row').remove();
             });
 
-            let availableTags = ["Accept", "Accept-CH", "Accept-CH-Lifetime", "Accept-Charset", "Accept-Encoding", "Accept-Idioma", "Accept-Patch", "Accept-Post", "Accept-Ranges", "Access-Control-Allow-Credentials", "Access-Control-Allow-Headers", "Access-Control-Allow-Methods", "Access-Control-Allow-Origin", "Access-Control-Expose-Headers", "Access-Control-Max-Age", "Access-Control-Request-Headers", "Access-Control-Request-Method", "Age", "Allow", "Alt-Svc", "Authorization", "Cache-Control", "Clear-Site-Data", "Connection", "Content-Disposition", "Content-Encoding", "Content-Idioma", "Content-Length", "Content-Location", "Content-Range", "Content-Security-Policy", "Content-Security-Policy-Report-Only", "Content-Type", "Cookie", "Cookie2", "Cross-Origin-Embedder-Policy", "Cross-Origin-Opener-Policy", "Cross-Origin-Resource-Policy", "DNT", "DPR", "Date", "Device-Memory", "Digest", "ETag", "Early-Data", "Expect", "Expect-CT", "Expires", "Feature-Policy", "Forwarded", "From", "Host", "If-Match", "If-Modified-Since", "If-None-Match", "If-Range", "If-Unmodified-Since", "Index", "Keep-Alive", "Large-Allocation", "Last-Modified", "Link", "Location", "NEL", "Origin", "Pragma", "Proxy-Authenticate", "Proxy-Authorization", "Public-Key-Pins", "Public-Key-Pins-Report-Only", "Range", "Referer", "Referrer-Policy", "Retry-After", "Guardar-Data", "Sec-Fetch-Dest", "Sec-Fetch-Mode", "Sec-Fetch-Site", "Sec-Fetch-User", "Sec-WebSocket-Accept", "Server", "Server-Timing", "Set-Cookie", "Set-Cookie2", "SourceMap", "Strict-Transport-Security", "TE", "Timing-Allow-Origin", "Tk", "Trailer", "Transfer-Encoding", "Upgrade", "Upgrade-Insecure-Requests", "User-Agent", "Vary", "Via", "WWW-Authenticate", "Want-Digest", "Warning", "X-Content-Type-Options", "X-DNS-Prefetch-Control", "X-Forwarded-For", "X-Forwarded-Host", "X-Forwarded-Proto", "X-Frame-Options", "X-XSS-Protection"];
+            let availableTags = ["Accept", "Accept-CH", "Accept-CH-Lifetime", "Accept-Charset", "Accept-Encoding", "Accept-Language", "Accept-Patch", "Accept-Post", "Accept-Ranges", "Access-Control-Allow-Credentials", "Access-Control-Allow-Headers", "Access-Control-Allow-Methods", "Access-Control-Allow-Origin", "Access-Control-Expose-Headers", "Access-Control-Max-Age", "Access-Control-Request-Headers", "Access-Control-Request-Method", "Age", "Allow", "Alt-Svc", "Authorization", "Cache-Control", "Clear-Site-Data", "Connection", "Content-Disposition", "Content-Encoding", "Content-Language", "Content-Length", "Content-Location", "Content-Range", "Content-Security-Policy", "Content-Security-Policy-Report-Only", "Content-Type", "Cookie", "Cookie2", "Cross-Origin-Embedder-Policy", "Cross-Origin-Opener-Policy", "Cross-Origin-Resource-Policy", "DNT", "DPR", "Date", "Device-Memory", "Digest", "ETag", "Early-Data", "Expect", "Expect-CT", "Expires", "Feature-Policy", "Forwarded", "From", "Host", "If-Match", "If-Modified-Since", "If-None-Match", "If-Range", "If-Unmodified-Since", "Index", "Keep-Alive", "Large-Allocation", "Last-Modified", "Link", "Location", "NEL", "Origin", "Pragma", "Proxy-Authenticate", "Proxy-Authorization", "Public-Key-Pins", "Public-Key-Pins-Report-Only", "Range", "Referer", "Referrer-Policy", "Retry-After", "Save-Data", "Sec-Fetch-Dest", "Sec-Fetch-Mode", "Sec-Fetch-Site", "Sec-Fetch-User", "Sec-WebSocket-Accept", "Server", "Server-Timing", "Set-Cookie", "Set-Cookie2", "SourceMap", "Strict-Transport-Security", "TE", "Timing-Allow-Origin", "Tk", "Trailer", "Transfer-Encoding", "Upgrade", "Upgrade-Insecure-Requests", "User-Agent", "Vary", "Via", "WWW-Authenticate", "Want-Digest", "Warning", "X-Content-Type-Options", "X-DNS-Prefetch-Control", "X-Forwarded-For", "X-Forwarded-Host", "X-Forwarded-Proto", "X-Frame-Options", "X-XSS-Protection"];
 
             $(document).on('click', addHeaderData, function () {
                 $(".headerDataKeys").autocomplete({

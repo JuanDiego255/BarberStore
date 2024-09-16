@@ -19,7 +19,7 @@
                                 </div>
 
                                 <div class="btn-area">
-                                    <button class="common_btn" type="submit"><span>@lang('Enviar')</span></button>
+                                    <button class="common_btn" type="submit"><span>@lang('Submit')</span></button>
                                 </div>
                             </div>
                         </form>

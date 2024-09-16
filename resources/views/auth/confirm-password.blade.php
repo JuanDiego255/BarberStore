@@ -16,9 +16,9 @@
         <form method="POST" action="{{ route('password.confirm') }}">
             @csrf
 
-            <!-- Contraseña -->
+            <!-- Password -->
             <div>
-                <x-label for="password" :value="__('Contraseña')" />
+                <x-label for="password" :value="__('Password')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -28,7 +28,7 @@
 
             <div class="flex justify-end mt-4">
                 <x-button>
-                    {{ __('Confirmar') }}
+                    {{ __('Confirm') }}
                 </x-button>
             </div>
         </form>

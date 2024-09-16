@@ -10,7 +10,7 @@
 
             <a href="{{route('admin.subscriber.sendEmail')}}"
                class="btn btn-primary mb-3 float-right" >
-               @lang('Enviar Correo electrónico')
+               @lang('Send Email')
             </a>
 
 
@@ -19,19 +19,19 @@
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">@lang('SL')</th>
-                        <th scope="col">@lang('Correo electrónico')</th>
+                        <th scope="col">@lang('Email')</th>
                         <th scope="col">@lang('Joined')</th>
-                        <th scope="col">@lang('Acción')</th>
+                        <th scope="col">@lang('Action')</th>
                     </tr>
                     </thead>
                     <tbody>
                     @forelse($subscribers as $subscriber)
                         <tr>
                             <td data-label="@lang('SL.')">{{loopIndex($subscribers) + $loop->index	 }}</td>
-                            <td data-label="@lang('Correo electrónico')">{{ $subscriber->email }}</td>
+                            <td data-label="@lang('Email')">{{ $subscriber->email }}</td>
                             <td data-label="@lang('Joined')">{{ dateTime($subscriber->created_at) }}</td>
 
-                            <td data-label="@lang('Acción')">
+                            <td data-label="@lang('Action')">
                                 <a href="javascript:void(0)"
                                    data-id="{{ $subscriber->id }}"
                                    data-email="{{ $subscriber->email }}"

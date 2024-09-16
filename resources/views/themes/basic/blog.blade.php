@@ -19,7 +19,7 @@
                                         @lang(optional($item->blogDetails)->service_name)
                                     </div>
                                     <h5 class="card-title">
-                                        <a class="blog_title" href="{{ route('blogDetails', [slug(optional($item->blogDetails)->title), $item->id]) }}">{{\Illuminate\Soporte\Str::limit(trans(optional($item->blogDetails)->title), 45)}}</a>
+                                        <a class="blog_title" href="{{ route('blogDetails', [slug(optional($item->blogDetails)->title), $item->id]) }}">{{\Illuminate\Support\Str::limit(trans(optional($item->blogDetails)->title), 45)}}</a>
                                     </h5>
                                     <ul class="section_list d-flex justify-content-between">
                                         <li>
@@ -68,7 +68,7 @@
                             <form action="{{ route('blog.search') }}" method="get">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="search"
-                                           placeholder="@lang('Buscar Here...')" value="{{ @request()->search }}"
+                                           placeholder="@lang('Search Here...')" value="{{ @request()->search }}"
                                            autocomplete="off">
                                     <button type="submit" class="input-group-text hover" id="basic-addon1"><i
                                             class="fa-solid fa-magnifying-glass"></i></button>

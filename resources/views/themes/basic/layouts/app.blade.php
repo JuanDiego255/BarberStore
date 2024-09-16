@@ -58,7 +58,7 @@
                 <ul class="navbar-nav m-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link {{ menuActive(['home'], 3) }}" aria-current="page"
-                           href="{{ route('home') }}">@lang('Inicio')</a>
+                           href="{{ route('home') }}">@lang('Home')</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ menuActive(['about'], 3) }}"
@@ -75,7 +75,7 @@
                     @bookAppointment
                     <li class="nav-item">
                         <a class="nav-link {{ menuActive(['appointment'], 3) }}"
-                           href="{{ route('appointment') }}">@lang('Cita')</a></li>
+                           href="{{ route('appointment') }}">@lang('Appointment')</a></li>
                     @endbookAppointment
 
                     @shop

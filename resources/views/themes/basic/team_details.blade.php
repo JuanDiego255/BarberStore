@@ -21,7 +21,7 @@
                             </h5>
                             <h5><span class="highlight">@lang('Experience') : </span> @lang($team_details->experience)</h5>
                             <h5><span class="highlight">@lang('Level') : </span> @lang($team_details->level)</h5>
-                            <h5><span class="highlight">@lang('Correo electrónico') : </span> @lang(optional($team_details->teamDetails)->email)
+                            <h5><span class="highlight">@lang('Email') : </span> @lang(optional($team_details->teamDetails)->email)
                             </h5>
                             <h5><span class="highlight">@lang('Phone') : </span>@lang($team_details->phone)</h5>
                         </div>

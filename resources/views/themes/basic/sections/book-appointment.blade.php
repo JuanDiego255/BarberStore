@@ -36,7 +36,7 @@
                             </div>
                             <div class="mt-4">
                                 <input type="email" name="email" class="form-control"
-                                       placeholder="@lang('Correo electrónico Address')" value="{{ old('email') }}"
+                                       placeholder="@lang('Email Address')" value="{{ old('email') }}"
                                        autocomplete="off">
                                 @error('email')
                                 <span class="text-danger">{{ $message }}</span>

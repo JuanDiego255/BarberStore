@@ -16,7 +16,7 @@
                         <th scope="col">@lang('No.')</th>
                         <th scope="col">@lang('Name')</th>
                         <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         
                     </tr>
                     </thead>
@@ -30,7 +30,7 @@
                                 <span class="badge badge-pill badge-{{($template->status == 1) ?'success' : 'danger'}}">{{($template->status == 1) ?trans('Active') : trans('Deactive')}}</span>
                             </td>
                             <td>
-                                <a  href="{{ route('admin.notify-template.edit',$template->id) }}" class="btn btn-sm btn-primary " title="@lang('Editar')"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                                <a  href="{{ route('admin.notify-template.edit',$template->id) }}" class="btn btn-sm btn-primary " title="@lang('Edit')"><i class="fas fa-edit" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                     @endforeach

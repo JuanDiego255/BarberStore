@@ -1,5 +1,5 @@
 @extends($theme.'layouts.user')
-@section('title',trans('Order Lista'))
+@section('title',trans('Order List'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
@@ -15,9 +15,9 @@
                             </div>
 
                             <div class="input-box col-lg-2">
-                                <label for="">@lang('Pago Type')</label>
+                                <label for="">@lang('Payment Type')</label>
                                 <input type="text" class="form-control" name="payment_type"
-                                       placeholder="@lang('Pago Type')" value="{{@request()->payment_type}}"
+                                       placeholder="@lang('Payment Type')" value="{{@request()->payment_type}}"
                                        autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
@@ -26,7 +26,7 @@
                                        value="{{@request()->date}}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Buscar')</button>
+                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
                     </form>
@@ -36,11 +36,11 @@
                         <thead>
                         <tr>
                             <th scope="col">@lang('#Order Number')</th>
-                            <th scope="col">@lang('Pago Type')</th>
+                            <th scope="col">@lang('Payment Type')</th>
                             <th scope="col">@lang('Amount')</th>
                             <th scope="col">@lang('Order Date')</th>
                             <th scope="col">@lang('Status')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,7 +49,7 @@
                                 <td data-label="Order Number">
                                     #{{ optional($data->getOrder)->order_number }}
                                 </td>
-                                <td data-label="Pago Type">
+                                <td data-label="Payment Type">
                                     @lang(optional(optional($data->getOrder)->gateway)->name ?? optional($data->getOrder)->payment_type)
                                 </td>
                                 <td data-label="Price">
@@ -71,10 +71,10 @@
                                     @elseif(optional($data->getOrder)->status == 4)
                                         <span class="badge bg-success">@lang('Completed')</span>
                                     @elseif(optional($data->getOrder)->status == 5)
-                                        <span class="badge bg-danger">@lang('Cancelar')</span>
+                                        <span class="badge bg-danger">@lang('Cancel')</span>
                                     @endif
                                 </td>
-                                <td data-label="Acción">
+                                <td data-label="Action">
                                     <a
                                         href="{{ route('user.my.order.details', $data->order_id) }}"
                                         class="">

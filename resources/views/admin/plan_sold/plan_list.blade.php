@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Book Cita Lista')
+    @lang('Book Appointment List')
 @endsection
 @section('content')
     <div class="page-header card card-primary m-0 m-md-4 my-4 m-md-0 p-2 pt-4 pl-4 shadow">
@@ -32,7 +32,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <input type="text" name="email" value="{{ @request()->email }}" class="form-control"
-                                       placeholder="@lang('Correo electrónico')">
+                                       placeholder="@lang('Email')">
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i
-                                        class="fas fa-search"></i> @lang('Buscar')</button>
+                                        class="fas fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <th scope="col">@lang('Plan Name')</th>
                         <th scope="col">@lang('User Name')</th>
                         <th scope="col">@lang('Purchase Date')</th>
-                        <th scope="col">@lang('Date Of Cita')</th>
+                        <th scope="col">@lang('Date Of Appointment')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -88,7 +88,7 @@
                             <td data-label="@lang('Purchase Date')">
                                 @lang(dateTime($item->purchase_date, 'd M Y'))
                             </td>
-                            <td data-label="@lang('Date Of Cita')">
+                            <td data-label="@lang('Date Of Appointment')">
                                 @if(optional($item->bookAppointment)->date_of_appointment)
                                     <span class="badge badge-success">Given</span>
                                 @else

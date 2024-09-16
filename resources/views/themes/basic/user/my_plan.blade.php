@@ -1,5 +1,5 @@
 @extends($theme.'layouts.user')
-@section('title',trans('My Perfil'))
+@section('title',trans('My Profile'))
 @section('content')
     <div class="container-fluid">
         <div class="main row">
@@ -24,7 +24,7 @@
                                        value="{{ @request()->purchase_date }}" autocomplete="off">
                             </div>
                             <div class="input-box col-lg-2">
-                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Buscar')</button>
+                                <button class="btn-custom w-100"><i class="fal fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
                     </form>
@@ -52,7 +52,7 @@
                                     {{ optional($data->plans)->price }}
                                 </td>
                                 <td data-label="Purchase Date">{{ dateTime($data->purchase_date, 'd M Y') }}</td>
-                                <td data-label="Date Of Cita">
+                                <td data-label="Date Of Appointment">
                                     @if(optional($data->bookAppointment)->date_of_appointment)
                                         <span class="badge bg-danger">@lang('Given')</span>
                                     @else

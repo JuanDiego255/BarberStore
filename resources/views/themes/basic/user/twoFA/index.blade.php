@@ -166,7 +166,7 @@
             copyText.setSelectionRange(0, 99999);
             /*For mobile devices*/
             document.execCommand("copy");
-            Notiflix.Notify.Éxito(`Copied: ${copyText.value}`);
+            Notiflix.Notify.Success(`Copied: ${copyText.value}`);
         }
     </script>
 @endpush

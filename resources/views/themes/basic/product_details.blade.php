@@ -426,7 +426,7 @@
         productCheck();
 
         // WishList
-        let isAuthenticate = "{{\Illuminate\Soporte\Facades\Auth::check()}}";
+        let isAuthenticate = "{{\Illuminate\Support\Facades\Auth::check()}}";
         let userId = "{{optional(auth()->user())->id}}";
 
         $('.wishList').on('click', function () {
@@ -452,12 +452,12 @@
                     if (data.data == 'added') {
                         $(`.save${id}`).removeClass("fal fa-heart");
                         $(`.save${id}`).addClass("fas fa-heart");
-                        Notiflix.Notify.Éxito(data.addNotify);
+                        Notiflix.Notify.Success(data.addNotify);
                     }
                     if (data.data == 'remove') {
                         $(`.save${id}`).removeClass("fas fa-heart");
                         $(`.save${id}`).addClass("fal fa-heart");
-                        Notiflix.Notify.Éxito(data.removeNotify);
+                        Notiflix.Notify.Success(data.removeNotify);
                     }
                 },
             });

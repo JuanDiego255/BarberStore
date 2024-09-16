@@ -12,7 +12,7 @@
 
         <div class="row justify-content-md-center">
             <div class="col-lg-12">
-                <!-- Currency Crear Form  -->
+                <!-- Currency Create Form  -->
                 <div class="card mb-4 shadow">
                     <div class="card-body">
 
@@ -75,7 +75,7 @@
                                         @endif
                                     @endforeach
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-sm btn-block">@lang('Guardar Change')</button>
+                                <button type="submit" class="btn btn-primary btn-sm btn-block">@lang('Save Change')</button>
                             </form>
 
                         @else
@@ -180,7 +180,7 @@
                                                     @endif
                                                 @endforeach
                                             </div>
-                                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Guardar Change')</button>
+                                            <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3">@lang('Save Change')</button>
                                         </form>
                                     </div>
                                 @endforeach
@@ -249,7 +249,7 @@
                 placement: 'bottom', // Only in button tag
                 rows: 5,
                 search: true,
-                searchText: 'Buscar icon',
+                searchText: 'Search icon',
                 selectedClass: 'btn-success',
                 unselectedClass: ''
             }).on('change', function (e) {

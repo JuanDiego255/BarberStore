@@ -1,18 +1,18 @@
-<?php $__env->startSection('title','Admin Login'); ?>
+<?php $__env->startSection('title','Administrador Iniciar sesión'); ?>
 
 <?php $__env->startSection('content'); ?>
     <div class="p-3">
         <div class="text-center">
             <img src=" <?php echo e(getFile(config('location.logoIcon.path').'favicon.png')); ?>" alt="wrapkit">
         </div>
-        <h2 class="mt-3 text-center"><?php echo app('translator')->get('Admin Login'); ?></h2>
+        <h2 class="mt-3 text-center"><?php echo app('translator')->get('Administrador Iniciar sesión'); ?></h2>
 
-        <form method="POST" action="<?php echo e(route('admin.login')); ?>" aria-label="<?php echo e(__('Login')); ?>">
+        <form method="POST" action="<?php echo e(route('admin.login')); ?>" aria-label="<?php echo e(__('Iniciar sesión')); ?>">
             <?php echo csrf_field(); ?>
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="text-dark" for="email"><?php echo app('translator')->get('Email Or Username'); ?></label>
+                        <label class="text-dark" for="email"><?php echo app('translator')->get('Correo electrónico Or Username'); ?></label>
                         <input id="username" type="text"
                                class="form-control
                                 <?php $__errorArgs = ['username'];
@@ -64,7 +64,7 @@ unset($__errorArgs, $__bag); ?>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="text-dark" for="pwd"><?php echo app('translator')->get('Password'); ?></label>
+                        <label class="text-dark" for="pwd"><?php echo app('translator')->get('Contraseña'); ?></label>
                         <input id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -95,7 +95,7 @@ unset($__errorArgs, $__bag); ?>
 
 
                 <div class="col-lg-12 text-center mt-5">
-                    <a href="<?php echo e(route('admin.password.request')); ?>" class="text-danger"><?php echo e(trans('Forgot Your Password?')); ?></a>
+                    <a href="<?php echo e(route('admin.password.request')); ?>" class="text-danger"><?php echo e(trans('Forgot Your Contraseña?')); ?></a>
                 </div>
 
 

@@ -24,7 +24,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="py-2"> <strong class="d-block ">@lang('Pago')</strong>
+                                        <div class="py-2"> <strong class="d-block ">@lang('Payment')</strong>
                                             <span>@lang($orderInfo->payment_type)</span> 
                                         </div>
                                     </td>

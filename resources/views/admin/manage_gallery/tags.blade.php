@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang('Gestionar Gallery Tags')
+    @lang('Manage Gallery Tags')
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
                         <tr>
                             <th scope="col">@lang('SL No.')</th>
                             <th scope="col">@lang('Name')</th>
-                            <th scope="col">@lang('Acción')</th>
+                            <th scope="col">@lang('Action')</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,7 +27,7 @@
                                 <td data-label="@lang('Name')">
                                     @lang($item->name)
                                 </td>
-                                <td data-label="@lang('Acción')">
+                                <td data-label="@lang('Action')">
                                     <button class="btn btn-sm btn-primary edit-button" type="button" data-toggle="modal"
                                         data-target="#editModal" data-name="{{ $item->name }}"
                                         data-route="{{ route('admin.gallery.tag.update', ['id' => $item->id]) }}">
@@ -74,22 +74,22 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal">
-                            <span>@lang('Cancelar')</span>
+                            <span>@lang('Cancel')</span>
                         </button>
                         <button type="submit" class="btn btn-primary">
-                            <span><i class="fas fa-save"></i> @lang('Guardar')</span></button>
+                            <span><i class="fas fa-save"></i> @lang('Save')</span></button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Editar Modal -->
+    <!-- Edit Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">@lang('Editar Tags')</h5>
+                    <h5 class="modal-title">@lang('Edit Tags')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -107,23 +107,23 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-dismiss="modal">
-                            <span>@lang('Cancelar')</span>
+                            <span>@lang('Cancel')</span>
                         </button>
                         <button type="submit" class="btn btn-primary">
-                            <span><i class="fas fa-save"></i> @lang('Guardar Changes')</span></button>
+                            <span><i class="fas fa-save"></i> @lang('Save Changes')</span></button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Eliminar Modal -->
+    <!-- Delete Modal -->
     <div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Eliminar Confirmation')
+                    <h4 class="modal-title" id="primary-header-modalLabel">@lang('Delete Confirmation')
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>

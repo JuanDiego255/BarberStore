@@ -58,7 +58,7 @@
                 <ul class="navbar-nav m-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link <?php echo e(menuActive(['home'], 3)); ?>" aria-current="page"
-                           href="<?php echo e(route('home')); ?>"><?php echo app('translator')->get('Home'); ?></a>
+                           href="<?php echo e(route('home')); ?>"><?php echo app('translator')->get('Inicio'); ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo e(menuActive(['about'], 3)); ?>"
@@ -75,7 +75,7 @@
                     <?php if (\Illuminate\Support\Facades\Blade::check('bookAppointment')): ?>
                     <li class="nav-item">
                         <a class="nav-link <?php echo e(menuActive(['appointment'], 3)); ?>"
-                           href="<?php echo e(route('appointment')); ?>"><?php echo app('translator')->get('Appointment'); ?></a></li>
+                           href="<?php echo e(route('appointment')); ?>"><?php echo app('translator')->get('Cita'); ?></a></li>
                     <?php endif; ?>
 
                     <?php if (\Illuminate\Support\Facades\Blade::check('shop')): ?>

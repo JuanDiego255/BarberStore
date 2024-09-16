@@ -13,7 +13,7 @@
                 </div>
                 <div class="breadcrumb d-flex justify-content-center">
                     <div class="text_area">
-                        <h6><a href="<?php echo e(route('home')); ?>"><span><?php echo app('translator')->get('Home'); ?></span></a> |
+                        <h6><a href="<?php echo e(route('home')); ?>"><span><?php echo app('translator')->get('Inicio'); ?></span></a> |
                             <span><?php echo $__env->yieldContent('title'); ?></span></h6>
                     </div>
                 </div>

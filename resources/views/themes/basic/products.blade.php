@@ -81,7 +81,7 @@
                             <div class="search_area d-flex align-items-center mb-40">
                                 <div class="input-group">
                                     <input type="text" name="search" class="form-control"
-                                        placeholder="@lang('Buscar Here...')" value="{{ @request()->search }}"
+                                        placeholder="@lang('Search Here...')" value="{{ @request()->search }}"
                                         autocomplete="off">
                                     <button type="submit" class="input-group-text hover" id="basic-addon1"><i
                                             class="fa-solid fa-magnifying-glass"></i></button>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="button_area filter_section">
-                    <button type="submit" class="common_btn">@lang('Enviar')</button>
+                    <button type="submit" class="common_btn">@lang('Submit')</button>
                 </div>
                 </form>
             </div>
@@ -165,7 +165,7 @@
         <script>
             'use strict';
 
-            let isAuthenticate = "{{ \Illuminate\Soporte\Facades\Auth::check() }}";
+            let isAuthenticate = "{{ \Illuminate\Support\Facades\Auth::check() }}";
             let userId = "{{ optional(auth()->user())->id }}";
 
             $('.wishList').on('click', function() {
@@ -193,12 +193,12 @@
                         if (data.data == 'added') {
                             $(`.save${id}`).removeClass("fal fa-heart");
                             $(`.save${id}`).addClass("fas fa-heart");
-                            Notiflix.Notify.Éxito(data.addNotify);
+                            Notiflix.Notify.Success(data.addNotify);
                         }
                         if (data.data == 'remove') {
                             $(`.save${id}`).removeClass("fas fa-heart");
                             $(`.save${id}`).addClass("fal fa-heart");
-                            Notiflix.Notify.Éxito(data.removeNotify);
+                            Notiflix.Notify.Success(data.removeNotify);
                         }
                     },
                 });

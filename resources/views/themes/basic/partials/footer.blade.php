@@ -20,7 +20,7 @@
                             @csrf
                             <div class="mb-3 d-flex align-items-center justify-content-center">
                                 <input type="email" name="email" class="form-control"
-                                       placeholder="@lang('Correo electrónico Address')" autocomplete="off">
+                                       placeholder="@lang('Email Address')" autocomplete="off">
                                 <button type="submit" class="common_btn"><i class="fa-solid fa-arrow-right-long"></i>
                                 </button>
                             </div>

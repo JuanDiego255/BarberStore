@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    @lang("User Lista")
+    @lang("User List")
 @endsection
 
 
@@ -42,7 +42,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <button type="submit" class="btn w-100 w-md-auto btn-primary"><i
-                                        class="fas fa-search"></i> @lang('Buscar')</button>
+                                        class="fas fa-search"></i> @lang('Search')</button>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
             <div class="dropdown mb-2 text-right">
                 <button class="btn btn-sm  btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span><i class="fas fa-bars pr-2"></i> @lang('Acción')</span>
+                    <span><i class="fas fa-bars pr-2"></i> @lang('Action')</span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <button class="dropdown-item" type="button" data-toggle="modal"
@@ -79,11 +79,11 @@
                         </th>
                         <th scope="col">@lang('No.')</th>
                         <th scope="col">@lang('Username')</th>
-                        <th scope="col">@lang('Correo electrónico')</th>
+                        <th scope="col">@lang('Email')</th>
                         <th scope="col">@lang('Phone')</th>
-                        <th scope="col">@lang('Last Iniciar sesión')</th>
+                        <th scope="col">@lang('Last Login')</th>
                         <th scope="col">@lang('Status')</th>
-                        <th scope="col">@lang('Acción')</th>
+                        <th scope="col">@lang('Action')</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -107,14 +107,14 @@
                                     </div>
                                 </a>
                             </td>
-                            <td data-label="@lang('Correo electrónico')">@lang($user->email)</td>
+                            <td data-label="@lang('Email')">@lang($user->email)</td>
                             <td data-label="@lang('Phone')">{{ $user->phone }}</td>
-                            <td data-label="@lang('Last Iniciar sesión')">{{diffForHumans($user->last_login)}}</td>
+                            <td data-label="@lang('Last Login')">{{diffForHumans($user->last_login)}}</td>
                             <td data-label="@lang('Status')">
                                 <span
                                     class="badge badge-pill {{ $user->status == 0 ? 'badge-danger' : 'badge-success' }}">{{ $user->status == 0 ? 'Inactive' : 'Active' }}</span>
                             </td>
-                            <td data-label="@lang('Acción')">
+                            <td data-label="@lang('Action')">
                                 <div class="dropdown show ">
                                     <a class="dropdown-toggle p-3" href="#" id="dropdownMenuLink" data-toggle="dropdown"
                                        aria-haspopup="true" aria-expanded="false">
@@ -123,18 +123,18 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <a class="dropdown-item" href="{{ route('admin.user-edit',$user->id) }}">
                                             <i class="fa fa-edit text-warning pr-2"
-                                               aria-hidden="true"></i> @lang('Editar')
+                                               aria-hidden="true"></i> @lang('Edit')
                                         </a>
                                         <a class="dropdown-item" href="{{ route('admin.send-email',$user->id) }}">
                                             <i class="fa fa-envelope text-success pr-2"
-                                               aria-hidden="true"></i> @lang('Enviar Correo electrónico')
+                                               aria-hidden="true"></i> @lang('Send Email')
                                         </a>
                                         <a class="dropdown-item loginAccount" type="button"
                                            data-toggle="modal"
                                            data-target="#signIn"
                                            data-route="{{route('admin.login-as-user',$user->id)}}">
                                             <i class="fas fa-sign-in-alt text-primary pr-2"
-                                               aria-hidden="true"></i> @lang('Iniciar sesión as User')
+                                               aria-hidden="true"></i> @lang('Login as User')
                                         </a>
 
                                     </div>
@@ -197,7 +197,7 @@
         </div>
     </div>
 
-    <!-- Administrador Iniciar sesión as a User Modal -->
+    <!-- Admin Login as a User Modal -->
     <div class="modal fade" id="signIn">
         <div class="modal-dialog">
             <div class="modal-content">

@@ -66,7 +66,7 @@
 
                         </div>
                         <button type="submit" class="btn waves-effect waves-light btn-rounded btn-primary btn-block mt-3"><span><i
-                                    class="fas fa-save pr-2"></i> @lang('Guardar Changes')</span></button>
+                                    class="fas fa-save pr-2"></i> @lang('Save Changes')</span></button>
                     </form>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                     When an event happens on an app, the app can notify all other apps and your system
                     <br><br>
                     Get your free API keys')
-                    <a href="https://dashboard.pusher.com/accounts/sign_up" target="_blank">@lang('Crear an account') <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://dashboard.pusher.com/accounts/sign_up" target="_blank">@lang('Create an account') <i class="fas fa-external-link-alt"></i></a>
                     @lang(', then create a Channels app.
                     Go to the "Keys" page for that app, and make a note of your app_id, key, secret and cluster.')
                 </div>

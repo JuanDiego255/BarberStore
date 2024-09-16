@@ -54,7 +54,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <button type="submit" name="submit" class="btn btn-primary btn-rounded btn-block">@lang('Guardar changes')</button>
+                                            <button type="submit" name="submit" class="btn btn-primary btn-rounded btn-block">@lang('Save changes')</button>
                                         </div>
                                     </form>
                                 </div>

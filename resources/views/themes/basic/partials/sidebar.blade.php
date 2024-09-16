@@ -10,13 +10,13 @@
     <ul class="main">
         <li>
             <a class="{{ menuActive(['user.home'], 3) }}" href="{{ route('user.home') }}"><i
-                    class="fal fa-th-large"></i>@lang('Tablero')</a>
+                    class="fal fa-th-large"></i>@lang('Dashboard')</a>
         </li>
         @bookAppointment
         <li>
             <a class="{{ menuActive(['user.my.appointment', 'user.search.appointment'], 3) }}"
                href="{{ route('user.my.appointment') }}"><i
-                    class="fa-thin fa-calendar-check"></i>@lang('My Cita')</a>
+                    class="fa-thin fa-calendar-check"></i>@lang('My Appointment')</a>
         </li>
         @endbookAppointment
         @plan
@@ -44,7 +44,7 @@
         </li>
           <li>
             <a class="{{ menuActive(['user.ticket.list', 'user.ticket.view', 'user.ticket.create'], 3) }}"
-               href="{{ route('user.ticket.list') }}"><i class="fal fa-user-headset" aria-hidden="true"></i>@lang('Soporte Ticket')</a>
+               href="{{ route('user.ticket.list') }}"><i class="fal fa-user-headset" aria-hidden="true"></i>@lang('Support Ticket')</a>
         </li>
 
         <li>
@@ -54,7 +54,7 @@
         @endshop
         <li>
             <a class="{{ menuActive(['user.profile'], 3) }}" href="{{ route('user.profile') }}"><i
-                    class="fal fa-user-edit"></i>@lang('Editar Perfil')</a>
+                    class="fal fa-user-edit"></i>@lang('Edit Profile')</a>
         </li>
         <li>
             @auth
