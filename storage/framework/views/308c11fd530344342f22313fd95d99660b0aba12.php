@@ -81,7 +81,7 @@
                             <div class="customize-input">
                                 <input class="form-control custom-shadow custom-radius border-0 bg-white"
                                        type="search" name="navbar_search" id="navbar_search" autocomplete="off"
-                                       placeholder="Buscar" aria-label="Buscar">
+                                       placeholder="Search" aria-label="Search">
                                 <i class="form-control-icon" data-feather="search"></i>
                             </div>
 
@@ -118,12 +118,12 @@
 
                         <a class="dropdown-item" href="<?php echo e(route('admin.profile')); ?>">
                             <i class="svg-icon mr-2 ml-1 icon-user"></i>
-                            <?php echo app('translator')->get('Perfil'); ?>
+                            <?php echo app('translator')->get('Profile'); ?>
                         </a>
 
                         <a class="dropdown-item" href="<?php echo e(route('admin.password')); ?>">
                             <i class="svg-icon mr-2 ml-1 icon-settings"></i>
-                            <?php echo app('translator')->get('Contraseña'); ?>
+                            <?php echo app('translator')->get('Password'); ?>
                         </a>
 
                         <div class="dropdown-divider"></div>
@@ -131,7 +131,7 @@
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i
                                 data-feather="power" class="svg-icon mr-2 ml-1"></i>
-                            <?php echo e(__('Cerrar sesión')); ?>
+                            <?php echo e(__('Logout')); ?>
 
                         </a>
                         <form id="logout-form" action="<?php echo e(route('admin.logout')); ?>" method="POST" class="d-none">
